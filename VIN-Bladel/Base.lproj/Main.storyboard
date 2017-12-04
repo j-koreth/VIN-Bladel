@@ -23,15 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wb9-4r-2dE">
-                                <rect key="frame" x="-37" y="0.0" width="871" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="QmF-eZ-GCC"/>
-                                    <tabBarItem systemItem="more" id="Wpi-6p-NMz"/>
-                                </items>
-                            </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-DL-U2J">
                                 <rect key="frame" x="145" y="299" width="545" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,11 +46,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="kId-3u-UaR">
-                        <barButtonItem key="leftBarButtonItem" image="homeButton" style="plain" id="ADT-uM-9kg">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HVD-SU-TQV">
-                                <rect key="frame" x="20" y="0.0" width="500" height="44"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="QUx-DU-4vy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AwB-OZ-4iD">
+                                <rect key="frame" x="20" y="0.0" width="50" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="homeButton"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                                <state key="normal" image="Home-Button"/>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -68,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="260.43165467625903" y="90.647482014388487"/>
         </scene>
-        <!--View Controller-->
+        <!--InputVC-->
         <scene sceneID="s8K-sc-nxV">
             <objects>
-                <viewController id="EG7-FL-6lW" sceneMemberID="viewController">
+                <viewController id="EG7-FL-6lW" customClass="InputVC" customModule="VIN_Bladel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KwT-tA-gXg">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,11 +75,11 @@
             </objects>
             <point key="canvasLocation" x="999" y="508"/>
         </scene>
-        <!--View Controller-->
+        <!--ScanVC-->
         <scene sceneID="SR8-bp-K5x">
             <objects>
-                <viewController id="yhV-Yd-TLF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mkp-ie-neU">
+                <viewController id="yhV-Yd-TLF" customClass="ScanVC" customModule="VIN_Bladel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mkp-ie-neU" customClass="SCa">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,6 +110,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homeButton" width="20" height="20"/>
+        <image name="Home-Button" width="50" height="50"/>
     </resources>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */; };
+		06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */; };
 		676053581FD5996D00322796 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 676053571FD5996D00322796 /* GoogleService-Info.plist */; };
 		67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */; };
 		67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24C1FD1A04500AD9532 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
+		06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
 		676053571FD5996D00322796 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIN-Bladel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */,
 				67F7B24C1FD1A04500AD9532 /* ViewController.swift */,
 				67F7B24E1FD1A04500AD9532 /* Main.storyboard */,
+				06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */,
+				06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */,
 				67F7B2511FD1A04500AD9532 /* Assets.xcassets */,
 				67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */,
 				67F7B2561FD1A04500AD9532 /* Info.plist */,
@@ -145,7 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */,
+				06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */,
 				67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */,
+				06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
