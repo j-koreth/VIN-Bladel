@@ -79,7 +79,7 @@
         <scene sceneID="SR8-bp-K5x">
             <objects>
                 <viewController id="yhV-Yd-TLF" customClass="ScanVC" customModule="VIN_Bladel" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mkp-ie-neU" customClass="SCa">
+                    <view key="view" contentMode="scaleToFill" id="Mkp-ie-neU">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

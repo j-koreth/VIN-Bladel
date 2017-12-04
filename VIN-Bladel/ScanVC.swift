@@ -91,5 +91,32 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        sessionQueue.async {
+            self.session.startRunning()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        sessionQueue.async {
+            self.session.stopRunning()
+        }
+    }
+    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
+            let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
+            
+            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
+            
+            present(alertController, animated: true, completion: nil)
+        }
+    }
 
 }
