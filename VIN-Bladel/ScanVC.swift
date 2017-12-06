@@ -58,8 +58,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
                 
                 metadataOutput.metadataObjectTypes = [
                     .ean13,
-                    .qr
-                    .code39
+                    .qr,
+                    .code39,
+                    .code39Mod43
                 ]
                 
                 metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
