@@ -29,19 +29,19 @@ class VINData{
                 let results = JSONObject.object(forKey: "Results") as! NSArray
                 
                 let modelyear = results.value(forKey: "ModelYear") as! NSArray
-                self.modelyear = modelyear[0] as? String
+                self.modelyear = modelyear[0] as! String
                 
                 let make = results.value(forKey: "Make") as! NSArray
-                self.make = make[0] as? String
+                self.make = make[0] as! String
                 
                 let model = results.value(forKey: "Model") as! NSArray
-                self.model = model[0] as? String
+                self.model = model[0] as! String
                 
                 let displacement = results.value(forKey: "DisplacementL") as! NSArray
-                self.displacement = displacement[0] as? String
+                self.displacement = displacement[0] as! String
                 
                 let cylinder = results.value(forKey: "EngineCylinders") as! NSArray
-                self.cylinder = cylinder[0] as? String
+                self.cylinder = cylinder[0] as! String
             }
             }.resume()
     }
