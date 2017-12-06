@@ -85,6 +85,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="zMH-fz-ySb"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sUM-8W-d9c">
+                        <barButtonItem key="rightBarButtonItem" title="Enter Manually" id="AG5-WR-x9t">
+                            <connections>
+                                <segue destination="EG7-FL-6lW" kind="show" id="dNQ-Ba-p3j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-Wx-YPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,4 +119,7 @@
     <resources>
         <image name="Home-Button" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dNQ-Ba-p3j"/>
+    </inferredMetricsTieBreakers>
 </document>

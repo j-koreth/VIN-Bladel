@@ -23,20 +23,21 @@ class CameraView: UIView {
     }
 }
 
-class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-
-    var session = AVCaptureSession()
-    var sessionQueue = DispatchQueue(label: AVCaptureSession.self.description())
-    var cameraView: CameraView!
-
+class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    var cameraView: CameraView!
+    
+    override func loadView() {
         cameraView = CameraView()
         
         view = cameraView
-        
+    }
+    
+    let session = AVCaptureSession()
+    let sessionQueue = DispatchQueue(label: AVCaptureSession.self.description(), attributes: [], target: nil)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         session.beginConfiguration()
         
         let videoDevice = AVCaptureDevice.default(for: .video)
@@ -88,9 +89,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         }
         
         cameraView.layer.connection?.videoOrientation = videoOrientation
-
+    
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -107,6 +108,31 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         }
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        // Update camera orientation
+        let videoOrientation: AVCaptureVideoOrientation
+        switch UIDevice.current.orientation {
+        case .portrait:
+            videoOrientation = .portrait
+            
+        case .portraitUpsideDown:
+            videoOrientation = .portraitUpsideDown
+            
+        case .landscapeLeft:
+            videoOrientation = .landscapeRight
+            
+        case .landscapeRight:
+            videoOrientation = .landscapeLeft
+            
+        default:
+            videoOrientation = .portrait
+        }
+        
+        cameraView.layer.connection?.videoOrientation = videoOrientation
+    }
+    
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
@@ -118,5 +144,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             present(alertController, animated: true, completion: nil)
         }
     }
-
+    
 }
+
