@@ -52,7 +52,12 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     .qr,
                     .code39,
                     .code39Mod43,
-                    .code128
+                    .code128,
+                    .itf14,
+                    .dataMatrix,
+                    .code93,
+                    .aztec
+                    
                 ]
                 
                 metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
