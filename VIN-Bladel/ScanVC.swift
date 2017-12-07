@@ -9,33 +9,24 @@
 import UIKit
 import AVFoundation
 
-class CameraView: UIView {
-    override class var layerClass: AnyClass {
-        get {
-            return AVCaptureVideoPreviewLayer.self
-        }
-    }
-    
-    override var layer: AVCaptureVideoPreviewLayer {
-        get {
-            return super.layer as! AVCaptureVideoPreviewLayer
-        }
-    }
-}
+var barcode = ""
 
-class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
+class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
+{
     
     var cameraView: CameraView!
+    let session = AVCaptureSession()
+    let sessionQueue = DispatchQueue(label: AVCaptureSession.self.description(), attributes: [], target: nil)
     
-    override func loadView() {
+    
+    override func loadView()
+    {
         cameraView = CameraView()
         
         view = cameraView
     }
     
-    let session = AVCaptureSession()
-    let sessionQueue = DispatchQueue(label: AVCaptureSession.self.description(), attributes: [], target: nil)
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         session.beginConfiguration()
@@ -60,7 +51,8 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
                     .ean13,
                     .qr,
                     .code39,
-                    .code39Mod43
+                    .code39Mod43,
+                    .code128
                 ]
                 
                 metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
@@ -138,14 +130,16 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate{
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
+            barcode = scan.stringValue!
             
-            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
-            
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
-            
-            present(alertController, animated: true, completion: nil)
+//            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
+//
+//            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
+//
+//            present(alertController, animated: true, completion: nil)
         }
     }
+    
     
 }
 
