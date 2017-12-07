@@ -48,14 +48,17 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                 session.addOutput(metadataOutput)
                 
                 metadataOutput.metadataObjectTypes = [
+                    .upce,
+                    .ean8,
                     .ean13,
-                    .qr,
                     .code39,
                     .code39Mod43,
                     .code128,
                     .itf14,
-                    .dataMatrix,
                     .code93,
+                    .qr,
+                    .dataMatrix,
+                    .pdf417,
                     .aztec
                     
                 ]
