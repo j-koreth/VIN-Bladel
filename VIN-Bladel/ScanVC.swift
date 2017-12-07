@@ -132,11 +132,11 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
             barcode = scan.stringValue!
             
-//            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
-//
-//            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
-//
-//            present(alertController, animated: true, completion: nil)
+            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
+
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
+
+            present(alertController, animated: true, completion: nil)
         }
     }
     
