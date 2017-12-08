@@ -59,7 +59,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     .qr,
                     .dataMatrix,
                     .pdf417,
-                    .aztec
+                    .aztec,
+                    .face,
+                    .interleaved2of5
                     
                 ]
                 
