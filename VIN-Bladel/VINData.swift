@@ -9,12 +9,13 @@
 import Foundation
 
 class VINData{
-    var vinNumber: String?
-    var modelyear: String?
-    var make: String?
-    var model: String?
-    var displacement: String?
-    var cylinder: String?
+    var vinNumber: String!
+    var modelyear: String!
+    var make: String!
+    var model: String!
+    var displacement: String!
+    var cylinder: String!
+    var correct: Bool!
     
     init(vinNumber: String) {
         self.vinNumber = vinNumber
@@ -42,8 +43,17 @@ class VINData{
                 
                 let cylinder = results.value(forKey: "EngineCylinders") as! NSArray
                 self.cylinder = cylinder[0] as! String
+                
+                let errorcode = results.value(forKey: "ErrorCode") as! NSArray
+                var errorcharacters = Array(errorcode[0] as! String)
+                if (errorcharacters[0] == "0"){
+                    self.correct = true
+                }
+                else {
+                    self.correct = false
+                }
             }
-            }.resume()
+        }.resume()
     }
 }
 
