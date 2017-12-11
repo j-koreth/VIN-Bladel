@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 var barcode = ""
+var carData = VINData(vinNumber: " ")
 
 class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 {
@@ -137,11 +138,16 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         cameraView.layer.connection?.videoOrientation = videoOrientation
     }
     
+    func segue() {
+        self.performSegue(withIdentifier: "segueToManual", sender: self)
+    }
+    
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
             barcode = scan.stringValue!
-            var carData = VINData(vinNumber: barcode)
+            
+            carData = VINData(vinNumber: barcode)
             DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
                 if carData.correct
                 {
@@ -149,13 +155,12 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                 }
                 else
                 {
-                    let vc = InputVC()
-                    self.present(vc, animated: true, completion: nil)
+                    self.segue()
+
                 }
             })
             
            
-            
             
 //            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
 //
@@ -167,6 +172,13 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToManuel" {
+            if let destination = segue.destination as? InputVC {
+                destination.car = carData // you can pass value to destination view controller
+            }
+        }
+    }
     
 }
 
