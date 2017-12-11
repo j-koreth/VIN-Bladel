@@ -141,16 +141,21 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
             barcode = scan.stringValue!
-            let carData = VINData(vinNumber: barcode)
-            if carData.correct
-            {
-                print(carData.vinNumber)
-            }
-            else
-            {
-                let vc = InputVC()
-                self.present(vc, animated: true, completion: nil)
-            }
+            var carData = VINData(vinNumber: barcode)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+                if carData.correct
+                {
+                    print(carData.vinNumber)
+                }
+                else
+                {
+                    let vc = InputVC()
+                    self.present(vc, animated: true, completion: nil)
+                }
+            })
+            
+           
+            
             
 //            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
 //
