@@ -141,7 +141,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
             barcode = scan.stringValue!
             var carData = VINData(vinNumber: barcode)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15, execute: {
                 if carData.correct
                 {
                     print(carData.vinNumber)
