@@ -62,7 +62,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     .aztec,
                     .face,
                     .interleaved2of5
-                    
                 ]
                 
                 metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
