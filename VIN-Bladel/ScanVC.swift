@@ -141,33 +141,35 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         self.performSegue(withIdentifier: "segueToManual", sender: self)
     }
     
+    
+    
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
-            barcode = scan.stringValue!
-            
-            carData = VINData(vinNumber: barcode)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
-                if carData.correct
-                {
-                    print(carData.vinNumber)
-                }
-                else
-                {
-                    self.segue()
+//            barcode = scan.stringValue!
+//
+//            carData = VINData(vinNumber: barcode)
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+//                if carData.correct
+//                {
+//                    print(carData.vinNumber)
+//                }
+//                else
+//                {
+//                    self.segue()
+//
+//                }
+//            })
 
-                }
-            })
-            
-           
-            
-//            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
-//
-//            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
-//
-//            present(alertController, animated: true, completion: nil)
-            
-            
+
+
+            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
+
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
+
+            present(alertController, animated: true, completion: nil)
+
+
         }
     }
     
