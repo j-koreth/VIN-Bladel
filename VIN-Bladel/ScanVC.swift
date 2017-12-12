@@ -146,20 +146,20 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
-//            barcode = scan.stringValue!
-//
-//            carData = VINData(vinNumber: barcode)
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
-//                if carData.correct
-//                {
-//                    print(carData.vinNumber)
-//                }
+            barcode = scan.stringValue!
+
+            carData = VINData(vinNumber: barcode)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+                if carData.correct
+                {
+                    print(carData.model)
+                }
 //                else
 //                {
 //                    self.segue()
 //
 //                }
-//            })
+            })
 
 
 
