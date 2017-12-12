@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 var barcode = ""
+var carData = VINData(vinNumber: " ")
 
 class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 {
@@ -136,6 +137,12 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         cameraView.layer.connection?.videoOrientation = videoOrientation
     }
     
+    func segue() {
+        self.performSegue(withIdentifier: "segueToManual", sender: self)
+    }
+    
+    
+    
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
@@ -166,6 +173,13 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToManuel" {
+            if let destination = segue.destination as? InputVC {
+                destination.car = carData // you can pass value to destination view controller
+            }
+        }
+    }
     
 }
 

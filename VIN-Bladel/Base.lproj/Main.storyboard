@@ -107,6 +107,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="EG7-FL-6lW" kind="show" id="W0K-e3-upr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-Wx-YPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
