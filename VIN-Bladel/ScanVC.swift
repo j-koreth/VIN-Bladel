@@ -152,13 +152,13 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
                 if carData.correct
                 {
-                    print(carData.model)
+                    print(carData.vinNumber)
                 }
-//                else
-//                {
-//                    self.segue()
-//
-//                }
+                else
+                {
+                    self.segue()
+
+                }
             })
 
 
