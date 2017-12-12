@@ -97,7 +97,33 @@
                     <view key="view" contentMode="scaleToFill" id="Mkp-ie-neU">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9j-Tb-gKx">
+                                <rect key="frame" x="0.0" y="962" width="834" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3X7-2j-JCg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nco-gB-aEZ">
+                                <rect key="frame" x="692" y="1016" width="122" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <segue destination="vqY-sD-39k" kind="show" id="2VV-K3-cxc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b9j-Tb-gKx" firstAttribute="bottom" secondItem="zMH-fz-ySb" secondAttribute="bottom" id="6MU-u5-kak"/>
+                            <constraint firstItem="b9j-Tb-gKx" firstAttribute="leading" secondItem="zMH-fz-ySb" secondAttribute="leading" id="Z1D-ka-VPy"/>
+                            <constraint firstItem="zMH-fz-ySb" firstAttribute="trailing" secondItem="b9j-Tb-gKx" secondAttribute="trailing" id="joy-uj-IOG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zMH-fz-ySb"/>
                     </view>
                     <navigationItem key="navigationItem" id="sUM-8W-d9c">
@@ -108,12 +134,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="EG7-FL-6lW" kind="show" id="W0K-e3-upr"/>
+                        <outlet property="barcodeLabel" destination="b9j-Tb-gKx" id="Va0-41-Eum"/>
+                        <outlet property="confrimButton" destination="Nco-gB-aEZ" id="ggT-l9-Ac1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-Wx-YPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="-190"/>
+            <point key="canvasLocation" x="985.61151079136698" y="-190.46762589928059"/>
         </scene>
         <!--Car Info View Controller-->
         <scene sceneID="KRO-EJ-6f8">
