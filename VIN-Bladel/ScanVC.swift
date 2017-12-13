@@ -13,8 +13,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 {
     var barcode = ""
     var carData: VINData?
+    
     @IBOutlet weak var barcodeLabel: UILabel!
-    @IBOutlet weak var confrimButton: UIButton!
+    @IBOutlet weak var confirmButton: UIBarButtonItem!
     
 //    var cameraView: CameraView!
     let session = AVCaptureSession()
@@ -32,8 +33,12 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
    
     override func viewDidLoad() {
-        super.viewDidLoad()
+//        navigationController?.navigationBar.barTintColor = UIColor.gray
+//        navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = UIColor.white
         
+        super.viewDidLoad()
+        confirmButton.isEnabled = false
+        confirmButton.tintColor = UIColor.gray
         session.beginConfiguration()
         
         let videoDevice = AVCaptureDevice.default(for: .video)
@@ -79,30 +84,31 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 //        cameraView.layer.videoGravity = .resizeAspectFill
         
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
-        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        videoPreviewLayer?.frame = view.layer.bounds
+        videoPreviewLayer?.videoGravity = .resizeAspectFill
+        videoPreviewLayer?.frame = view.bounds
         view.layer.addSublayer(videoPreviewLayer!)
         view.bringSubview(toFront: self.barcodeLabel)
-        view.bringSubview(toFront: self.confrimButton)
+
         
-        let videoOrientation: AVCaptureVideoOrientation
-        switch UIApplication.shared.statusBarOrientation {
-        case .portrait:
-            videoOrientation = .portrait
-            
-        case .portraitUpsideDown:
-            videoOrientation = .portraitUpsideDown
-            
-        case .landscapeLeft:
-            videoOrientation = .landscapeLeft
-            
-        case .landscapeRight:
-            videoOrientation = .landscapeRight
-            
-        default:
-            videoOrientation = .portrait
-        }
-        videoPreviewLayer?.connection?.videoOrientation = videoOrientation
+//        let videoOrientation: AVCaptureVideoOrientation
+//        switch UIApplication.shared.statusBarOrientation {
+//        case .portrait:
+//            videoOrientation = .portrait
+//            
+//        case .portraitUpsideDown:
+//            videoOrientation = .portraitUpsideDown
+//            
+//        case .landscapeLeft:
+//            videoOrientation = .landscapeLeft
+//            
+//        case .landscapeRight:
+//            videoOrientation = .landscapeRight
+//            
+//        default:
+//            videoOrientation = .portrait
+//        }
+//        
+//        videoPreviewLayer?.connection?.videoOrientation = videoOrientation
         
 //        cameraView.layer.connection?.videoOrientation = videoOrientation
     
@@ -162,6 +168,8 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
             barcode = scan.stringValue!
+            confirmButton.isEnabled = true
+            confirmButton.tintColor = UIColor.orange
             barcodeLabel.text = barcode
             carData = VINData(vinNumber: barcode)
 
@@ -174,13 +182,16 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             
         }
         if metadataObjects.count == 0 {
+            confirmButton.isEnabled = false
+            confirmButton.tintColor = UIColor.darkGray
             barcodeLabel.text = "No barcode is detected"
+            
         }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if let destination = segue.destination as? InputVC {
+        if let destination = segue.destination as? CarInfoViewController {
             destination.car = carData! // you can pass value to destination view controller
         }
         

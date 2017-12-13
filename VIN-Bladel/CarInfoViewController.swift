@@ -10,7 +10,8 @@ import UIKit
 
 class CarInfoViewController: UIViewController {
     
-
+    var car: VINData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
