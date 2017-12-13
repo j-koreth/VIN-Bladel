@@ -10,8 +10,11 @@ import UIKit
 
 class InputVC: UIViewController {
 
+    var car: VINData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(car?.model)
 
     }
 
