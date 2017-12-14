@@ -16,6 +16,9 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(car?.model)
+        
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 
 
