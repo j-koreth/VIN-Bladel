@@ -133,30 +133,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-
-        // Update camera orientation
-        let videoOrientation: AVCaptureVideoOrientation
-        switch UIDevice.current.orientation {
-        case .portrait:
-            videoOrientation = .portrait
-
-        case .portraitUpsideDown:
-            videoOrientation = .portraitUpsideDown
-
-        case .landscapeLeft:
-            videoOrientation = .landscapeRight
-
-        case .landscapeRight:
-            videoOrientation = .landscapeLeft
-
-        default:
-            videoOrientation = .portrait
-        }
-
-        videoPreviewLayer?.connection?.videoOrientation = videoOrientation
-    }
     
     func segue() {
         self.performSegue(withIdentifier: "segueToManual", sender: self)
