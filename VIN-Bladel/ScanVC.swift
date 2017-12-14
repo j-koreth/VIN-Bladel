@@ -31,8 +31,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         
         confirmButton.isEnabled = false
-        confirmButton.tintColor = UIColor.white
-        confirmButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Arial", size: 20)!], for: UIControlState.normal)
+        confirmButton.tintColor = UIColor.lightGray
 
         self.navigationItem.rightBarButtonItem? = confirmButton
 
