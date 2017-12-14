@@ -24,10 +24,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-DL-U2J">
-                                <rect key="frame" x="214.5" y="273" width="405" height="150"/>
+                                <rect key="frame" x="215" y="273" width="405" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.8165756790558466" blue="0.65002686888680272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="tOe-SQ-h1c"/>
+                                    <constraint firstAttribute="width" constant="405" id="Td3-ZQ-jnD"/>
+                                    <constraint firstAttribute="height" constant="150" id="fHk-2i-o1r"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="100"/>
                                 <state key="normal" title="Scan VIN">
@@ -41,7 +42,8 @@
                                 <rect key="frame" x="123" y="581" width="588" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.81657567909999995" blue="0.65002686890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="9K9-5M-hNF"/>
+                                    <constraint firstAttribute="height" constant="150" id="5FG-lb-epW"/>
+                                    <constraint firstAttribute="width" constant="588" id="rZP-A9-4HJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="100"/>
                                 <state key="normal" title="Manual Input">
@@ -54,10 +56,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="SJW-HN-Z97" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cag-gE-Qgo"/>
-                            <constraint firstItem="rqc-DL-U2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vh8-ue-YIA"/>
-                            <constraint firstItem="SJW-HN-Z97" firstAttribute="top" secondItem="rqc-DL-U2J" secondAttribute="bottom" constant="158" id="bTq-fq-FYK"/>
-                            <constraint firstItem="rqc-DL-U2J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="209" id="cCd-Hk-eKD"/>
+                            <constraint firstItem="rqc-DL-U2J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="209" id="8aR-Je-5Fx"/>
+                            <constraint firstItem="rqc-DL-U2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fua-LH-NFp"/>
+                            <constraint firstItem="SJW-HN-Z97" firstAttribute="top" secondItem="rqc-DL-U2J" secondAttribute="bottom" constant="158" id="udo-dl-wuc"/>
+                            <constraint firstItem="SJW-HN-Z97" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ymm-Oa-x4J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
