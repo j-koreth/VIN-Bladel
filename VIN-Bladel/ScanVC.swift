@@ -17,28 +17,25 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var confirmButton: UIBarButtonItem!
     
-//    var cameraView: CameraView!
     let session = AVCaptureSession()
     let sessionQueue = DispatchQueue(label: AVCaptureSession.self.description(), attributes: [], target: nil)
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
 
-    
-    
-//    override func loadView()
-//    {
-//        cameraView = CameraView()
-//
-//        view = cameraView
-//    }
+
     
    
     override func viewDidLoad() {
-//        navigationController?.navigationBar.barTintColor = UIColor.gray
-//        navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = UIColor.white
         
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        
         confirmButton.isEnabled = false
-        confirmButton.tintColor = UIColor.gray
+        confirmButton.tintColor = UIColor.white
+        confirmButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Arial", size: 20)!], for: UIControlState.normal)
+
+        self.navigationItem.rightBarButtonItem? = confirmButton
+
         session.beginConfiguration()
         
         let videoDevice = AVCaptureDevice.default(for: .video)
@@ -74,14 +71,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     .interleaved2of5
                 ]
                 
-                metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-//            }
-//        }
-        
+        metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         session.commitConfiguration()
-        
-//        cameraView.layer.session = session
-//        cameraView.layer.videoGravity = .resizeAspectFill
+
         
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
         videoPreviewLayer?.videoGravity = .resizeAspectFill
@@ -89,28 +81,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         view.layer.addSublayer(videoPreviewLayer!)
         view.bringSubview(toFront: self.barcodeLabel)
 
-        
-//        let videoOrientation: AVCaptureVideoOrientation
-//        switch UIApplication.shared.statusBarOrientation {
-//        case .portrait:
-//            videoOrientation = .portrait
-//            
-//        case .portraitUpsideDown:
-//            videoOrientation = .portraitUpsideDown
-//            
-//        case .landscapeLeft:
-//            videoOrientation = .landscapeLeft
-//            
-//        case .landscapeRight:
-//            videoOrientation = .landscapeRight
-//            
-//        default:
-//            videoOrientation = .portrait
-//        }
-//        
-//        videoPreviewLayer?.connection?.videoOrientation = videoOrientation
-        
-//        cameraView.layer.connection?.videoOrientation = videoOrientation
+
     
     }
     
@@ -119,8 +90,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         
         sessionQueue.async {
             self.session.startRunning()
-//           view.bringSubview(toFront: self.barcodeLabel)
-//            view.bringSubview(toFront: self.confrimButton)
+
             
         }
     }
@@ -145,30 +115,35 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
             barcode = scan.stringValue!
             confirmButton.isEnabled = true
-            confirmButton.tintColor = UIColor.orange
+            confirmButton.tintColor = UIColor.white
+
+            barcodeLabel.textColor = UIColor.green
             barcodeLabel.text = barcode
             carData = VINData(vinNumber: barcode)
-
-//            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
-//
-//            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
-//
-//            present(alertController, animated: true, completion: nil)
             
             
         }
+        
         if metadataObjects.count == 0 {
             confirmButton.isEnabled = false
-            confirmButton.tintColor = UIColor.darkGray
+            confirmButton.tintColor = UIColor.lightGray
+            barcodeLabel.textColor = UIColor.white
             barcodeLabel.text = "No barcode is detected"
             
         }
     }
+    
+    @IBAction func segueToCarInfo(_ sender: Any)
+    {
+        print("Seguing")
+        self.performSegue(withIdentifier: "segue", sender: nil)
 
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if let destination = segue.destination as? CarInfoViewController {
-            destination.car = carData! // you can pass value to destination view controller
+            destination.car = carData
         }
         
     }

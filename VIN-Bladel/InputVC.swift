@@ -13,6 +13,8 @@ class InputVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+
 
     }
 

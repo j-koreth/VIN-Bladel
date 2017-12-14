@@ -24,10 +24,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-DL-U2J">
-                                <rect key="frame" x="215" y="273" width="405" height="150"/>
+                                <rect key="frame" x="167.5" y="273" width="500" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.8165756790558466" blue="0.65002686888680272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="405" id="Td3-ZQ-jnD"/>
+                                    <constraint firstAttribute="width" constant="500" id="Td3-ZQ-jnD"/>
                                     <constraint firstAttribute="height" constant="150" id="fHk-2i-o1r"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="100"/>
@@ -39,11 +39,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJW-HN-Z97">
-                                <rect key="frame" x="123" y="581" width="588" height="150"/>
+                                <rect key="frame" x="92" y="581" width="650" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.81657567909999995" blue="0.65002686890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="5FG-lb-epW"/>
-                                    <constraint firstAttribute="width" constant="588" id="rZP-A9-4HJ"/>
+                                    <constraint firstAttribute="width" constant="650" id="rZP-A9-4HJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="100"/>
                                 <state key="normal" title="Manual Input">
@@ -128,25 +128,16 @@
                         <viewLayoutGuide key="safeArea" id="zMH-fz-ySb"/>
                     </view>
                     <navigationItem key="navigationItem" id="sUM-8W-d9c">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="pka-aR-hhO">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nco-gB-aEZ">
-                                <rect key="frame" x="727" y="1" width="87" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
-                                <state key="normal" title="Confirm">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="UAf-Ix-wRe">
                             <connections>
-                                <segue destination="vqY-sD-39k" kind="show" id="k83-mv-WOd"/>
+                                <action selector="segueToCarInfo:" destination="yhV-Yd-TLF" id="Fkb-Cj-Gcm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="barcodeLabel" destination="b9j-Tb-gKx" id="Va0-41-Eum"/>
-                        <outlet property="confirmButton" destination="pka-aR-hhO" id="i7x-K2-uC7"/>
+                        <outlet property="confirmButton" destination="UAf-Ix-wRe" id="hpw-LD-Zdk"/>
+                        <segue destination="vqY-sD-39k" kind="show" identifier="segue" id="Pnv-QD-lvO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-Wx-YPM" userLabel="First Responder" sceneMemberID="firstResponder"/>

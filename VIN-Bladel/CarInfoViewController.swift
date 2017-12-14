@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarInfoViewController: UIViewController {
+class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var carArray = [String]()
 
     
@@ -16,12 +16,15 @@ class CarInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+
 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return carArray.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
