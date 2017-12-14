@@ -13,27 +13,28 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 {
     var barcode = ""
     var carData: VINData?
-    @IBOutlet weak var barcodeLabel: UILabel!
-    @IBOutlet weak var confrimButton: UIButton!
     
-//    var cameraView: CameraView!
+    @IBOutlet weak var barcodeLabel: UILabel!
+    @IBOutlet weak var confirmButton: UIBarButtonItem!
+    
     let session = AVCaptureSession()
     let sessionQueue = DispatchQueue(label: AVCaptureSession.self.description(), attributes: [], target: nil)
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
 
-    
-    
-//    override func loadView()
-//    {
-//        cameraView = CameraView()
-//
-//        view = cameraView
-//    }
+
     
    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        
+        confirmButton.isEnabled = false
+        confirmButton.tintColor = UIColor.lightGray
+
+        self.navigationItem.rightBarButtonItem? = confirmButton
+
         session.beginConfiguration()
         
         let videoDevice = AVCaptureDevice.default(for: .video)
@@ -69,42 +70,17 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     .interleaved2of5
                 ]
                 
-                metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-//            }
-//        }
-        
+        metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         session.commitConfiguration()
-        
-//        cameraView.layer.session = session
-//        cameraView.layer.videoGravity = .resizeAspectFill
+
         
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
-        videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        videoPreviewLayer?.frame = view.layer.bounds
+        videoPreviewLayer?.videoGravity = .resizeAspectFill
+        videoPreviewLayer?.frame = view.bounds
         view.layer.addSublayer(videoPreviewLayer!)
         view.bringSubview(toFront: self.barcodeLabel)
-        view.bringSubview(toFront: self.confrimButton)
-        
-        let videoOrientation: AVCaptureVideoOrientation
-        switch UIApplication.shared.statusBarOrientation {
-        case .portrait:
-            videoOrientation = .portrait
-            
-        case .portraitUpsideDown:
-            videoOrientation = .portraitUpsideDown
-            
-        case .landscapeLeft:
-            videoOrientation = .landscapeLeft
-            
-        case .landscapeRight:
-            videoOrientation = .landscapeRight
-            
-        default:
-            videoOrientation = .portrait
-        }
-        videoPreviewLayer?.connection?.videoOrientation = videoOrientation
-        
-//        cameraView.layer.connection?.videoOrientation = videoOrientation
+
+
     
     }
     
@@ -113,8 +89,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         
         sessionQueue.async {
             self.session.startRunning()
-//           view.bringSubview(toFront: self.barcodeLabel)
-//            view.bringSubview(toFront: self.confrimButton)
+
             
         }
     }
@@ -127,30 +102,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-
-        // Update camera orientation
-        let videoOrientation: AVCaptureVideoOrientation
-        switch UIDevice.current.orientation {
-        case .portrait:
-            videoOrientation = .portrait
-
-        case .portraitUpsideDown:
-            videoOrientation = .portraitUpsideDown
-
-        case .landscapeLeft:
-            videoOrientation = .landscapeRight
-
-        case .landscapeRight:
-            videoOrientation = .landscapeLeft
-
-        default:
-            videoOrientation = .portrait
-        }
-
-        videoPreviewLayer?.connection?.videoOrientation = videoOrientation
-    }
     
     func segue() {
         self.performSegue(withIdentifier: "segueToManual", sender: self)
@@ -162,26 +113,36 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
             barcode = scan.stringValue!
+            confirmButton.isEnabled = true
+            confirmButton.tintColor = UIColor.white
+
+            barcodeLabel.textColor = UIColor.green
             barcodeLabel.text = barcode
             carData = VINData(vinNumber: barcode)
-
-//            let alertController = UIAlertController(title: "Barcode Scanned", message: scan.stringValue, preferredStyle: .alert)
-//
-//            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
-//
-//            present(alertController, animated: true, completion: nil)
             
             
         }
+        
         if metadataObjects.count == 0 {
+            confirmButton.isEnabled = false
+            confirmButton.tintColor = UIColor.lightGray
+            barcodeLabel.textColor = UIColor.white
             barcodeLabel.text = "No barcode is detected"
+            
         }
     }
+    
+    @IBAction func segueToCarInfo(_ sender: Any)
+    {
+        print("Seguing")
+        self.performSegue(withIdentifier: "segue", sender: nil)
 
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if let destination = segue.destination as? InputVC {
-            destination.car = carData! // you can pass value to destination view controller
+        if let destination = segue.destination as? CarInfoViewController {
+            destination.car = carData
         }
         
     }
