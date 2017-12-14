@@ -9,6 +9,8 @@
 import UIKit
 
 class CarInfoViewController: UIViewController {
+    var carArray = [String]()
+
     
     var car: VINData?
     
@@ -18,7 +20,7 @@ class CarInfoViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return carArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
