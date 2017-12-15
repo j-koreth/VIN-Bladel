@@ -170,7 +170,7 @@
                                         <rect key="frame" x="0.0" y="28" width="834" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XJL-sm-ehY" id="fcm-vV-SQg">
-                                            <rect key="frame" x="0.0" y="0.0" width="834" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="834" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="HpB-7r-zeX">
@@ -200,6 +200,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="BBL-R1-gkr"/>
                     </view>
+                    <connections>
+                        <outlet property="carInfo" destination="hSc-vw-0Uf" id="f6U-gR-dgQ"/>
+                        <outlet property="carTextField" destination="HpB-7r-zeX" id="970-aC-S3l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIl-ge-RNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

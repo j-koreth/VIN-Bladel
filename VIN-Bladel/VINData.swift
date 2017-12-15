@@ -14,7 +14,7 @@ class VINData{
     var make: String!
     var model: String!
     var displacement: String!
-    var cylinder: String!
+//    var cylinder: String!
     var correct: Bool!
     
     init(vinNumber: String) {
@@ -42,10 +42,11 @@ class VINData{
                 self.displacement = displacement[0] as! String
                 
                 let cylinder = results.value(forKey: "EngineCylinders") as! NSArray
-                self.cylinder = cylinder[0] as! String
+//                self.cylinder = cylinder[0] as! String
                 
                 let errorcode = results.value(forKey: "ErrorCode") as! NSArray
                 var errorcharacters = Array(errorcode[0] as! String)
+                
                 if (errorcharacters[0] == "0"){
                     self.correct = true
                 }
