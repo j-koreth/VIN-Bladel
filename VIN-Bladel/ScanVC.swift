@@ -86,7 +86,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        barcodeLabel.text = "No barcode is detected"
         sessionQueue.async {
             self.session.startRunning()
 
