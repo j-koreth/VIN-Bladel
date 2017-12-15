@@ -9,6 +9,9 @@
 import UIKit
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
     var carArray = [String]()
     
     var car: VINData?
