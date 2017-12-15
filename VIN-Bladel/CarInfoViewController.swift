@@ -11,6 +11,8 @@ import UIKit
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var carArray = [String]()
 
+    @IBOutlet weak var carInfo: UILabel!
+    @IBOutlet weak var carTextField: UITextField!
     
     var car: VINData?
     
