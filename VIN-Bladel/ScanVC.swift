@@ -112,13 +112,25 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
             let scan = metadataObjects.first as! AVMetadataMachineReadableCodeObject
-            barcode = scan.stringValue!
+            
+            if scan.stringValue?.first == "I"
+            {
+                var imported: String = scan.stringValue!
+                imported.remove(at: (scan.stringValue?.startIndex)!)
+                barcode = imported
+            }
+            else
+            {
+                barcode = scan.stringValue!
+            }
+            
+            carData = VINData(vinNumber: barcode)
+            
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
 
             barcodeLabel.textColor = UIColor.green
             barcodeLabel.text = barcode
-            carData = VINData(vinNumber: barcode)
             
             
         }
@@ -134,14 +146,19 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     @IBAction func segueToCarInfo(_ sender: Any)
     {
-        print("Seguing")
-        self.performSegue(withIdentifier: "segue", sender: nil)
+        session.stopRunning()
+        confirmButton.tintColor = UIColor.lightGray
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.performSegue(withIdentifier: "segue", sender: nil)
+        }
 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if let destination = segue.destination as? CarInfoViewController {
+            print("passing")
             destination.car = carData
         }
         
