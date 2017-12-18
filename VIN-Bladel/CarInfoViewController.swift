@@ -12,7 +12,8 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
-    var carArray = [String]()
+    var carArray = ["Vin Number", "Model Year", "Make", "Model", "Displacement"]
+
     
     var car: VINData?
     
