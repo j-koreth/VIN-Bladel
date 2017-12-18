@@ -81,12 +81,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-eJ-Wh1">
-                                <rect key="frame" x="75" y="394" width="684" height="164"/>
+                                <rect key="frame" x="150" y="424" width="534" height="158"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter VIN" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="OfT-Au-eQ5">
-                                        <rect key="frame" x="0.0" y="0.0" width="684" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="534" height="68"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="zFP-YM-iK8"/>
+                                            <constraint firstAttribute="height" constant="68" id="JQi-8L-0Tg"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
@@ -96,17 +97,17 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ0-Sw-P5x">
-                                        <rect key="frame" x="0.0" y="89" width="684" height="75"/>
+                                        <rect key="frame" x="0.0" y="98" width="534" height="60"/>
                                         <color key="backgroundColor" red="0.51657563659273054" green="0.71110683611880965" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="qua-Cd-Qy0"/>
+                                            <constraint firstAttribute="height" constant="60" id="ZgL-X0-V5N"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="35"/>
                                         <state key="normal" title="Search VIN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8Fv-st-vBI" kind="show" id="g75-VW-x3K"/>
+                                            <action selector="search:" destination="EG7-FL-6lW" eventType="touchUpInside" id="SjZ-2o-TAQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -114,16 +115,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PYT-By-74B" firstAttribute="bottom" secondItem="OM3-eJ-Wh1" secondAttribute="bottom" constant="550" id="4lG-El-MyN"/>
-                            <constraint firstItem="OM3-eJ-Wh1" firstAttribute="leading" secondItem="PYT-By-74B" secondAttribute="leading" constant="75" id="YlF-pg-UQF"/>
-                            <constraint firstItem="PYT-By-74B" firstAttribute="trailing" secondItem="OM3-eJ-Wh1" secondAttribute="trailing" constant="75" id="kNr-RT-0i7"/>
-                            <constraint firstItem="OM3-eJ-Wh1" firstAttribute="top" secondItem="PYT-By-74B" secondAttribute="top" constant="330" id="lzY-bi-miP"/>
+                            <constraint firstItem="OM3-eJ-Wh1" firstAttribute="top" secondItem="PYT-By-74B" secondAttribute="top" constant="360" id="fzv-zJ-NdI"/>
+                            <constraint firstItem="OM3-eJ-Wh1" firstAttribute="leading" secondItem="PYT-By-74B" secondAttribute="leading" constant="150" id="hfd-Uf-1mB"/>
+                            <constraint firstItem="PYT-By-74B" firstAttribute="bottom" secondItem="OM3-eJ-Wh1" secondAttribute="bottom" constant="530" id="raF-kx-t0n"/>
+                            <constraint firstItem="PYT-By-74B" firstAttribute="trailing" secondItem="OM3-eJ-Wh1" secondAttribute="trailing" constant="150" id="ztB-a4-wyD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PYT-By-74B"/>
                     </view>
                     <connections>
                         <outlet property="searchButton" destination="hQ0-Sw-P5x" id="X1d-3D-Rs6"/>
                         <outlet property="vinTextfield" destination="OfT-Au-eQ5" id="OyL-X2-dIx"/>
+                        <segue destination="8Fv-st-vBI" kind="show" identifier="search" id="rmM-Xd-mot"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eE8-Dq-uOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xL-ro-9GS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819.4244604316548" y="49.640287769784173"/>
+            <point key="canvasLocation" x="1781" y="149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sbf-WN-aTy">
@@ -246,6 +248,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="g75-VW-x3K"/>
+        <segue reference="rmM-Xd-mot"/>
     </inferredMetricsTieBreakers>
 </document>
