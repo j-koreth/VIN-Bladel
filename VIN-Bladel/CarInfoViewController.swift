@@ -32,6 +32,7 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.textLabel?.text = labelTitles[indexPath.row]
         return cell
     }
     
