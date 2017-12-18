@@ -14,12 +14,13 @@ class InputVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var vinTextfield: UITextField!
     
     var barcode = ""
+    var carData : VINData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         searchButton.isEnabled = false
-        searchButton.backgroundColor = UIColor.clear
+        searchButton.backgroundColor = UIColor.lightGray
         
 
     }
@@ -30,6 +31,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         if vinTextfield.text!.count >= 17
         {
             barcode = vinTextfield.text!
+            carData = VINData(vinNumber: barcode)
         }
         
         return true
@@ -38,8 +40,30 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if vinTextfield.text!.count >= 17
         {
+            searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
             searchButton.isEnabled = true
             
+        }
+        else
+        {
+            searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
+
+        }
+    }
+    
+    
+    @IBAction func search(_ sender: Any)
+    {
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.performSegue(withIdentifier: "search", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CarInfoViewController {
+            print("passing")
+            destination.car = carData
         }
     }
 
