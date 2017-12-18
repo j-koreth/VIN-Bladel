@@ -26,7 +26,7 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carArray.count
+        return labelTitles.count
     }
     
     
