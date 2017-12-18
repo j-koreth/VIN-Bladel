@@ -10,9 +10,8 @@ import UIKit
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
-    var carArray = [String]()
+    var labelTitles = ["Vin Number", "Model Year", "Make", "Model", "Displacement"]
+
     
     var car: VINData?
     
@@ -27,12 +26,13 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return carArray.count
+        return labelTitles.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.textLabel?.text = labelTitles[indexPath.row]
         return cell
     }
     
