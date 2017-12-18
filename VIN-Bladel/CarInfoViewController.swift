@@ -10,7 +10,8 @@ import UIKit
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var labelTitles = ["Vin Number", "Model Year", "Make", "Model", "Displacement"]
+    var labelTitles = ["Vin Number:", "Model Year:", "Make:", "Model:", "Displacement:"]
+    var textViewInformation = [String?]()
 
     
     var car: VINData?
@@ -19,6 +20,7 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         print(car?.model)
+        textViewInformation = [car?.vinNumber, car?.modelyear, car?.make, car?.model, car?.displacement]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 
@@ -33,6 +35,7 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         cell.textLabel?.text = labelTitles[indexPath.row]
+        cell.detailTextLabel?.text = textViewInformation[indexPath.row]
         return cell
     }
     
