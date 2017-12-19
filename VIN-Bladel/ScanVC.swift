@@ -150,8 +150,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         confirmButton.tintColor = UIColor.lightGray
         let when = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: when) {
-//            print(self.carData?.model)
-            self.performSegue(withIdentifier: "segue", sender: nil)
+        self.performSegue(withIdentifier: "segue", sender: nil)
         }
 
     }
