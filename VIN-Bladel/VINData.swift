@@ -14,47 +14,48 @@ class VINData{
     var make: String!
     var model: String!
     var displacement: String!
-//    var cylinder: String!
-    var correct: Bool!
+    var cylinder: String!
+    var error: String?
     
     init(vinNumber: String) {
         self.vinNumber = vinNumber
-        getJSONData(vinNumber: vinNumber)
+        if Reachability.isConnectedToNetwork(){
+            getData(vinNumber: vinNumber)
+        }
+        else {
+            error = "No Internet Connection"
+        }
     }
     
-    func getJSONData(vinNumber : String) {
+    func getData(vinNumber : String) {
         let urlString = "https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/\(vinNumber)?format=json"
         let url = URL(string: urlString)!
         URLSession.shared.dataTask(with: url) { (myData, response, error) in
             if let JSONObject = try? JSONSerialization.jsonObject(with: myData!, options: .allowFragments) as! NSDictionary{
                 let results = JSONObject.object(forKey: "Results") as! NSArray
                 
-                let modelyear = results.value(forKey: "ModelYear") as! NSArray
-                self.modelyear = modelyear[0] as! String
-                
-                let make = results.value(forKey: "Make") as! NSArray
-                self.make = make[0] as! String
-                
-                let model = results.value(forKey: "Model") as! NSArray
-                self.model = model[0] as! String
-                
-                let displacement = results.value(forKey: "DisplacementL") as! NSArray
-                self.displacement = displacement[0] as! String
-                
-                let cylinder = results.value(forKey: "EngineCylinders") as! NSArray
-//                self.cylinder = cylinder[0] as! String
-                
-                let errorcode = results.value(forKey: "ErrorCode") as! NSArray
-                var errorcharacters = Array(errorcode[0] as! String)
-                
-                if (errorcharacters[0] == "0"){
-                    self.correct = true
-                }
-                else {
-                    self.correct = false
-                }
+                self.serializeJSON(results: results)
             }
         }.resume()
+    }
+    func serializeJSON(results : NSArray){
+        let modelyear = results.value(forKey: "ModelYear") as! NSArray
+        self.modelyear = modelyear[0] as! String
+        
+        let make = results.value(forKey: "Make") as! NSArray
+        self.make = make[0] as! String
+        
+        let model = results.value(forKey: "Model") as! NSArray
+        self.model = model[0] as! String
+        
+        let displacement = results.value(forKey: "DisplacementL") as! NSArray
+        self.displacement = displacement[0] as! String
+        
+        let cylinder = results.value(forKey: "EngineCylinders") as! NSArray
+        self.cylinder = cylinder[0] as! String
+        
+        let error = results.value(forKey: "ErrorCode") as! NSArray
+        self.error = (error[0] as! String)
     }
 }
 

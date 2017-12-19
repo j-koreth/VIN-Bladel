@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */; };
 		06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */; };
+		208EDD131FE89A3F001C9AB4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208EDD121FE89A3F001C9AB4 /* Reachability.swift */; };
 		6753A2BE1FD839900076AC8A /* VINData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6753A2BD1FD839900076AC8A /* VINData.swift */; };
 		67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */; };
 		67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24C1FD1A04500AD9532 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
 		06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
+		208EDD121FE89A3F001C9AB4 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6753A2BD1FD839900076AC8A /* VINData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VINData.swift; sourceTree = "<group>"; };
 		67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIN-Bladel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */,
 				06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */,
 				6753A2BD1FD839900076AC8A /* VINData.swift */,
+				208EDD121FE89A3F001C9AB4 /* Reachability.swift */,
 				67F7B2511FD1A04500AD9532 /* Assets.xcassets */,
 				67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */,
 				67F7B2561FD1A04500AD9532 /* Info.plist */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				208EDD131FE89A3F001C9AB4 /* Reachability.swift in Sources */,
 				67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */,
 				06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */,
 				9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */,

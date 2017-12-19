@@ -152,6 +152,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         DispatchQueue.main.asyncAfter(deadline: when) {
             print(self.carData?.model)
 //            self.performSegue(withIdentifier: "segue", sender: nil)
+            
         }
 
     }
