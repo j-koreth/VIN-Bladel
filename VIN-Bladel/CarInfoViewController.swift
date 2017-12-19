@@ -10,7 +10,7 @@ import UIKit
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var labelTitles = ["Vin Number:", "Model Year:", "Make:", "Model:", "Displacement:"]
+    var labelTitles = ["VIN:", "Model Year:", "Make:", "Model:", "Displacement:"]
     var textViewInformation = [String?]()
 
     
