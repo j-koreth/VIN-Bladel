@@ -49,22 +49,22 @@ class InputVC: UIViewController, UITextFieldDelegate {
     {
         let when = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: when) {
-            self.performSegue(withIdentifier: "search", sender: nil)
+            if(self.carData?.error != nil){
+                let alert = UIAlertController(title: "ERROR", message: self.carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "search", sender: nil)
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(carData?.error != nil){
-            let alert = UIAlertController(title: "ERROR", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else{
-            if let destination = segue.destination as? CarInfoViewController
-            {
-                print("passing")
-                destination.car = carData
-            }
+        if let destination = segue.destination as? CarInfoViewController
+        {
+            print("passing")
+            destination.car = carData
         }
     }
 
