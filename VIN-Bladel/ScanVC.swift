@@ -150,20 +150,25 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         confirmButton.tintColor = UIColor.lightGray
         let when = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: when) {
-            print(self.carData?.model)
+//            print(self.carData?.model)
 //            self.performSegue(withIdentifier: "segue", sender: nil)
-            
         }
 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if let destination = segue.destination as? CarInfoViewController
-        {
-            destination.car = carData
+        if(carData?.error != nil){
+            let alert = UIAlertController(title: "ERROR", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
-        
+        else{
+            if let destination = segue.destination as? CarInfoViewController
+            {
+                destination.car = carData
+            }
+        }
     }
     
 }

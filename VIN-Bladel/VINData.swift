@@ -55,7 +55,10 @@ class VINData{
         self.cylinder = cylinder[0] as! String
         
         let error = results.value(forKey: "ErrorCode") as! NSArray
-        self.error = (error[0] as! String)
+        let errorc = Array(error)
+        if (errorc[0] as! String != "0"){
+            self.error = (error[0] as! String)
+        }
     }
 }
 
