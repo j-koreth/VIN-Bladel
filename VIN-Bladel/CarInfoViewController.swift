@@ -18,8 +18,7 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(car?.model)
+        //print(car?.model)
         textViewInformation = [car?.vinNumber, car?.modelyear, car?.make, car?.model, car?.displacement]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
