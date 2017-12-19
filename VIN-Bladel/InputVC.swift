@@ -27,28 +27,21 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
+  
+        barcode = vinTextfield.text!
+        carData = VINData(vinNumber: barcode)
         
-        if vinTextfield.text!.count >= 17
-        {
-            barcode = vinTextfield.text!
-            carData = VINData(vinNumber: barcode)
-        }
         
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if vinTextfield.text!.count >= 17
-        {
-            searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
-            searchButton.isEnabled = true
-            
-        }
-        else
-        {
-            searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
 
-        }
+        searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
+        searchButton.isEnabled = true
+
+        searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
+
     }
     
     
