@@ -35,21 +35,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingScreenThing" translatesAutoresizingMaskIntoConstraints="NO" id="Klq-Po-6YY">
-                                <rect key="frame" x="17" y="344" width="801" height="425"/>
+                                <rect key="frame" x="162" y="421" width="510" height="270"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="425" id="5Za-AD-KQU"/>
-                                    <constraint firstAttribute="width" constant="801" id="nRN-cj-A9b"/>
+                                    <constraint firstAttribute="width" constant="510" id="J5M-cs-iWR"/>
+                                    <constraint firstAttribute="height" constant="270" id="R1W-Tg-hjv"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Klq-Po-6YY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="69T-1g-PMi"/>
                             <constraint firstItem="S9h-yn-vU1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8oR-uJ-evu"/>
                             <constraint firstItem="S9h-yn-vU1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ckj-3y-2Ux"/>
                             <constraint firstItem="RmI-Pg-P66" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OXU-QW-av9"/>
+                            <constraint firstItem="Klq-Po-6YY" firstAttribute="top" secondItem="S9h-yn-vU1" secondAttribute="bottom" constant="278" id="Xm5-35-kRb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RmI-Pg-P66" secondAttribute="bottom" constant="32" id="YYi-HS-Ie4"/>
-                            <constraint firstItem="Klq-Po-6YY" firstAttribute="top" secondItem="S9h-yn-vU1" secondAttribute="bottom" constant="201" id="gAi-OH-uoI"/>
+                            <constraint firstItem="Klq-Po-6YY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="z6T-Vp-wlo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
