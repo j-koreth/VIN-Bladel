@@ -40,6 +40,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         }
         else{
             searchButton.isEnabled = false
+            searchButton.backgroundColor = UIColor.lightGray
         }
 
     }
