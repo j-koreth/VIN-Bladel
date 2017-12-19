@@ -81,10 +81,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-eJ-Wh1">
-                                <rect key="frame" x="75" y="394" width="684" height="165"/>
+                                <rect key="frame" x="150" y="424" width="534" height="158"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter VIN" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="OfT-Au-eQ5">
-                                        <rect key="frame" x="0.0" y="0.0" width="684" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="534" height="68"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="68" id="JQi-8L-0Tg"/>
                                         </constraints>
@@ -96,7 +96,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ0-Sw-P5x">
-                                        <rect key="frame" x="0.0" y="105" width="684" height="60"/>
+                                        <rect key="frame" x="0.0" y="98" width="534" height="60"/>
                                         <color key="backgroundColor" red="0.51657563659273054" green="0.71110683611880965" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="ZgL-X0-V5N"/>
@@ -168,7 +168,7 @@
                     <connections>
                         <outlet property="barcodeLabel" destination="b9j-Tb-gKx" id="Va0-41-Eum"/>
                         <outlet property="confirmButton" destination="UAf-Ix-wRe" id="hpw-LD-Zdk"/>
-                        <segue destination="8Fv-st-vBI" kind="show" id="mrQ-Ia-42B"/>
+                        <segue destination="8Fv-st-vBI" kind="show" identifier="segue" id="mrQ-Ia-42B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-Wx-YPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,6 +247,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rmM-Xd-mot"/>
+        <segue reference="mrQ-Ia-42B"/>
     </inferredMetricsTieBreakers>
 </document>
