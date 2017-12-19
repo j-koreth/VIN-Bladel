@@ -61,9 +61,17 @@ class InputVC: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CarInfoViewController {
-            print("passing")
-            destination.car = carData
+        if(carData?.error != nil){
+            let alert = UIAlertController(title: "ERROR", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else{
+            if let destination = segue.destination as? CarInfoViewController
+            {
+                print("passing")
+                destination.car = carData
+            }
         }
     }
 
