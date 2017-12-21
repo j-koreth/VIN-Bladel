@@ -10,7 +10,7 @@ import UIKit
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var labelTitles = ["Vin Number:", "Model Year:", "Make:", "Model:", "Displacement:"]
+    var labelTitles = ["VIN:", "Model Year:", "Make:", "Model:", "Displacement:", "Transmission:", "Drive Type:"]
     var textViewInformation = [String?]()
 
     
@@ -18,9 +18,8 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(car?.model)
-        textViewInformation = [car?.vinNumber, car?.modelyear, car?.make, car?.model, car?.displacement]
+        //print(car?.model)
+        textViewInformation = [car?.vinNumber, car?.modelyear, car?.make, car?.model, car?.displacement, car?.transmission, car?.drivetype]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 

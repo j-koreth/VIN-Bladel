@@ -19,36 +19,30 @@ class InputVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        searchButton.isEnabled = false
         searchButton.backgroundColor = UIColor.lightGray
+        searchButton.isEnabled = false
         
 
     }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
-        
-        if vinTextfield.text!.count >= 17
-        {
-            barcode = vinTextfield.text!
-            carData = VINData(vinNumber: barcode)
-        }
-        
+        barcode = vinTextfield.text!
+        carData = VINData(vinNumber: barcode)
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if vinTextfield.text!.count >= 17
+
+        if vinTextfield.text?.count == 17
         {
             searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
             searchButton.isEnabled = true
-            
         }
-        else
-        {
-            searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
+        else{
+            searchButton.isEnabled = false
+            searchButton.backgroundColor = UIColor.lightGray
+        }
 
-        }
     }
     
     
@@ -56,12 +50,20 @@ class InputVC: UIViewController, UITextFieldDelegate {
     {
         let when = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: when) {
-            self.performSegue(withIdentifier: "search", sender: nil)
+            if(self.carData?.error != nil){
+                let alert = UIAlertController(title: "ERROR", message: self.carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "search", sender: nil)
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CarInfoViewController {
+        if let destination = segue.destination as? CarInfoViewController
+        {
             print("passing")
             destination.car = carData
         }
