@@ -1,0 +1,6 @@
+framework module Pods_VIN_Bladel {
+  umbrella header "Pods-VIN-Bladel-umbrella.h"
+
+  export *
+  module * { export * }
+}
