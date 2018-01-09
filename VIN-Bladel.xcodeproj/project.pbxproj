@@ -18,11 +18,13 @@
 		67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */; };
 		67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */; };
 		9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */; };
+		BB5102B01E83BEC5459F612A /* Pods_VIN_Bladel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
 		06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
+		0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.release.xcconfig"; sourceTree = "<group>"; };
 		208EDD121FE89A3F001C9AB4 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6753A2BD1FD839900076AC8A /* VINData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VINData.swift; sourceTree = "<group>"; };
 		67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIN-Bladel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +35,9 @@
 		67F7B2541FD1A04500AD9532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67F7B2561FD1A04500AD9532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIN_Bladel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
+		A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5102B01E83BEC5459F612A /* Pods_VIN_Bladel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E984257C2BB36315B5A7580 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */,
+				0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		67F7B23E1FD1A04500AD9532 = {
 			isa = PBXGroup;
 			children = (
 				67F7B2491FD1A04500AD9532 /* VIN-Bladel */,
 				67F7B2481FD1A04500AD9532 /* Products */,
+				1E984257C2BB36315B5A7580 /* Pods */,
+				D0863621B18205990DF04980 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +98,14 @@
 			path = "VIN-Bladel";
 			sourceTree = "<group>";
 		};
+		D0863621B18205990DF04980 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67F7B2591FD1A04500AD9532 /* Build configuration list for PBXNativeTarget "VIN-Bladel" */;
 			buildPhases = (
+				6C7E1664CA87FF8AF4F868AB /* [CP] Check Pods Manifest.lock */,
 				67F7B2431FD1A04500AD9532 /* Sources */,
 				67F7B2441FD1A04500AD9532 /* Frameworks */,
 				67F7B2451FD1A04500AD9532 /* Resources */,
+				EA8CF7D6D8D785A3F1693B8B /* [CP] Embed Pods Frameworks */,
+				5DCB1512697A329EFC1C8505 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +176,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DCB1512697A329EFC1C8505 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C7E1664CA87FF8AF4F868AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIN-Bladel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA8CF7D6D8D785A3F1693B8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67F7B2431FD1A04500AD9532 /* Sources */ = {
@@ -296,6 +383,7 @@
 		};
 		67F7B25A1FD1A04500AD9532 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +400,7 @@
 		};
 		67F7B25B1FD1A04500AD9532 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
