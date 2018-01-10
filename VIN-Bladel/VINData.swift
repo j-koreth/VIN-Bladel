@@ -17,6 +17,7 @@ class VINData{
     var cylinder: String!
     var error: String?
     var transmission: String!
+    var drivetype: String!
     
     init(vinNumber: String) {
         self.vinNumber = vinNumber
@@ -58,6 +59,9 @@ class VINData{
         
         let transmission = results.value(forKey: "TransmissionStyle") as! NSArray
         self.transmission = transmission[0] as! String
+        
+        let drivetype = results.value(forKey: "DriveType") as! NSArray
+        self.drivetype = drivetype[0] as! String
         
         let jsonerror = results.value(forKey: "ErrorCode") as! NSArray
         let errorc = Array(jsonerror[0] as! String)
