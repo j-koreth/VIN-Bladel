@@ -53,6 +53,7 @@ class VINData{
         
         let displacement = results.value(forKey: "DisplacementL") as! NSArray
         self.displacement = displacement[0] as! String
+        self.displacement = String(round(Double(self.displacement)!*10)/10)
         
         let cylinder = results.value(forKey: "EngineCylinders") as! NSArray
         self.cylinder = cylinder[0] as! String
