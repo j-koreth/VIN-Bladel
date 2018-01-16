@@ -42,4 +42,5 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
         
     }
+    
 }
