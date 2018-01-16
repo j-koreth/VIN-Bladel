@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
 
-        var customerDatabase = databaseReference.root.child("customer")
-        var vehicleDatabase = databaseReference.root.child("vehicle")
+        customerDatabase = databaseReference.root.child("customer")
+        vehicleDatabase = databaseReference.root.child("vehicle")
         
         databaseReference.observe(.value) { (snapshot) in
            
