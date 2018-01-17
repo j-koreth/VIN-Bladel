@@ -14,16 +14,16 @@ class CarInfoTableViewCell: UITableViewCell {
     
 }
 
-class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    var labelTitles = ["VIN:", "Make:", "Model:", "Submodel", "Model Year:", "Engine (L):", "Transmission:", "Drive Type:"]
+    var labelTitles = ["VIN:", "Make:", "Model:", "Model Year:", "Engine (L):", "Transmission:", "Drive Type:"]
+    //var labelTitles = ["VIN:", "Make:", "Model:", "Submodel", "Model Year:", "Engine (L):", "Transmission:", "Drive Type:"]
     var textViewInformation = [String?]()
     
     var car: VINData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(car?.model)
         textViewInformation = [car?.vinNumber, car?.make, car?.model, car?.modelyear, car?.displacement, car?.transmission, car?.drivetype]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
@@ -37,9 +37,10 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarInfoTableViewCell
-        cell.textLabel?.text = labelTitles[indexPath.row]
-        cell.detailTextLabel?.text = textViewInformation[indexPath.row]
+        cell.carLabel?.text = labelTitles[indexPath.row]
+        cell.carTextField.text = textViewInformation[indexPath.row]
         return cell
+        
     }
-    
+
 }
