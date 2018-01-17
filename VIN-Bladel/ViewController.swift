@@ -12,20 +12,20 @@ import FirebaseDatabase
 
 class ViewController: UIViewController {
 
-//    var databaseReference = Database.database().reference()
-//    var customerDatabase: DatabaseReference?
-//    var vehicleDatabase: DatabaseReference?
+    var databaseReference = Database.database().reference()
+    var customerDatabase: DatabaseReference?
+    var vehicleDatabase: DatabaseReference?
     
     override func viewDidLoad() {
 
         super.viewDidLoad()
-//        
-//        customerDatabase = databaseReference.root.child("customer")
-//        vehicleDatabase = databaseReference.root.child("vehicle")
         
-        //        databaseReference.observe(.value) { (snapshot) in
-        //
-        //        }
+        customerDatabase = databaseReference.root.child("customer")
+        vehicleDatabase = databaseReference.root.child("vehicle")
+        
+                databaseReference.observe(.value) { (snapshot) in
+                    
+                }
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 
