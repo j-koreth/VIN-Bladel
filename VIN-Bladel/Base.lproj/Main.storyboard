@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -186,34 +185,32 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="6hf-Mf-B7y" customClass="CarInfoTableViewCell" customModule="VIN_Bladel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="768" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6hf-Mf-B7y" id="aWd-O1-wxO">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6hf-Mf-B7y" id="aWd-O1-wxO">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZB-lW-tO9">
-                                                    <rect key="frame" x="25" y="0.0" width="167" height="89"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="center" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-l4-d7u">
-                                                    <rect key="frame" x="458" y="0.0" width="310" height="44"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-l4-d7u">
+                                                    <rect key="frame" x="458" y="0.0" width="310" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="jKh-NF-XRc"/>
                                                         <constraint firstAttribute="width" constant="400" id="sho-qu-AeS"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZB-lW-tO9">
+                                                    <rect key="frame" x="27" y="0.0" width="202" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="y8T-l4-d7u" firstAttribute="top" secondItem="aWd-O1-wxO" secondAttribute="top" id="GZk-sw-sFM"/>
-                                                <constraint firstItem="kZB-lW-tO9" firstAttribute="leading" secondItem="aWd-O1-wxO" secondAttribute="leadingMargin" constant="10" id="TUk-sa-eW8"/>
-                                                <constraint firstItem="kZB-lW-tO9" firstAttribute="centerY" secondItem="aWd-O1-wxO" secondAttribute="centerY" id="ti0-lv-trI"/>
                                                 <constraint firstAttribute="bottom" secondItem="y8T-l4-d7u" secondAttribute="bottom" id="uXU-Lz-9jq"/>
                                                 <constraint firstAttribute="trailing" secondItem="y8T-l4-d7u" secondAttribute="trailing" id="wvO-vw-Gba"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="kZB-lW-tO9" secondAttribute="bottom" id="y6s-xq-ism"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
