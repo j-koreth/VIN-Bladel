@@ -14,7 +14,7 @@ class CarInfoTableViewCell: UITableViewCell {
     
 }
 
-class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     var labelTitles = ["VIN:", "Make:", "Model:", "Model Year:", "Engine (L):", "Transmission:", "Drive Type:"]
     //var labelTitles = ["VIN:", "Make:", "Model:", "Submodel", "Model Year:", "Engine (L):", "Transmission:", "Drive Type:"]
@@ -42,4 +42,5 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
         
     }
+
 }
