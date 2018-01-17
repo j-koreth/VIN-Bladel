@@ -18,6 +18,7 @@ class VINData{
     var error: String?
     var transmission: String!
     var drivetype: String!
+    var submodel: String!
     
     init(vinNumber: String) {
         self.vinNumber = vinNumber
@@ -50,6 +51,9 @@ class VINData{
         
         let model = results.value(forKey: "Model") as! NSArray
         self.model = model[0] as! String
+        
+        let submodel = results.value(forKey: "Series") as! NSArray
+        self.submodel = submodel[0] as! String
         
         let displacement = results.value(forKey: "DisplacementL") as! NSArray
         self.displacement = displacement[0] as! String
