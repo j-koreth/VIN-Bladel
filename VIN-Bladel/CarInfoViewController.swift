@@ -16,15 +16,14 @@ class CarInfoTableViewCell: UITableViewCell {
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    var labelTitles = ["VIN:", "Make:", "Model:", "Model Year:", "Engine (L):", "Transmission:", "Drive Type:"]
-    //var labelTitles = ["VIN:", "Make:", "Model:", "Submodel", "Model Year:", "Engine (L):", "Transmission:", "Drive Type:"]
+    var labelTitles = ["VIN:", "Make:", "Model:", "Submodel:", "Model Year:", "Engine (L):", "Cylinders:", "Transmission:", "Drive Type:"]
     var textViewInformation = [String?]()
     
     var car: VINData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textViewInformation = [car?.vinNumber, car?.make, car?.model, car?.modelyear, car?.displacement, car?.transmission, car?.drivetype]
+        textViewInformation = [car?.vinNumber, car?.make, car?.model, car?.submodel, car?.modelyear, car?.displacement, car?.cylinder, car?.transmission, car?.drivetype]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         

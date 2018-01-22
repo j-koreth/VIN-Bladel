@@ -18,6 +18,7 @@
 		67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */; };
 		67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */; };
 		9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */; };
+		B7CF84D62016315A00B1A182 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF84D52016315A00B1A182 /* LoadingViewController.swift */; };
 		BB5102B01E83BEC5459F612A /* Pods_VIN_Bladel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIN_Bladel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
 		A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.debug.xcconfig"; sourceTree = "<group>"; };
+		B7CF84D52016315A00B1A182 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		67F7B2491FD1A04500AD9532 /* VIN-Bladel */ = {
 			isa = PBXGroup;
 			children = (
+				B7CF84D52016315A00B1A182 /* LoadingViewController.swift */,
 				67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */,
 				67F7B24E1FD1A04500AD9532 /* Main.storyboard */,
 				67F7B24C1FD1A04500AD9532 /* ViewController.swift */,
@@ -245,6 +248,7 @@
 				208EDD131FE89A3F001C9AB4 /* Reachability.swift in Sources */,
 				67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */,
 				06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */,
+				B7CF84D62016315A00B1A182 /* LoadingViewController.swift in Sources */,
 				9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */,
 				6753A2BE1FD839900076AC8A /* VINData.swift in Sources */,
 				67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */,

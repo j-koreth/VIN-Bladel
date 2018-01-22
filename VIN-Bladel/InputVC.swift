@@ -21,9 +21,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         searchButton.backgroundColor = UIColor.lightGray
         searchButton.isEnabled = false
-        
-
+    
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         barcode = vinTextfield.text!
