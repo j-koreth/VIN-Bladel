@@ -189,7 +189,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-l4-d7u">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Information Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-l4-d7u">
                                                     <rect key="frame" x="458" y="0.0" width="310" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="jKh-NF-XRc"/>
