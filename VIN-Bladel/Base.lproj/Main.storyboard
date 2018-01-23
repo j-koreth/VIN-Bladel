@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C4T-oc-1fY">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-DL-U2J">
-                                <rect key="frame" x="134" y="229" width="500" height="150"/>
+                                <rect key="frame" x="134" y="273" width="500" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.54878095550022721" blue="0.51411642573663352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="500" id="Td3-ZQ-jnD"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJW-HN-Z97">
-                                <rect key="frame" x="59" y="537" width="650" height="150"/>
+                                <rect key="frame" x="59" y="581" width="650" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.54025958437336352" blue="0.49231062857590979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="5FG-lb-epW"/>
@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OM3-eJ-Wh1">
-                                <rect key="frame" x="115" y="220" width="538" height="135"/>
+                                <rect key="frame" x="115" y="264" width="538" height="135"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Xfn-S7-xAU">
                                         <rect key="frame" x="0.0" y="0.0" width="538" height="45"/>
@@ -244,17 +244,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-z0-t9U">
-                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-z0-t9U">
+                                <rect key="frame" x="0.0" y="64" width="550" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taI-TV-CGv">
+                                <rect key="frame" x="643" y="273" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Segu"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="DWc-RP-kSa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vdK-z0-t9U" firstAttribute="leading" secondItem="4Hb-Ak-DBc" secondAttribute="leading" id="7NM-Cl-fSn"/>
-                            <constraint firstItem="vdK-z0-t9U" firstAttribute="bottom" secondItem="4Hb-Ak-DBc" secondAttribute="bottom" id="Xcf-qf-bDN"/>
-                            <constraint firstItem="vdK-z0-t9U" firstAttribute="trailing" secondItem="4Hb-Ak-DBc" secondAttribute="trailing" id="g0j-Ys-Ngh"/>
-                            <constraint firstItem="vdK-z0-t9U" firstAttribute="top" secondItem="4Hb-Ak-DBc" secondAttribute="top" id="vPS-NL-x2y"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Hb-Ak-DBc"/>
                     </view>
                     <navigationItem key="navigationItem" id="DTA-rb-ACs"/>

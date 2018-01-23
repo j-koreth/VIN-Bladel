@@ -18,6 +18,7 @@
 		67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */; };
 		67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */; };
 		9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */; };
+		B7B0CCC920177C2B00D36C05 /* GIF .jpg Files in Resources */ = {isa = PBXBuildFile; fileRef = B7B0CCC820177C2B00D36C05 /* GIF .jpg Files */; };
 		B7CF84D62016315A00B1A182 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF84D52016315A00B1A182 /* LoadingViewController.swift */; };
 		BB5102B01E83BEC5459F612A /* Pods_VIN_Bladel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIN_Bladel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
 		A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.debug.xcconfig"; sourceTree = "<group>"; };
+		B7B0CCC820177C2B00D36C05 /* GIF .jpg Files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "GIF .jpg Files"; path = "../../GIF .jpg Files"; sourceTree = "<group>"; };
 		B7CF84D52016315A00B1A182 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 		67F7B23E1FD1A04500AD9532 = {
 			isa = PBXGroup;
 			children = (
+				B7B0CCC720177C0900D36C05 /* New Group */,
 				67F7B2491FD1A04500AD9532 /* VIN-Bladel */,
 				67F7B2481FD1A04500AD9532 /* Products */,
 				1E984257C2BB36315B5A7580 /* Pods */,
@@ -99,6 +102,14 @@
 				67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */,
 			);
 			path = "VIN-Bladel";
+			sourceTree = "<group>";
+		};
+		B7B0CCC720177C0900D36C05 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B7B0CCC820177C2B00D36C05 /* GIF .jpg Files */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		D0863621B18205990DF04980 /* Frameworks */ = {
@@ -172,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */,
+				B7B0CCC920177C2B00D36C05 /* GIF .jpg Files in Resources */,
 				67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */,
 				67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */,
 				67F7B2501FD1A04500AD9532 /* Main.storyboard in Resources */,
