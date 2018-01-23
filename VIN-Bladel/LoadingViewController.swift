@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class LoadingViewController: UIViewController {
     
+    var customerArray = [CustomerData()]
     var array = [UIImage]()
     
     var image1 = UIImage(named: "1")
