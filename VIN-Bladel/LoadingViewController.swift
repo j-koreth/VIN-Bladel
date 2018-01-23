@@ -90,7 +90,7 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customerDatabase = databaseReference.root.child("customer")
+        customerDatabase = databaseReference.root.child("customers")
         vehicleDatabase = databaseReference.root.child("vehicle")
         customerDatabase?.observe(.value) { (snapshot) in
             for customers in snapshot.children.allObjects as! [DataSnapshot]
@@ -99,7 +99,6 @@ class LoadingViewController: UIViewController {
                 let ID = object?["Customer ID"] as! String
                 let title = object?["Customer Title"] as! String
                 let first = object?["Customer First Name"] as! String
-                print(first)
                 let last = object?["Customer Last Name"] as! String
                 
                 let add1 = object?["Customer Addr1"] as! String
@@ -122,8 +121,8 @@ class LoadingViewController: UIViewController {
             }
         }
 //        array.append(image1!)
-        DispatchQueue.main.async {
-            print(self.customerArray)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
+            print(self.customerArray[0].customerFirst)
 
         }
         
