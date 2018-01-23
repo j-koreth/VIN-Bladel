@@ -86,14 +86,14 @@
 		67F7B2491FD1A04500AD9532 /* VIN-Bladel */ = {
 			isa = PBXGroup;
 			children = (
+				67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */,
 				67F7B24E1FD1A04500AD9532 /* Main.storyboard */,
 				B7CF84D52016315A00B1A182 /* LoadingViewController.swift */,
-				67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */,
 				67F7B24C1FD1A04500AD9532 /* ViewController.swift */,
-				9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */,
-				06E25E3E20177E0C004D0863 /* CustomerData.swift */,
 				06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */,
 				06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */,
+				9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */,
+				06E25E3E20177E0C004D0863 /* CustomerData.swift */,
 				6753A2BD1FD839900076AC8A /* VINData.swift */,
 				208EDD121FE89A3F001C9AB4 /* Reachability.swift */,
 				67F7B2511FD1A04500AD9532 /* Assets.xcassets */,
