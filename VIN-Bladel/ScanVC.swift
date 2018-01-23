@@ -21,9 +21,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     let session = AVCaptureSession()
     let sessionQueue = DispatchQueue(label: AVCaptureSession.self.description(), attributes: [], target: nil)
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
-
-
-    
    
     override func viewDidLoad() {
         
@@ -73,16 +70,12 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                 
         metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         session.commitConfiguration()
-
         
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
         videoPreviewLayer?.videoGravity = .resizeAspectFill
         videoPreviewLayer?.frame = view.bounds
         view.layer.addSublayer(videoPreviewLayer!)
         view.bringSubview(toFront: self.barcodeLabel)
-
-
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,8 +83,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         barcodeLabel.text = "No barcode is detected"
         sessionQueue.async {
             self.session.startRunning()
-
-            
         }
     }
     
@@ -103,12 +94,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
-    
     func segue() {
         self.performSegue(withIdentifier: "segueToManual", sender: self)
     }
-    
-    
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
@@ -132,8 +120,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 
             barcodeLabel.textColor = UIColor.green
             barcodeLabel.text = barcode
-            
-            
         }
         
         if metadataObjects.count == 0 {
@@ -141,7 +127,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             confirmButton.tintColor = UIColor.lightGray
             barcodeLabel.textColor = UIColor.white
             barcodeLabel.text = "No barcode is detected"
-            
         }
     }
     
@@ -153,7 +138,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         DispatchQueue.main.asyncAfter(deadline: when) {
         self.performSegue(withIdentifier: "segue", sender: nil)
         }
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -170,6 +154,4 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             }
         }
     }
-    
 }
-
