@@ -21,7 +21,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         searchButton.backgroundColor = UIColor.lightGray
         searchButton.isEnabled = false
-    
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -42,7 +41,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
             searchButton.isEnabled = false
             searchButton.backgroundColor = UIColor.lightGray
         }
-
     }
     
     
@@ -68,6 +66,4 @@ class InputVC: UIViewController, UITextFieldDelegate {
             destination.car = carData
         }
     }
-
-
 }
