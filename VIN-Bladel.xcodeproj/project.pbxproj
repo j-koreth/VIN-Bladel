@@ -183,6 +183,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6757E6B1201783CF00E9AF9D /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				B7B0CCCA201781E800D36C05 /* GIF */,
+			);
+			path = GIF;
+			sourceTree = "<group>";
+		};
 		67F7B23E1FD1A04500AD9532 = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +212,7 @@
 		67F7B2491FD1A04500AD9532 /* VIN-Bladel */ = {
 			isa = PBXGroup;
 			children = (
-				B7B0CCCA201781E800D36C05 /* GIF */,
+				6757E6B1201783CF00E9AF9D /* GIF */,
 				B7CF84D52016315A00B1A182 /* LoadingViewController.swift */,
 				67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */,
 				67F7B24E1FD1A04500AD9532 /* Main.storyboard */,
@@ -286,7 +294,8 @@
 				9D05B8AC201782D50045A35D /* otherLoadingGIFFF-59 (dragged) 1.jpg */,
 				9D05B899201782D30045A35D /* otherLoadingGIFFF-60 (dragged) 1.jpg */,
 			);
-			path = GIF;
+			name = GIF;
+			path = ../GIF;
 			sourceTree = "<group>";
 		};
 		D0863621B18205990DF04980 /* Frameworks */ = {
