@@ -24,21 +24,21 @@ class LoadingViewController: UIViewController {
     
     var array = [UIImage]()
     
-    var image1 = UIImage(named: "1")
-    var image2 = UIImage(named: "2")
-    var image3 = UIImage(named: "3")
-    var image4 = UIImage(named: "4")
-    var image5 = UIImage(named: "5")
-    var image6 = UIImage(named: "6")
-    var image7 = UIImage(named: "7")
-    var image8 = UIImage(named: "8")
-    var image9 = UIImage(named: "9")
-    var image10 = UIImage(named: "10")
-    var image11 = UIImage(named: "11")
-    var image12 = UIImage(named: "12")
-    var image13 = UIImage(named: "13")
-    var image14 = UIImage(named: "14")
-    var image15 = UIImage(named: "15")
+//    var image1 = UIImage(named: "1")
+//    var image2 = UIImage(named: "2")
+//    var image3 = UIImage(named: "3")
+//    var image4 = UIImage(named: "4")
+//    var image5 = UIImage(named: "5")
+//    var image6 = UIImage(named: "6")
+//    var image7 = UIImage(named: "7")
+//    var image8 = UIImage(named: "8")
+//    var image9 = UIImage(named: "9")
+//    var image10 = UIImage(named: "10")
+//    var image11 = UIImage(named: "11")
+//    var image12 = UIImage(named: "12")
+//    var image13 = UIImage(named: "13")
+//    var image14 = UIImage(named: "14")
+//    var image15 = UIImage(named: "15")
 //    var image1 = UIImage(named: "1")
 //    var image1 = UIImage(named: "1")
 //    var image1 = UIImage(named: "1")
@@ -92,13 +92,14 @@ class LoadingViewController: UIViewController {
         
         customerDatabase = databaseReference.root.child("customer")
         vehicleDatabase = databaseReference.root.child("vehicle")
-        databaseReference.observe(.value) { (snapshot) in
+        customerDatabase?.observe(.value) { (snapshot) in
             for customers in snapshot.children.allObjects as! [DataSnapshot]
             {
                 let object = customers.value as? [String: AnyObject]
                 let ID = object?["Customer ID"] as! String
                 let title = object?["Customer Title"] as! String
                 let first = object?["Customer First Name"] as! String
+                print(first)
                 let last = object?["Customer Last Name"] as! String
                 
                 let add1 = object?["Customer Addr1"] as! String
@@ -120,8 +121,11 @@ class LoadingViewController: UIViewController {
                 
             }
         }
-        array.append(image1!)
-        print(customerArray[0].customerFirst)
+//        array.append(image1!)
+        DispatchQueue.main.async {
+            print(self.customerArray)
+
+        }
         
     }
 
