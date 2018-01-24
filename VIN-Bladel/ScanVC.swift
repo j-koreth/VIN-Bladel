@@ -117,7 +117,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
-
+            
             barcodeLabel.textColor = UIColor.green
             barcodeLabel.text = barcode
         }

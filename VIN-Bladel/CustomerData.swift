@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseDatabase
+var customerDatabase = Database.database().reference().root.child("customers")
 
 class CustomerData
 {
@@ -39,6 +42,14 @@ class CustomerData
         customerEmail = email
         customerHomePhone = home
         customerWorkPhone = work
+    }
+    
+    func updateToDatabase() {
+        let newCustomer = ["Customer ID": customerID, "Customer Title": customerTitle, "Customer First": customerFirst, "Customer Last": customerLast, "Customer Addr1": customerAddress1, "Customer Addr2": customerAddress2, "Customer City": customerCity, "Customer State": customerState, "Customer Zip Code": customerZip, "Customer Country": customerCountry, "Customer Email": customerEmail, "Customer Home Phone": customerHomePhone, "Customer Work Phone": customerWorkPhone]
+        
+        customerDatabase.child(customerID).setValue(newCustomer)
+        
+        
     }
 
 }

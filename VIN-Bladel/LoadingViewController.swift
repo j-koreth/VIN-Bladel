@@ -101,7 +101,7 @@ class LoadingViewController: UIViewController {
                 let object = customers.value as? [String: AnyObject]
                 let ID = object?["Customer ID"] as! String
                 let title = object?["Customer Title"] as! String
-                let first = object?["Customer First Name"] as! String
+//                let first = object?["Customer First Name"] as! String
                 let last = object?["Customer Last Name"] as! String
                 
                 let add1 = object?["Customer Addr1"] as! String
@@ -116,14 +116,19 @@ class LoadingViewController: UIViewController {
                 let work = object?["Customer Work Phone"] as! String
 
 
-                let customer = CustomerData(ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
+                let customer = CustomerData(ID: ID, title: title, first: "hi", last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.customerArray.append(customer)
                 
             }
         }
+//        array.append(image1!)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3)
+        {
+            self.customerArray[0].customerZip = "60004"
+            self.customerArray[0].updateToDatabase()
 
-        
+        }
         
         loops(array: array)
         
