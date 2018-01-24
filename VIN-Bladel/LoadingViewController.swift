@@ -25,12 +25,28 @@ class LoadingViewController: UIViewController {
     
     var array = [UIImage]()
     
-    var image1 = UIImage(named: "1")
-
+ 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        array.append(UIImage(named: "1")!)
+        array.append(UIImage(named: "2")!)
+        array.append(UIImage(named: "3")!)
+        array.append(UIImage(named: "4")!)
+        array.append(UIImage(named: "5")!)
+        array.append(UIImage(named: "6")!)
+        array.append(UIImage(named: "7")!)
+        array.append(UIImage(named: "8")!)
+        array.append(UIImage(named: "9")!)
+        array.append(UIImage(named: "10")!)
+        array.append(UIImage(named: "11")!)
+        array.append(UIImage(named: "12")!)
+        array.append(UIImage(named: "13")!)
+        array.append(UIImage(named: "14")!)
+        array.append(UIImage(named: "15")!)
+        
         
         customerDatabase = databaseReference.root.child("customers")
         vehicleDatabase = databaseReference.root.child("vehicle")
@@ -61,10 +77,7 @@ class LoadingViewController: UIViewController {
                 
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
-            print(self.customerArray[0].customerFirst)
 
-        }
         
         
         loops(array: array)
