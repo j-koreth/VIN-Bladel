@@ -121,8 +121,11 @@ class LoadingViewController: UIViewController {
             }
         }
 //        array.append(image1!)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3)
+        {
             print(self.customerArray[0].customerFirst)
+            self.customerArray[0].customerZip = "60004"
+            self.customerArray[0].updateToDatabase()
 
         }
         
