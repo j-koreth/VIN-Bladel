@@ -261,6 +261,9 @@
                         <viewLayoutGuide key="safeArea" id="4Hb-Ak-DBc"/>
                     </view>
                     <navigationItem key="navigationItem" id="DTA-rb-ACs"/>
+                    <connections>
+                        <outlet property="imageView" destination="vdK-z0-t9U" id="pBT-IJ-43E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhb-Xd-fna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
