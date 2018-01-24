@@ -46,17 +46,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func manualToCarInfo(_ sender: Any)
     {
-        let when = DispatchTime.now() + 2
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            if(self.carData?.error != nil){
-                let alert = UIAlertController(title: "ERROR", message: self.carData?.error, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-            else{
-                self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
-            }
-        }
+        self.performSegue(withIdentifier: "search", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
