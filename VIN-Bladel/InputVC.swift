@@ -44,12 +44,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func search(_ sender: Any)
+    @IBAction func manualToCarInfo(_ sender: Any)
     {
-//        let when = DispatchTime.now() + 2
-//        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.performSegue(withIdentifier: "search", sender: nil)
-//        }
+        self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
