@@ -19,6 +19,7 @@ class LoadingViewController: UIViewController {
     var customerArray: [CustomerData] = []
     
     
+    @IBOutlet weak var imageView: UIImageView!
     
     
     
@@ -57,18 +58,27 @@ class LoadingViewController: UIViewController {
                 let customer = CustomerData(ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.customerArray.append(customer)
-
                 
             }
         }
-//        array.append(image1!)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
             print(self.customerArray[0].customerFirst)
 
         }
         
+        
+        loops(array: array)
+        
     }
 
-
+    
+    func loops(array: [UIImage] )
+    {
+        
+        imageView.image = UIImage.animatedImage(with: array, duration: 0.5)
+        
+    }
+    
+    
 
 }
