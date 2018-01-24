@@ -13,6 +13,7 @@ var customerDatabase = Database.database().reference().root.child("customers")
 
 class CustomerData
 {
+    var customerIndex: String!
     var customerID: String!
     var customerTitle: String!
     var customerFirst: String!
@@ -28,7 +29,8 @@ class CustomerData
     var customerHomePhone: String!
     var customerWorkPhone: String!
     
-    init(ID: String, title: String, first: String, last: String, address1: String, address2: String, city: String, state: String, zip: String, country: String, email: String, home: String, work: String) {
+    init(index: String, ID: String, title: String, first: String, last: String, address1: String, address2: String, city: String, state: String, zip: String, country: String, email: String, home: String, work: String) {
+        customerIndex = index
         customerID = ID
         customerTitle = title
         customerFirst = first
@@ -45,9 +47,9 @@ class CustomerData
     }
     
     func updateToDatabase() {
-        let newCustomer = ["Customer ID": customerID, "Customer Title": customerTitle, "Customer First": customerFirst, "Customer Last": customerLast, "Customer Addr1": customerAddress1, "Customer Addr2": customerAddress2, "Customer City": customerCity, "Customer State": customerState, "Customer Zip Code": customerZip, "Customer Country": customerCountry, "Customer Email": customerEmail, "Customer Home Phone": customerHomePhone, "Customer Work Phone": customerWorkPhone]
+        let newCustomer = [ "Customer Index": customerIndex, "Customer ID": customerID, "Customer Title": customerTitle, "Customer First Name": customerFirst, "Customer Last Name": customerLast, "Customer Addr1": customerAddress1, "Customer Addr2": customerAddress2, "Customer City": customerCity, "Customer State": customerState, "Customer Zip Code": customerZip, "Customer Country": customerCountry, "Customer Email": customerEmail, "Customer Home Phone": customerHomePhone, "Customer Work Phone": customerWorkPhone]
         
-        customerDatabase.child(customerID).setValue(newCustomer)
+        customerDatabase.child(customerIndex).setValue(newCustomer)
         
         
     }

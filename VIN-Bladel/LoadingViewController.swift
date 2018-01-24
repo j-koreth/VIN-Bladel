@@ -31,6 +31,10 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        customerDatabase = databaseReference.root.child("customers")
+        vehicleDatabase = databaseReference.root.child("vehicle")
+        
+        
         array.append(UIImage(named: "1")!)
         array.append(UIImage(named: "2")!)
         array.append(UIImage(named: "3")!)
@@ -93,15 +97,16 @@ class LoadingViewController: UIViewController {
         array.append(UIImage(named: "60")!)
         
         
-        customerDatabase = databaseReference.root.child("customers")
-        vehicleDatabase = databaseReference.root.child("vehicle")
+        
         customerDatabase?.observe(.value) { (snapshot) in
+            var num = 0
             for customers in snapshot.children.allObjects as! [DataSnapshot]
             {
+                let index = String(num)
                 let object = customers.value as? [String: AnyObject]
                 let ID = object?["Customer ID"] as! String
                 let title = object?["Customer Title"] as! String
-//                let first = object?["Customer First Name"] as! String
+                let first = object?["Customer First Name"] as! String
                 let last = object?["Customer Last Name"] as! String
                 
                 let add1 = object?["Customer Addr1"] as! String
@@ -116,21 +121,21 @@ class LoadingViewController: UIViewController {
                 let work = object?["Customer Work Phone"] as! String
 
 
-                let customer = CustomerData(ID: ID, title: title, first: "hi", last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
+                let customer = CustomerData(index: index, ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.customerArray.append(customer)
-                
+                                
             }
         }
-//        array.append(image1!)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3)
         {
-            self.customerArray[0].customerZip = "60004"
-            self.customerArray[0].updateToDatabase()
+            //THIS GETS CUSTOMER BY NAME
+            //print(self.getCustomerByName(first: "Eric", last: "Johnson")?.customerID)
 
         }
         
         loops(array: array)
+        
         
     }
 
@@ -142,6 +147,25 @@ class LoadingViewController: UIViewController {
         
     }
     
+    func getCustomerByName(first: String, last: String) -> CustomerData?
+    {
+        for customer in customerArray
+        {
+            if customer.customerFirst == first && customer.customerLast == last
+            {
+                return customer
+            }
+        }
+        return nil
+    }
+    
+//    func getCustomerByVIN(VIN: String) -> CustomerData
+//    {
+//        for customer in customerArray
+//        {
+//            if customer.
+//        }
+//    }
     
 
 }
