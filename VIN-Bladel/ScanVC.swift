@@ -134,10 +134,10 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     {
         session.stopRunning()
         confirmButton.tintColor = UIColor.lightGray
-        let when = DispatchTime.now() + 2
-        DispatchQueue.main.asyncAfter(deadline: when) {
-        self.performSegue(withIdentifier: "segue", sender: nil)
-        }
+//        let when = DispatchTime.now() + 2
+//        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.performSegue(withIdentifier: "segue", sender: nil)
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
