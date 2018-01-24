@@ -36,12 +36,22 @@ class VINData{
         URLSession.shared.dataTask(with: url) { (myData, response, error) in
             if let JSONObject = try? JSONSerialization.jsonObject(with: myData!, options: .allowFragments) as! NSDictionary{
                 let results = JSONObject.object(forKey: "Results") as! NSArray
-                
-                self.serializeJSON(results: results)
+
+                if(self.checkForErrors(results: results)){
+                    self.serializeJSON(results: results)
+                }
             }
         }.resume()
     }
-    
+    func checkForErrors(results : NSArray) -> Bool{
+        let jsonerror = results.value(forKey: "ErrorCode") as! NSArray
+        let errorc = Array(jsonerror[0] as! String)
+        if (errorc[0] != "0"){
+            self.error = (jsonerror[0] as! String)
+            return false
+        }
+        return true
+    }
     func serializeJSON(results : NSArray){
         let modelyear = results.value(forKey: "ModelYear") as! NSArray
         self.modelyear = modelyear[0] as! String
@@ -57,7 +67,9 @@ class VINData{
         
         let displacement = results.value(forKey: "DisplacementL") as! NSArray
         self.displacement = displacement[0] as! String
-        self.displacement = String(round(Double(self.displacement)!*10)/10)
+        if (self.displacement != nil){
+            self.displacement = String(round(Double(self.displacement)!*10)/10)
+        }
         
         let cylinder = results.value(forKey: "EngineCylinders") as! NSArray
         self.cylinder = cylinder[0] as! String
@@ -68,10 +80,5 @@ class VINData{
         let drivetype = results.value(forKey: "DriveType") as! NSArray
         self.drivetype = drivetype[0] as! String
         
-        let jsonerror = results.value(forKey: "ErrorCode") as! NSArray
-        let errorc = Array(jsonerror[0] as! String)
-        if (errorc[0] != "0"){
-            self.error = (jsonerror[0] as! String)
-        }
     }
 }

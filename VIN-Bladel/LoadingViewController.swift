@@ -19,76 +19,79 @@ class LoadingViewController: UIViewController {
     var customerArray: [CustomerData] = []
     
     
+    @IBOutlet weak var imageView: UIImageView!
     
     
     
     var array = [UIImage]()
     
-//    var image1 = UIImage(named: "1")
-//    var image2 = UIImage(named: "2")
-//    var image3 = UIImage(named: "3")
-//    var image4 = UIImage(named: "4")
-//    var image5 = UIImage(named: "5")
-//    var image6 = UIImage(named: "6")
-//    var image7 = UIImage(named: "7")
-//    var image8 = UIImage(named: "8")
-//    var image9 = UIImage(named: "9")
-//    var image10 = UIImage(named: "10")
-//    var image11 = UIImage(named: "11")
-//    var image12 = UIImage(named: "12")
-//    var image13 = UIImage(named: "13")
-//    var image14 = UIImage(named: "14")
-//    var image15 = UIImage(named: "15")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
-//    var image1 = UIImage(named: "1")
+ 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        array.append(UIImage(named: "1")!)
+        array.append(UIImage(named: "2")!)
+        array.append(UIImage(named: "3")!)
+        array.append(UIImage(named: "4")!)
+        array.append(UIImage(named: "5")!)
+        array.append(UIImage(named: "6")!)
+        array.append(UIImage(named: "7")!)
+        array.append(UIImage(named: "8")!)
+        array.append(UIImage(named: "9")!)
+        array.append(UIImage(named: "10")!)
+        array.append(UIImage(named: "11")!)
+        array.append(UIImage(named: "12")!)
+        array.append(UIImage(named: "13")!)
+        array.append(UIImage(named: "14")!)
+        array.append(UIImage(named: "15")!)
+        array.append(UIImage(named: "16")!)
+        array.append(UIImage(named: "17")!)
+        array.append(UIImage(named: "18")!)
+        array.append(UIImage(named: "19")!)
+        array.append(UIImage(named: "20")!)
+        array.append(UIImage(named: "21")!)
+        array.append(UIImage(named: "22")!)
+        array.append(UIImage(named: "23")!)
+        array.append(UIImage(named: "24")!)
+        array.append(UIImage(named: "25")!)
+        array.append(UIImage(named: "26")!)
+        array.append(UIImage(named: "27")!)
+        array.append(UIImage(named: "28")!)
+        array.append(UIImage(named: "29")!)
+        array.append(UIImage(named: "30")!)
+        array.append(UIImage(named: "31")!)
+        array.append(UIImage(named: "32")!)
+        array.append(UIImage(named: "33")!)
+        array.append(UIImage(named: "34")!)
+        array.append(UIImage(named: "35")!)
+        array.append(UIImage(named: "36")!)
+        array.append(UIImage(named: "37")!)
+        array.append(UIImage(named: "38")!)
+        array.append(UIImage(named: "39")!)
+        array.append(UIImage(named: "40")!)
+        array.append(UIImage(named: "41")!)
+        array.append(UIImage(named: "42")!)
+        array.append(UIImage(named: "43")!)
+        array.append(UIImage(named: "44")!)
+        array.append(UIImage(named: "45")!)
+        array.append(UIImage(named: "46")!)
+        array.append(UIImage(named: "47")!)
+        array.append(UIImage(named: "48")!)
+        array.append(UIImage(named: "49")!)
+        array.append(UIImage(named: "50")!)
+        array.append(UIImage(named: "51")!)
+        array.append(UIImage(named: "52")!)
+        array.append(UIImage(named: "53")!)
+        array.append(UIImage(named: "54")!)
+        array.append(UIImage(named: "55")!)
+        array.append(UIImage(named: "56")!)
+        array.append(UIImage(named: "57")!)
+        array.append(UIImage(named: "58")!)
+        array.append(UIImage(named: "59")!)
+        array.append(UIImage(named: "60")!)
+        
         
         customerDatabase = databaseReference.root.child("customers")
         vehicleDatabase = databaseReference.root.child("vehicle")
@@ -116,7 +119,6 @@ class LoadingViewController: UIViewController {
                 let customer = CustomerData(ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.customerArray.append(customer)
-
                 
             }
         }
@@ -127,10 +129,20 @@ class LoadingViewController: UIViewController {
             self.customerArray[0].customerZip = "60004"
             self.customerArray[0].updateToDatabase()
 
-        }
+        
+        
+        loops(array: array)
         
     }
 
-
+    
+    func loops(array: [UIImage] )
+    {
+        
+        imageView.image = UIImage.animatedImage(with: array, duration: 2)
+        
+    }
+    
+    
 
 }

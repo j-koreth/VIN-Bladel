@@ -94,9 +94,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
-    func segue() {
-        self.performSegue(withIdentifier: "segueToManual", sender: self)
-    }
+//    func segue() {
+//        self.performSegue(withIdentifier: "segueToManual", sender: self)
+//    }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
@@ -136,7 +136,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         confirmButton.tintColor = UIColor.lightGray
         let when = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: when) {
-        self.performSegue(withIdentifier: "segue", sender: nil)
+        self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
         }
     }
     

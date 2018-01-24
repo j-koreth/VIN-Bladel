@@ -118,7 +118,7 @@
                     <connections>
                         <outlet property="searchButton" destination="hQ0-Sw-P5x" id="X1d-3D-Rs6"/>
                         <outlet property="vinTextfield" destination="Xfn-S7-xAU" id="VR6-dm-Nbf"/>
-                        <segue destination="8Fv-st-vBI" kind="show" identifier="search" id="rmM-Xd-mot"/>
+                        <segue destination="8Fv-st-vBI" kind="show" identifier="manualToCarInfo" id="rmM-Xd-mot"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eE8-Dq-uOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,12 +162,27 @@
                     <connections>
                         <outlet property="barcodeLabel" destination="b9j-Tb-gKx" id="Va0-41-Eum"/>
                         <outlet property="confirmButton" destination="UAf-Ix-wRe" id="hpw-LD-Zdk"/>
-                        <segue destination="8Fv-st-vBI" kind="show" identifier="segue" id="mrQ-Ia-42B"/>
+                        <segue destination="8Fv-st-vBI" kind="show" identifier="scanToCarInfo" id="mrQ-Ia-42B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-Wx-YPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1150.78125" y="-191.015625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h32-7H-LXh">
+            <objects>
+                <viewController id="AoO-Ua-zqM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TEX-ar-q9V">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="0Zl-IX-ydT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGV-YU-abG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2296" y="-191"/>
         </scene>
         <!--Car Info View Controller-->
         <scene sceneID="uLw-Co-Y8q">
@@ -234,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xL-ro-9GS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1946.09375" y="148.828125"/>
+            <point key="canvasLocation" x="3424" y="90"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="hMh-rF-k4V">
@@ -261,6 +276,9 @@
                         <viewLayoutGuide key="safeArea" id="4Hb-Ak-DBc"/>
                     </view>
                     <navigationItem key="navigationItem" id="DTA-rb-ACs"/>
+                    <connections>
+                        <outlet property="imageView" destination="vdK-z0-t9U" id="pBT-IJ-43E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhb-Xd-fna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,6 +304,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mrQ-Ia-42B"/>
+        <segue reference="rmM-Xd-mot"/>
     </inferredMetricsTieBreakers>
 </document>
