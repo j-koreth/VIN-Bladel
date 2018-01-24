@@ -134,7 +134,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     {
         session.stopRunning()
         confirmButton.tintColor = UIColor.lightGray
-        self.performSegue(withIdentifier: "segue", sender: nil)
+        self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

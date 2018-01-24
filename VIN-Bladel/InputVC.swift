@@ -46,7 +46,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func manualToCarInfo(_ sender: Any)
     {
-        self.performSegue(withIdentifier: "search", sender: nil)
+        self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
