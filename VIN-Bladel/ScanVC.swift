@@ -94,9 +94,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
-    func segue() {
-        self.performSegue(withIdentifier: "segueToManual", sender: self)
-    }
+//    func segue() {
+//        self.performSegue(withIdentifier: "segueToManual", sender: self)
+//    }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
