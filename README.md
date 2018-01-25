@@ -1,5 +1,5 @@
 # VIN-Bladel
-An iOS app to decode VINs powered by the [NHTSA API] (https://vpic.nhtsa.dot.gov/api/).
+An iOS app to decode VINs powered by the [NHTSA API](https://vpic.nhtsa.dot.gov/api/).
 
 ## Features
 * Input a VIN through using the built-in scanner or manually
