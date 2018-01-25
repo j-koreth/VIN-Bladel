@@ -143,7 +143,7 @@ class LoadingViewController: UIViewController {
     func loops(array: [UIImage] )
     {
         
-        imageView.image = UIImage.animatedImage(with: array, duration: 2)
+        imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
         
     }
     
