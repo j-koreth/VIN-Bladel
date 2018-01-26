@@ -1,3 +1,5 @@
+### <p align="center"><img width = "150px" height="150px" src="https://raw.githubusercontent.com/j-koreth/VIN-Bladel/master/VIN-Bladel/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5%402x.png"></p>
+
 # VIN-Bladel
 An iOS app to decode VINs powered by the [NHTSA API](https://vpic.nhtsa.dot.gov/api/).
 
