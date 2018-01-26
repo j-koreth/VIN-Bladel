@@ -159,6 +159,12 @@ class LoadingViewController: UIViewController {
         return nil
     }
     
+//    func segu()
+//    {
+//    self.performSegue(withIdentifier: "toBeginningThing", sender: nil)
+//
+//    }
+    
 //    func getCustomerByVIN(VIN: String) -> CustomerData
 //    {
 //        for customer in customerArray
