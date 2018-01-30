@@ -102,7 +102,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="search:" destination="EG7-FL-6lW" eventType="touchUpInside" id="SjZ-2o-TAQ"/>
+                                            <action selector="manualToCarInfo:" destination="EG7-FL-6lW" eventType="touchUpInside" id="gCf-lI-6Ny"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -489,7 +489,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DYy-Lo-c9s"/>
+        <segue reference="rmM-Xd-mot"/>
         <segue reference="TuX-OR-o8z"/>
     </inferredMetricsTieBreakers>
 </document>
