@@ -139,12 +139,15 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if(carData?.error != nil){
+        if(carData?.error != nil)
+        {
             let alert = UIAlertController(title: "ERROR", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        else{
+        
+        else
+        {
             if let destination = segue.destination as? CarInfoViewController
             {
                 destination.car = carData

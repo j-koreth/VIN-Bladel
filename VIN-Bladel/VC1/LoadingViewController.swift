@@ -12,7 +12,8 @@ class LoadingViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var array = [UIImage(named: "1")]
+    var array = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named: "3"), UIImage(named: "4"), UIImage(named: "5"), UIImage(named: "6"), UIImage(named: "7"), UIImage(named: "8"), UIImage(named: "9"), UIImage(named: "10"), UIImage(named: "11"), UIImage(named: "12"), UIImage(named: "13"), UIImage(named: "14"), UIImage(named: "15"), UIImage(named: "16"), UIImage(named: "17"), UIImage(named: "18"), UIImage(named: "19"), UIImage(named: "20"), UIImage(named: "21"), UIImage(named: "22"), UIImage(named: "23"), UIImage(named: "24"), UIImage(named: "25"), UIImage(named: "26"), UIImage(named: "27"), UIImage(named: "28"), UIImage(named: "29"), UIImage(named: "30"), UIImage(named: "31"), UIImage(named: "32"), UIImage(named: "33"), UIImage(named: "34"), UIImage(named: "35"), UIImage(named: "36"), UIImage(named: "37"), UIImage(named: "38"), UIImage(named: "39"), UIImage(named: "40"), UIImage(named: "41"), UIImage(named: "42"), UIImage(named: "43"), UIImage(named: "44"), UIImage(named: "45"), UIImage(named: "46"), UIImage(named: "47"), UIImage(named: "48"), UIImage(named: "49"), UIImage(named: "50"), UIImage(named: "51"), UIImage(named: "52"), UIImage(named: "53"), UIImage(named: "54"), UIImage(named: "55"), UIImage(named: "56"), UIImage(named: "57"), UIImage(named: "58"), UIImage(named: "59"), UIImage(named: "60")]
+
     var customerArray = CustomerDB()
 
     
@@ -20,67 +21,9 @@ class LoadingViewController: UIViewController {
         super.viewDidLoad()
         
     customerArray.pullFromFirebase()
-//        print(customerArray.database[0])
-        array.append(UIImage(named: "1")!)
-        array.append(UIImage(named: "2")!)
-        array.append(UIImage(named: "3")!)
-        array.append(UIImage(named: "4")!)
-        array.append(UIImage(named: "5")!)
-        array.append(UIImage(named: "6")!)
-        array.append(UIImage(named: "7")!)
-        array.append(UIImage(named: "8")!)
-        array.append(UIImage(named: "9")!)
-        array.append(UIImage(named: "10")!)
-        array.append(UIImage(named: "11")!)
-        array.append(UIImage(named: "12")!)
-        array.append(UIImage(named: "13")!)
-        array.append(UIImage(named: "14")!)
-        array.append(UIImage(named: "15")!)
-        array.append(UIImage(named: "16")!)
-        array.append(UIImage(named: "17")!)
-        array.append(UIImage(named: "18")!)
-        array.append(UIImage(named: "19")!)
-        array.append(UIImage(named: "20")!)
-        array.append(UIImage(named: "21")!)
-        array.append(UIImage(named: "22")!)
-        array.append(UIImage(named: "23")!)
-        array.append(UIImage(named: "24")!)
-        array.append(UIImage(named: "25")!)
-        array.append(UIImage(named: "26")!)
-        array.append(UIImage(named: "27")!)
-        array.append(UIImage(named: "28")!)
-        array.append(UIImage(named: "29")!)
-        array.append(UIImage(named: "30")!)
-        array.append(UIImage(named: "31")!)
-        array.append(UIImage(named: "32")!)
-        array.append(UIImage(named: "33")!)
-        array.append(UIImage(named: "34")!)
-        array.append(UIImage(named: "35")!)
-        array.append(UIImage(named: "36")!)
-        array.append(UIImage(named: "37")!)
-        array.append(UIImage(named: "38")!)
-        array.append(UIImage(named: "39")!)
-        array.append(UIImage(named: "40")!)
-        array.append(UIImage(named: "41")!)
-        array.append(UIImage(named: "42")!)
-        array.append(UIImage(named: "43")!)
-        array.append(UIImage(named: "44")!)
-        array.append(UIImage(named: "45")!)
-        array.append(UIImage(named: "46")!)
-        array.append(UIImage(named: "47")!)
-        array.append(UIImage(named: "48")!)
-        array.append(UIImage(named: "49")!)
-        array.append(UIImage(named: "50")!)
-        array.append(UIImage(named: "51")!)
-        array.append(UIImage(named: "52")!)
-        array.append(UIImage(named: "53")!)
-        array.append(UIImage(named: "54")!)
-        array.append(UIImage(named: "55")!)
-        array.append(UIImage(named: "56")!)
-        array.append(UIImage(named: "57")!)
-        array.append(UIImage(named: "58")!)
-        array.append(UIImage(named: "59")!)
-        array.append(UIImage(named: "60")!)
+
+
+
         
         
         loops(array: array as! [UIImage])
