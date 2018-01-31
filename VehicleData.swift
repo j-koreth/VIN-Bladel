@@ -29,8 +29,7 @@ class VehicleData
     var vehicleHomePhone: String!
     var vehicleWorkPhone: String!
     
-    init(index: String, customerID: String, ID: String, make: String, model: String, modelyear: String, displacement: String, cylinder: String, transmission: String, drivetype: String, submodel: String, vin: String) {
-        vehicleIndex = index
+    init(customerID: String, ID: String, make: String, model: String, modelyear: String, displacement: String, cylinder: String, transmission: String, drivetype: String, submodel: String, vin: String) {
         vehicleCustomerID = customerID
         vehicleID = ID
         vehicleMake = make
@@ -45,7 +44,7 @@ class VehicleData
     }
     
     func updateToDatabase() {
-        let newVehicle = ["Customer ID": vehicleID, "Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": vehicleVIN]
+        let newVehicle = ["Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": vehicleVIN]
 
         vehicleDatabase.child(vehicleIndex).setValue(newVehicle)
 
