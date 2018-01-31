@@ -52,7 +52,8 @@ class VINData{
         }
         return true
     }
-    func serializeJSON(results : NSArray){
+    func serializeJSON(results : NSArray)
+    {
         let modelyear = results.value(forKey: "ModelYear") as! NSArray
         self.modelyear = modelyear[0] as! String
         

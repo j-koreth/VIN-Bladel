@@ -41,11 +41,10 @@ class CustomerDB
     func pullFromFirebase()
     {
         customerReference.observe(.value) { (snapshot) in
-            var num = 0
             for customers in snapshot.children.allObjects as! [DataSnapshot]
             {
-                let index = String(num)
                 let object = customers.value as? [String: AnyObject]
+                let index = object?["Customer Index"] as! String
                 let ID = object?["Customer ID"] as! String
                 let title = object?["Customer Title"] as! String
                 let first = object?["Customer First Name"] as! String
@@ -66,6 +65,10 @@ class CustomerDB
                 let customer = CustomerData(index: index, ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.database.append(customer)
+                
+                DispatchQueue.main.async {
+                    print("Fetched customerDatabase")
+                }
                 
             }
         }
