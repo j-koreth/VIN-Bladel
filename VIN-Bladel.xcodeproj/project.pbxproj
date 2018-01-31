@@ -73,7 +73,6 @@
 				67F7B24C1FD1A04500AD9532 /* ViewController.swift */,
 				06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */,
 				06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */,
-				9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */,
 			);
 			path = VC1;
 			sourceTree = "<group>";
@@ -81,6 +80,7 @@
 		066F8EE62020BCED00B9A8CE /* VC2 */ = {
 			isa = PBXGroup;
 			children = (
+				9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */,
 				9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */,
 				9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */,
 				9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */,
