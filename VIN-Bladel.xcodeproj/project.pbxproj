@@ -92,10 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				06E25E3E20177E0C004D0863 /* CustomerData.swift */,
+				06FD9F4D2020E87E00B400D3 /* CustomerDB.swift */,
 				67488A84201A2009005A1062 /* VehicleData.swift */,
 				6753A2BD1FD839900076AC8A /* VINData.swift */,
 				208EDD121FE89A3F001C9AB4 /* Reachability.swift */,
-				06FD9F4D2020E87E00B400D3 /* CustomerDB.swift */,
 			);
 			name = Classes;
 			path = ..;

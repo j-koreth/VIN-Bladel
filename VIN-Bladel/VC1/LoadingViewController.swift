@@ -21,7 +21,7 @@ class LoadingViewController: UIViewController {
         
     customerArray.pullFromFirebase()
 //        print(customerArray.database[0])
-        array.append(UIImage(named: "1")!)
+//        array.append(UIImage(named: "1")!)
         array.append(UIImage(named: "2")!)
         array.append(UIImage(named: "3")!)
         array.append(UIImage(named: "4")!)
