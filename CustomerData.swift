@@ -18,6 +18,7 @@ class CustomerData
     var customerTitle: String!
     var customerFirst: String!
     var customerLast: String!
+    var customerEmail: String!
 
     var customerAddress1: String!
     var customerAddress2: String!
@@ -25,7 +26,6 @@ class CustomerData
     var customerState: String!
     var customerZip: String!
     var customerCountry: String!
-    var customerEmail: String!
     var customerHomePhone: String!
     var customerWorkPhone: String!
     

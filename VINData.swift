@@ -68,7 +68,7 @@ class VINData{
         
         let displacement = results.value(forKey: "DisplacementL") as! NSArray
         self.displacement = displacement[0] as! String
-        if (self.displacement != nil){
+        if (self.displacement != nil && self.displacement != ""){
             self.displacement = String(round(Double(self.displacement)!*10)/10)
         }
         
