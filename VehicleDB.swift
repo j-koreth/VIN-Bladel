@@ -20,12 +20,6 @@ class VehicleDB
         vehicleReference = databaseReference.root.child("vehicles")
     }
     
-    
-    func deleteCustomerByName(first: String, last: String)
-    {
-        
-    }
-    
     func searchByVIN(vin: String) -> VehicleData?
     {
         for vehicle in database
