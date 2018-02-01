@@ -39,19 +39,19 @@ class VehicleDB
             {
                 let object = vehicles.value as? [String: AnyObject]
                 let vehicleCustomerID = object?["Customer ID"] as! String
-                let vehicleID = object?["Customer Title"] as! String
-                let vehicleMake = object?["Customer First Name"] as! String
-                let vehicleModel = object?["Customer Last Name"] as! String
+                let vehicleID = object?["Vehicle ID"] as! String
+                let vehicleMake = object?["Make Description"] as! String
+                let vehicleModel = object?["Model Description"] as! String
                 
-                let vehicleModelYear = object?["Customer Addr1"] as! String
-                let vehicleDisplacement = object?["Customer Addr2"] as! String
-                let vehicleCylinder = object?["Customer City"] as! String
-                let vehicleTransmission = object?["Customer State"] as! String
-                let vehicleSubModel = object?["Customer Country"] as! String
-                let vehicleVIN = object?["Customer Zip Code"] as! String
+                let vehicleModelYear = object?["Year"] as! String
+                let vehicleDisplacement = object?["Engine Description"] as! String
+                let vehicleCylinder = object?["Number of Cylinders"] as! String
+//                let vehicleTransmission = object?["Customer State"] as! String
+                let vehicleSubModel = object?["VehicleSubModel"] as! String
+                let vehicleVIN = object?["VIN"] as! String
 
                 
-                let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleID, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, transmission: vehicleTransmission, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
+                let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleID, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
                 
                 self.database.append(vehicle)
                 

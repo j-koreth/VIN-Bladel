@@ -29,7 +29,7 @@ class VehicleData
     var vehicleHomePhone: String!
     var vehicleWorkPhone: String!
     
-    init(customerID: String, ID: String, make: String, model: String, modelyear: String, displacement: String, cylinder: String, transmission: String, drivetype: String, submodel: String, vin: String) {
+    init(customerID: String, ID: String, make: String, model: String, modelyear: String, displacement: String, cylinder: String, drivetype: String, submodel: String, vin: String) {
         vehicleCustomerID = customerID
         vehicleID = ID
         vehicleMake = make
@@ -37,7 +37,7 @@ class VehicleData
         vehicleModelYear = modelyear
         vehicleDisplacement = displacement
         vehicleCylinder = cylinder
-        vehicleTransmission = transmission
+//        vehicleTransmission = transmission
         vehicleSubModel = drivetype
         vehicleVIN = vin
 
