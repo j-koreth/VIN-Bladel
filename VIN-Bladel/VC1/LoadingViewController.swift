@@ -20,14 +20,14 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    loops(array: array as! [UIImage])
+
+        
     customerArray.pullFromFirebase()
 
-
-
         
-        
-        loops(array: array as! [UIImage])
-        
+    segu()
         
     }
 
@@ -41,11 +41,22 @@ class LoadingViewController: UIViewController {
     
     
     
-//    func segu()
-//    {
-//    self.performSegue(withIdentifier: "toBeginningThing", sender: nil)
-//
-//    }
+    func segu()
+    {
+        let randomNumber = Int(arc4random_uniform(3) + 1)
+        
+        let double = Double(randomNumber) + 2
+        
+        print(double)
+        
+        let when = DispatchTime.now() + double
+        
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            
+            self.performSegue(withIdentifier: "loadingToMain", sender: nil)
+        }
+
+    }
     
 //    func getCustomerByVIN(VIN: String) -> CustomerData
 //    {
