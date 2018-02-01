@@ -10,20 +10,24 @@ import Foundation
 import FirebaseDatabase
 import Firebase
 
+var customerReference = Database.database().reference().root.child("customers")
+
+
 class CustomerDB
 {
     var database = [CustomerData]()
-    private var databaseReference = Database.database().reference()
-    private var customerReference = DatabaseReference()
-    
-    init() {
-        customerReference = databaseReference.root.child("customers")
-    }
     
     
     func deleteCustomerByName(first: String, last: String)
     {
-        
+        var theCustomer: CustomerData!
+        for customers in database
+        {
+            theCustomer = getCustomerByName(first: first, last: last)
+        }
+        var index = Int(theCustomer.customerIndex)
+        database.remove(at: index!)
+
     }
     
     func getCustomerByName(first: String, last: String) -> CustomerData?
@@ -31,6 +35,18 @@ class CustomerDB
         for customer in database
         {
             if customer.customerFirst == first && customer.customerLast == last
+            {
+                return customer
+            }
+        }
+        return nil
+    }
+    
+    func getCustomerByIndex(index: String) -> CustomerData?
+    {
+        for customer in database
+        {
+            if customer.customerIndex == index
             {
                 return customer
             }
@@ -66,10 +82,12 @@ class CustomerDB
                 
                 self.database.append(customer)
                 
-                DispatchQueue.main.async {
-                    print("Fetched customerDatabase")
-                }
                 
+            }
+            
+            DispatchQueue.main.async {
+                print("Fetched customerDatabase")
+            
             }
         }
     }
