@@ -17,10 +17,14 @@ class CustomerDB
 {
     var database = [CustomerData]()
     
-    func addCustomer(newCustomer: [String: String?])
+    func addCustomer(newCustomer: CustomerData)
     {
         var key = customerReference.childByAutoId().key
-        customerReference.child(key).setValue(newCustomer)
+        var num = database.count
+        newCustomer.customerIndex = String(num)
+        var customerDictionary = newCustomer.newCustomer()
+        customerReference.child(key).setValue(customerDictionary)
+        
     }
     
     
