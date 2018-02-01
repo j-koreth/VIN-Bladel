@@ -25,7 +25,7 @@ class CustomerDB
         {
             theCustomer = getCustomerByName(first: first, last: last)
         }
-        var index = Int(theCustomer.customerIndex)
+        let index = Int(theCustomer.customerIndex)
         database.remove(at: index!)
 
     }
