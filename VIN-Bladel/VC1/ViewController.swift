@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        
+
         
         
         var customer = CustomerData(ID: "31", title: "Mr.", first: "Joel", last: "Koreth", address1: "John", address2: "Hersey", city: "Arlington Heights", state: "IL", zip: "60056", country: "USA", email: "jals@gmail.com", home: "lol", work: "Hexanetech")

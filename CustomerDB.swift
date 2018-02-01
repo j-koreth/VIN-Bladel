@@ -24,9 +24,7 @@ class CustomerDB
         newCustomer.customerIndex = String(num)
         var customerDictionary = newCustomer.newCustomer()
         customerReference.child(key).setValue(customerDictionary)
-        
     }
-    
     
     func getCustomerByName(first: String, last: String) -> CustomerData?
     {
