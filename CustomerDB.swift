@@ -17,18 +17,12 @@ class CustomerDB
 {
     var database = [CustomerData]()
     
-    
-    func deleteCustomerByName(first: String, last: String)
+    func addCustomer(newCustomer: [String: String?])
     {
-        var theCustomer: CustomerData!
-        for customers in database
-        {
-            theCustomer = getCustomerByName(first: first, last: last)
-        }
-        let index = Int(theCustomer.customerIndex)
-        database.remove(at: index!)
-
+        var key = customerReference.childByAutoId().key
+        customerReference.child(key).setValue(newCustomer)
     }
+    
     
     func getCustomerByName(first: String, last: String) -> CustomerData?
     {
@@ -56,6 +50,8 @@ class CustomerDB
     
     func pullFromFirebase()
     {
+        var num = 0
+
         customerReference.observe(.value) { (snapshot) in
             for customers in snapshot.children.allObjects as! [DataSnapshot]
             {
@@ -78,11 +74,11 @@ class CustomerDB
                 let work = object?["Customer Work Phone"] as! String
                 
                 
-                let customer = CustomerData(index: index, ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
+                let customer = CustomerData(ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.database.append(customer)
                 
-                
+                num += 1
             }
             
             DispatchQueue.main.async {
@@ -91,5 +87,27 @@ class CustomerDB
             }
         }
     }
+    
+    
+    //Work in Progress
+//    func deleteCustomerByName(first: String, last: String)
+//    {
+//        var theCustomer: CustomerData!
+//        for customers in database
+//        {
+//            theCustomer = getCustomerByName(first: first, last: last)
+//        }
+//        var index = Int(theCustomer.customerIndex)
+//        database.remove(at: index!)
+//
+//        var num = 0
+//        for customers in database
+//        {
+//            customers.customerIndex = String(num)
+//            num += 1
+//
+//        }
+//
+//    }
     
 }
