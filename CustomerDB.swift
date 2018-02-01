@@ -19,10 +19,12 @@ class CustomerDB
     
     func addCustomer(newCustomer: CustomerData)
     {
-        var key = customerReference.childByAutoId().key
-        var num = database.count
+        let key = customerReference.childByAutoId().key
+        let num = database.count
         newCustomer.customerIndex = String(num)
-        var customerDictionary = newCustomer.newCustomer()
+        
+        database.append(newCustomer)
+        var customerDictionary = newCustomer.createNewCustomer()
         customerReference.child(key).setValue(customerDictionary)
     }
     
@@ -30,10 +32,7 @@ class CustomerDB
     {
         for customer in database
         {
-            if customer.customerFirst == first && customer.customerLast == last
-            {
-                return customer
-            }
+            if customer.customerFirst == first && customer.customerLast == last { return customer }
         }
         return nil
     }
@@ -42,10 +41,7 @@ class CustomerDB
     {
         for customer in database
         {
-            if customer.customerIndex == index
-            {
-                return customer
-            }
+            if customer.customerIndex == index { return customer }
         }
         return nil
     }
@@ -81,11 +77,6 @@ class CustomerDB
                 self.database.append(customer)
                 
                 num += 1
-            }
-            
-            DispatchQueue.main.async {
-                print("Fetched customerDatabase")
-            
             }
         }
     }
