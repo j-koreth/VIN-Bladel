@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase
 import Firebase
 
-class VehicleDB
+class VehicleDatabase
 {
     var database = [VehicleData]()
     private var databaseReference = Database.database().reference()

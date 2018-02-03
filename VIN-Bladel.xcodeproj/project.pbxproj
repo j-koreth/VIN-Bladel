@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */; };
 		06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */; };
-		20884E5020262C5400D5BEE5 /* VehicleDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4A20262C5400D5BEE5 /* VehicleDB.swift */; };
+		20884E5020262C5400D5BEE5 /* VehicleDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */; };
 		20884E5120262C5400D5BEE5 /* CustomerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4B20262C5400D5BEE5 /* CustomerData.swift */; };
 		20884E5220262C5400D5BEE5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4C20262C5400D5BEE5 /* Reachability.swift */; };
 		20884E5320262C5400D5BEE5 /* VINData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4D20262C5400D5BEE5 /* VINData.swift */; };
@@ -33,7 +33,7 @@
 		06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
 		06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
 		0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.release.xcconfig"; sourceTree = "<group>"; };
-		20884E4A20262C5400D5BEE5 /* VehicleDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleDB.swift; path = "VIN-Bladel/Classes/VehicleDB.swift"; sourceTree = "<group>"; };
+		20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleDatabase.swift; path = "VIN-Bladel/Classes/VehicleDatabase.swift"; sourceTree = "<group>"; };
 		20884E4B20262C5400D5BEE5 /* CustomerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerData.swift; path = "VIN-Bladel/Classes/CustomerData.swift"; sourceTree = "<group>"; };
 		20884E4C20262C5400D5BEE5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = "VIN-Bladel/Classes/Reachability.swift"; sourceTree = "<group>"; };
 		20884E4D20262C5400D5BEE5 /* VINData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VINData.swift; path = "VIN-Bladel/Classes/VINData.swift"; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 				20884E4E20262C5400D5BEE5 /* CustomerDB.swift */,
 				20884E4C20262C5400D5BEE5 /* Reachability.swift */,
 				20884E4F20262C5400D5BEE5 /* VehicleData.swift */,
-				20884E4A20262C5400D5BEE5 /* VehicleDB.swift */,
+				20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */,
 				20884E4D20262C5400D5BEE5 /* VINData.swift */,
 			);
 			name = Classes;
@@ -291,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20884E5020262C5400D5BEE5 /* VehicleDB.swift in Sources */,
+				20884E5020262C5400D5BEE5 /* VehicleDatabase.swift in Sources */,
 				9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */,
 				20884E5320262C5400D5BEE5 /* VINData.swift in Sources */,
 				67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */,

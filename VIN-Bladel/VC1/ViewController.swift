@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     var customerList = CustomerDB()
-
+    var vehicleDB = VehicleDatabase()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
