@@ -14,6 +14,8 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 {
     var barcode = ""
     var carData: VINData?
+    var customerArray = CustomerDB()
+    var vehicleDB = VehicleDatabase()
     
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var confirmButton: UIBarButtonItem!
@@ -148,10 +150,8 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         
         else
         {
-            if let destination = segue.destination as? CarInfoViewController
-            {
-                destination.car = carData
-            }
+
+            
         }
     }
 }

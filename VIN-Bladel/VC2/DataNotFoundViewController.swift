@@ -10,6 +10,9 @@ import UIKit
 
 class DataNotFoundViewController: UIViewController {
     
+    var customerArray = CustomerDB()
+    var vehicleDB = VehicleDatabase()
+    
     @IBAction func toNewCustomerVC(_ sender: UIButton) {
     }
     @IBAction func toPreviousCustomerVC(_ sender: UIButton) {

@@ -24,7 +24,7 @@ class CustomerDB
         newCustomer.customerIndex = String(num)
         
         database.append(newCustomer)
-        var customerDictionary = newCustomer.createNewCustomer()
+        let customerDictionary = newCustomer.createNewCustomer()
         customerReference.child(key).setValue(customerDictionary)
     }
     
@@ -54,7 +54,7 @@ class CustomerDB
             for customers in snapshot.children.allObjects as! [DataSnapshot]
             {
                 let object = customers.value as? [String: AnyObject]
-                let index = object?["Customer Index"] as! String
+//                let index = object?["Customer Index"] as! String
                 let ID = object?["Customer ID"] as! String
                 let title = object?["Customer Title"] as! String
                 let first = object?["Customer First Name"] as! String
@@ -72,7 +72,7 @@ class CustomerDB
                 let work = object?["Customer Work Phone"] as! String
                 
                 
-                let customer = CustomerData(ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
+                let customer = CustomerData(index: String(num), ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.database.append(customer)
                 
