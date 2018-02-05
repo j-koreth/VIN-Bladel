@@ -46,15 +46,15 @@ class CustomerData
     }
     
     func updateToDatabase() {
-        let newCustomer = [ "Customer Index": customerIndex, "Customer ID": customerID, "Customer Title": customerTitle, "Customer First Name": customerFirst, "Customer Last Name": customerLast, "Customer Addr1": customerAddress1, "Customer Addr2": customerAddress2, "Customer City": customerCity, "Customer State": customerState, "Customer Zip Code": customerZip, "Customer Country": customerCountry, "Customer Email": customerEmail, "Customer Home Phone": customerHomePhone, "Customer Work Phone": customerWorkPhone]
+        let newCustomer = createNewCustomer()
         
         customerDatabase.child(customerIndex).setValue(newCustomer)
         
         }
     
-    func newCustomer() -> [String: String?]
+    func createNewCustomer() -> [String: String?]
     {
-         let newCustomer = [ "Customer Index": customerIndex, "Customer ID": customerID, "Customer Title": customerTitle, "Customer First Name": customerFirst, "Customer Last Name": customerLast, "Customer Addr1": customerAddress1, "Customer Addr2": customerAddress2, "Customer City": customerCity, "Customer State": customerState, "Customer Zip Code": customerZip, "Customer Country": customerCountry, "Customer Email": customerEmail, "Customer Home Phone": customerHomePhone, "Customer Work Phone": customerWorkPhone]
+         let newCustomer = ["Customer Index": customerIndex, "Customer ID": customerID, "Customer Title": customerTitle, "Customer First Name": customerFirst, "Customer Last Name": customerLast, "Customer Addr1": customerAddress1, "Customer Addr2": customerAddress2, "Customer City": customerCity, "Customer State": customerState, "Customer Zip Code": customerZip, "Customer Country": customerCountry, "Customer Email": customerEmail, "Customer Home Phone": customerHomePhone, "Customer Work Phone": customerWorkPhone]
         
         return newCustomer
     }

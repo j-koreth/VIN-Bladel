@@ -43,6 +43,7 @@ class VINData{
             }
         }.resume()
     }
+    
     func checkForErrors(results : NSArray) -> Bool{
         let jsonerror = results.value(forKey: "ErrorCode") as! NSArray
         let errorc = Array(jsonerror[0] as! String)
@@ -52,6 +53,7 @@ class VINData{
         }
         return true
     }
+    
     func serializeJSON(results : NSArray)
     {
         let modelyear = results.value(forKey: "ModelYear") as! NSArray
