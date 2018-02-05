@@ -10,17 +10,24 @@ import UIKit
 
 class SearchCustomerViewController: UIViewController {
 
+    @IBOutlet weak var inputFirstName: UITextField!
+    @IBOutlet weak var inputLastName: UITextField!
+    
+    @IBAction func searchButton(_ sender: UIButton) {
+    }
+    
+    @IBOutlet weak var pulledFirstName: UITextField!
+    @IBOutlet weak var pulledLastName: UITextField!
+    @IBAction func confirmButton(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
 
     /*
     // MARK: - Navigation
