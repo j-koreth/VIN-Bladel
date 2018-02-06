@@ -37,7 +37,7 @@ class VehicleData
         vehicleModelYear = modelyear
         vehicleDisplacement = displacement
         vehicleCylinder = cylinder
-//        vehicleTransmission = transmission
+        vehicleTransmission = ""
         vehicleSubModel = drivetype
         vehicleVIN = vin
 
