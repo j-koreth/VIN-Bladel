@@ -22,8 +22,8 @@ class SearchCustomerViewController: UIViewController {
         if customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
         {
             customer = customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)!
-            pulledLastName.text = customer.customerLast
-            pulledFirstName.text = customer.customerFirst
+            pulledName.text = customer.customerLast
+            pulledName.text = customer.customerFirst
         }
         else
         {
