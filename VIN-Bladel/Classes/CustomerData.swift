@@ -29,7 +29,8 @@ class CustomerData
     var customerHomePhone: String!
     var customerWorkPhone: String!
     
-    init(ID: String, title: String, first: String, last: String, address1: String, address2: String, city: String, state: String, zip: String, country: String, email: String, home: String, work: String) {
+    init(index: String, ID: String, title: String, first: String, last: String, address1: String, address2: String, city: String, state: String, zip: String, country: String, email: String, home: String, work: String) {
+        customerIndex = index
         customerID = ID
         customerTitle = title
         customerFirst = first

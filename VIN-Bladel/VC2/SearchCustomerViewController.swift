@@ -9,11 +9,26 @@
 import UIKit
 
 class SearchCustomerViewController: UIViewController {
+    
+    var customer: CustomerData!
+    var customerArray = CustomerDB()
+    var vehicleDB = VehicleDatabase()
 
     @IBOutlet weak var inputFirstName: UITextField!
     @IBOutlet weak var inputLastName: UITextField!
     
-    @IBAction func searchButton(_ sender: UIButton) {
+    @IBAction func searchButton(_ sender: UIButton)
+    {
+        if customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
+        {
+            customer = customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)!
+            pulledLastName.text = customer.customerLast
+            pulledFirstName.text = customer.customerFirst
+        }
+        else
+        {
+            
+        }
     }
     
     @IBOutlet weak var pulledName: UITextField!
@@ -28,15 +43,5 @@ class SearchCustomerViewController: UIViewController {
     }
 
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -15,6 +15,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     var barcode = ""
     var carData : VINData?
+    var customerArray = CustomerDB()
+    var vehicleDB = VehicleDatabase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +57,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        else{
-            if let destination = segue.destination as? CarInfoViewController
-            {
-                print("passing")
-                destination.car = carData
-            }
+        else
+        {
+
         }
     }
 }

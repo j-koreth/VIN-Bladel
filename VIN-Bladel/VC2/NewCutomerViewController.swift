@@ -9,9 +9,13 @@
 import UIKit
 
 class NewCutomerViewController: UIViewController {
+    
     @IBOutlet weak var newFirstName: UITextField!
     @IBOutlet weak var newLastName: UITextField!
     @IBOutlet weak var newEmail: UITextField!
+    
+    var customerArray = CustomerDB()
+    var vehicleDB = VehicleDatabase()
     
     @IBAction func confirmNewInfo(_ sender: UIButton) {
     }
@@ -22,15 +26,5 @@ class NewCutomerViewController: UIViewController {
     }
 
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

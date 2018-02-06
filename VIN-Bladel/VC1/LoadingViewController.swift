@@ -61,7 +61,7 @@ class LoadingViewController: UIViewController {
         if let destination = segue.destination as? ViewController
         {
             destination.vehicleDB = vehicleDB
-            destination.customerList = customerArray
+            destination.customerArray = customerArray
         }
     }
 
