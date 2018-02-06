@@ -12,7 +12,6 @@ class CarInfoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var carLabel: UILabel!
     @IBOutlet weak var carTextField: UITextField!
-    
 
 }
 
