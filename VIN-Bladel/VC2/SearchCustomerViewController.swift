@@ -22,8 +22,8 @@ class SearchCustomerViewController: UIViewController {
         if customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
         {
             customer = customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)!
-            pulledLastName.text = customer.customerLast
-            pulledFirstName.text = customer.customerFirst
+            pulledName.text = customer.customerLast
+            pulledName.text = customer.customerFirst
         }
         else
         {
@@ -31,11 +31,9 @@ class SearchCustomerViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var pulledFirstName: UITextField!
-    @IBOutlet weak var pulledLastName: UITextField!
-    @IBAction func confirmButton(_ sender: UIButton)
-    {
-        
+    @IBOutlet weak var pulledName: UITextField!
+    
+    @IBAction func confirmButton(_ sender: UIButton) {
     }
     
     override func viewDidLoad() {

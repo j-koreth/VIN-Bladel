@@ -265,8 +265,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-y0-c8u">
                                 <rect key="frame" x="375" y="854" width="339" height="81"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
-                                <state key="normal" title="Confirm"/>
+                                <color key="backgroundColor" red="0.31372549020000001" green="0.63137254899999995" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="50"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="confirmNewInfo:" destination="oia-Ym-obO" eventType="touchUpInside" id="wTV-KK-lwi"/>
                                     <segue destination="8Fv-st-vBI" kind="show" identifier="newCustomerToCarInfo" id="3R2-gQ-Mk5"/>
@@ -382,8 +385,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmz-9b-e7I">
                                 <rect key="frame" x="400" y="923" width="339" height="81"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
-                                <state key="normal" title="Confirm"/>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.63137254901960782" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="50"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="confirmButton:" destination="l21-Ei-0oO" eventType="touchUpInside" id="XSm-E1-xKh"/>
                                 </connections>
@@ -416,19 +422,15 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkb-W8-Wnb">
                                 <rect key="frame" x="433" y="472" width="339" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
-                                <state key="normal" title="Search"/>
+                                <color key="backgroundColor" red="0.51764705879999995" green="0.71110683610000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="45"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="searchButton:" destination="l21-Ei-0oO" eventType="touchUpInside" id="5A3-EA-qge"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NnH-e0-GjN">
-                                <rect key="frame" x="132" y="694" width="559" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -453,8 +455,7 @@
                     <connections>
                         <outlet property="inputFirstName" destination="euj-P1-unE" id="V7w-ip-cLg"/>
                         <outlet property="inputLastName" destination="gPi-lv-wF2" id="rdm-4N-kn6"/>
-                        <outlet property="pulledFirstName" destination="vMf-E8-fns" id="GXn-9f-T0E"/>
-                        <outlet property="pulledLastName" destination="NnH-e0-GjN" id="3LS-mu-FEY"/>
+                        <outlet property="pulledName" destination="vMf-E8-fns" id="5U9-7H-QMn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pr0-n5-VcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
