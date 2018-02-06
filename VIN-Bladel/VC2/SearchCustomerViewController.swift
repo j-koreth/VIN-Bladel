@@ -16,8 +16,8 @@ class SearchCustomerViewController: UIViewController {
     @IBAction func searchButton(_ sender: UIButton) {
     }
     
-    @IBOutlet weak var pulledFirstName: UITextField!
-    @IBOutlet weak var pulledLastName: UITextField!
+    @IBOutlet weak var pulledName: UITextField!
+    
     @IBAction func confirmButton(_ sender: UIButton) {
     }
     
