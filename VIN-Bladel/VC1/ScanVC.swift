@@ -151,6 +151,13 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         {
             destination.car = carData
         }
+        
+        if segue.destination is DataNotFoundViewController
+        {
+            let destination = segue.destination as? DataNotFoundViewController
+            destination?.customerArray = customerArray
+            destination?.vehicleDB = vehicleDB
+        }
     }
 //        if(carData?.error != nil)
 //        {

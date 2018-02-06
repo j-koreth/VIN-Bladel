@@ -40,7 +40,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
             carData = vehicleDB.searchByVIN(vin: vinTextfield.text!)
 
         }
-        else{
+        else
+        {
             searchButton.isEnabled = false
             searchButton.backgroundColor = UIColor.lightGray
         }
@@ -49,13 +50,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
     @IBAction func searchVIN(_ sender: Any)
     {
         if carData != nil
-        {
-            self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
-        }
+        { self.performSegue(withIdentifier: "manualToCarInfo", sender: nil) }
         else
-        {
-            self.performSegue(withIdentifier: "inputNotFound", sender: nil)
-        }
+        { self.performSegue(withIdentifier: "inputNotFound", sender: nil) }
     }
     
     
@@ -64,6 +61,13 @@ class InputVC: UIViewController, UITextFieldDelegate {
         if let destination = segue.destination as? CarInfoViewController
         {
             destination.car = carData
+        }
+        
+        if segue.destination is DataNotFoundViewController
+        {
+            let destination = segue.destination as? DataNotFoundViewController
+            destination?.customerArray = customerArray
+            destination?.vehicleDB = vehicleDB
         }
         
         

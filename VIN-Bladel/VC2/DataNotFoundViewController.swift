@@ -13,15 +13,25 @@ class DataNotFoundViewController: UIViewController {
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
     
-    @IBAction func toNewCustomerVC(_ sender: UIButton) {
-    }
-    @IBAction func toPreviousCustomerVC(_ sender: UIButton) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.destination is SearchCustomerViewController
+        {
+            let destination = segue.destination as? SearchCustomerViewController
+            destination?.vehicleDB = vehicleDB
+            destination?.customerArray = customerArray
+        }
+        
+        if segue.destination is NewCutomerViewController
+        {
+            let destination = segue.destination as? NewCutomerViewController
+            destination?.vehicleDB = vehicleDB
+            destination?.customerArray = customerArray
+        }
     }
 
 }

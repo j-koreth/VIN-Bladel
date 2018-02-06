@@ -188,7 +188,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="toNewCustomerVC:" destination="AoO-Ua-zqM" eventType="touchUpInside" id="Xwt-Rq-aYW"/>
                                     <segue destination="oia-Ym-obO" kind="show" identifier="notFoundToNewCutomer" id="VPS-F6-Ooo"/>
                                 </connections>
                             </button>
@@ -201,7 +200,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="toPreviousCustomerVC:" destination="AoO-Ua-zqM" eventType="touchUpInside" id="PAG-Nw-GS7"/>
                                     <segue destination="l21-Ei-0oO" kind="show" identifier="notFoundToPreviousCutomer" id="ZXX-Pc-h66"/>
                                 </connections>
                             </button>
