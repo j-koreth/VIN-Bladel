@@ -14,7 +14,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var vinTextfield: UITextField!
     
     var barcode = ""
-    var carData : VINData?
+    var carData : VehicleData?
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
     
@@ -23,12 +23,11 @@ class InputVC: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         searchButton.backgroundColor = UIColor.lightGray
         searchButton.isEnabled = false
+
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
-        barcode = vinTextfield.text!
-        carData = VINData(vinNumber: barcode)
         return true
     }
     
@@ -38,6 +37,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
         {
             searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
             searchButton.isEnabled = true
+            carData = vehicleDB.searchByVIN(vin: vinTextfield.text!)
+
         }
         else{
             searchButton.isEnabled = false
@@ -45,21 +46,35 @@ class InputVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-    @IBAction func manualToCarInfo(_ sender: Any)
+    @IBAction func searchVIN(_ sender: Any)
     {
-        self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(self.carData?.error != nil){
-            let alert = UIAlertController(title: "ERROR", message: self.carData?.error, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+        if carData != nil
+        {
+            self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
         }
         else
         {
-
+            self.performSegue(withIdentifier: "inputNotFound", sender: nil)
         }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? CarInfoViewController
+        {
+            destination.car = carData
+        }
+        
+        
+//        if(self.carData?.error != nil){
+//            let alert = UIAlertController(title: "ERROR", message: self.carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        }
+//        else
+//        {
+//
+//        }
     }
 }

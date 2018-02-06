@@ -19,11 +19,13 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         loops(array: array as! [UIImage])
         if Reachability.isConnectedToNetwork(){
-            customerArray.pullFromFirebase()
-            vehicleDB.pullFromFirebase()
+            
+    
+ 
         }
         else {
 //            TODO
@@ -40,28 +42,30 @@ class LoadingViewController: UIViewController {
     func loops(array: [UIImage] )
     {
         imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
+        self.customerArray.pullFromFirebase()
+        self.vehicleDB.pullFromFirebase()
     }
     
     
     func segu()
     {
-        let randomNumber = Int(arc4random_uniform(3) + 1)
-        let double = Double(randomNumber) + 2
-        print(double)
         
-        let when = DispatchTime.now() + double
+        let randomNumber = Int(arc4random_uniform(3) + 5)
+        let when = DispatchTime.now() + Double(randomNumber)
         DispatchQueue.main.asyncAfter(deadline: when)
         {
+            print(self.customerArray.database.count)
             self.performSegue(withIdentifier: "loadingToMain", sender: nil)
         }
 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? ViewController
+        if segue.destination is ViewController
         {
-            destination.vehicleDB = vehicleDB
-            destination.customerArray = customerArray
+            let destination = segue.destination as? ViewController
+            destination?.vehicleDB = vehicleDB
+            destination?.customerArray = customerArray
         }
     }
 

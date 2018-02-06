@@ -18,14 +18,18 @@ class ViewController: UIViewController {
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
 
-        
-            
     }
 
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ScanVC
+        {
+            destination.vehicleDB = vehicleDB
+            destination.customerArray = customerArray
+        }
+        
+        if let destination = segue.destination as? InputVC
         {
             destination.vehicleDB = vehicleDB
             destination.customerArray = customerArray

@@ -13,7 +13,7 @@ import FirebaseDatabase
 class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 {
     var barcode = ""
-    var carData: VINData?
+    var carData: VehicleData?
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
     
@@ -96,9 +96,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
     }
     
-//    func segue() {
-//        self.performSegue(withIdentifier: "segueToManual", sender: self)
-//    }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {
@@ -115,8 +112,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                 barcode = scan.stringValue!
             }
             
-            carData = VINData(vinNumber: barcode)
-            
+            carData = self.vehicleDB.searchByVIN(vin: barcode)
+
+           
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
             
@@ -136,23 +134,36 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     {
         session.stopRunning()
         confirmButton.tintColor = UIColor.lightGray
-        self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
+        
+        if carData != nil
+        {
+            self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
+        }
+        else
+        {
+            self.performSegue(withIdentifier: "scanNotFound", sender: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if(carData?.error != nil)
+        if let destination = segue.destination as? CarInfoViewController
         {
-            let alert = UIAlertController(title: "ERROR", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        else
-        {
-
-            
+            destination.car = carData
         }
     }
+//        if(carData?.error != nil)
+//        {
+//            let alert = UIAlertController(title: "ERROR", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        }
+//
+//        else
+//        {
+//
+//
+//        }
+    
 }
 
