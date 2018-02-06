@@ -18,6 +18,22 @@ class NewCutomerViewController: UIViewController {
     var vehicleDB = VehicleDatabase()
     
     @IBAction func confirmNewInfo(_ sender: UIButton) {
+        if newFirstName.text == ""
+        { newFirstName.placeholder = "Please enter a First Name" }
+        
+        if newLastName.text == ""
+        { newLastName.placeholder = "Please enter a Last Name" }
+        
+        if newEmail.text == ""
+        { newEmail.placeholder = "Please enter an Email" }
+        
+        if newFirstName.text != "" && newLastName.text != "" && newEmail.text != ""
+        {
+            var newCustomer = CustomerData(ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
+            customerArray.addCustomer(newCustomer: newCustomer)
+
+
+        }
     }
     
     override func viewDidLoad() {

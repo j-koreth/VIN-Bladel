@@ -46,6 +46,22 @@ class CustomerData
         customerWorkPhone = work
     }
     
+    init(ID: String, title: String, first: String, last: String, address1: String, address2: String, city: String, state: String, zip: String, country: String, email: String, home: String, work: String) {
+        customerID = ID
+        customerTitle = title
+        customerFirst = first
+        customerLast = last
+        customerAddress1 = address1
+        customerAddress2 = address2
+        customerCity = city
+        customerState = state
+        customerZip = zip
+        customerCountry = country
+        customerEmail = email
+        customerHomePhone = home
+        customerWorkPhone = work
+    }
+    
     func updateToDatabase() {
         let newCustomer = createNewCustomer()
         
