@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var cutomerArray = CustomerDB()
+    var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         if let destination = segue.destination as? ScanVC
         {
             destination.vehicleDB = vehicleDB
-            destination.customerArray = cutomerArray
+            destination.customerArray = customerArray
         }
     }
 }
