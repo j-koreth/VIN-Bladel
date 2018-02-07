@@ -19,8 +19,7 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        
+            
         loops(array: array as! [UIImage])
         if Reachability.isConnectedToNetwork(){
             
