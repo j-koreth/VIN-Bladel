@@ -31,6 +31,9 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         textViewInformation = [car?.vehicleVIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        firstName.text = customer?.customerFirst
+        lastName.text = customer?.customerLast
+        email.text = customer?.customerEmail
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
