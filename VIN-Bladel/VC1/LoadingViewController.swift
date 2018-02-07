@@ -54,7 +54,6 @@ class LoadingViewController: UIViewController {
         let when = DispatchTime.now() + Double(randomNumber)
         DispatchQueue.main.asyncAfter(deadline: when)
         {
-            print(self.customerArray.database.count)
             self.performSegue(withIdentifier: "loadingToMain", sender: nil)
         }
 
