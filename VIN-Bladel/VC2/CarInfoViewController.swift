@@ -16,6 +16,9 @@ class CarInfoTableViewCell: UITableViewCell {
 }
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+    @IBOutlet weak var firstName: UILabel!
+    @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var email: UILabel!
     
     var labelTitles = ["VIN:", "Make:", "Model:", "Submodel:", "Model Year:", "Engine (L):", "Cylinders:", "Transmission:", "Drive Type:"]
     var textViewInformation = [String?]()
