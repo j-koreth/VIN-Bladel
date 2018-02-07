@@ -19,18 +19,15 @@ class SearchCustomerViewController: UIViewController {
     
     @IBAction func searchButton(_ sender: UIButton)
     {
-//        if customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
-//        {
-        print(customerArray.database.count)
-            print(inputFirstName.text!)
-            print(inputLastName.text!)
+        if customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
+        {
             customer = customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)
             pulledName.text = customer.customerFirst + " " + customer.customerLast
-//        }
-//        else
-//        {
-//            pulledName.text = "Try Again"
-//        }
+        }
+        else
+        {
+            pulledName.text = "Try Again"
+        }
     }
     
     @IBOutlet weak var pulledName: UITextField!

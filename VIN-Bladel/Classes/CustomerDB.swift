@@ -32,7 +32,9 @@ class CustomerDB
     {
         for customer in database
         {
-            if customer.customerFirst == first && customer.customerLast == last { return customer }
+            if customer.customerFirst.lowercased() == first.lowercased()
+                && customer.customerLast.lowercased() == last.lowercased()
+            { return customer }
         }
         return nil
     }
