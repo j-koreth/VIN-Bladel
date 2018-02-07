@@ -569,12 +569,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-z0-t9U">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdK-z0-t9U">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vdK-z0-t9U" firstAttribute="leading" secondItem="4Hb-Ak-DBc" secondAttribute="leading" id="Hbk-tp-Ivx"/>
+                            <constraint firstItem="vdK-z0-t9U" firstAttribute="bottom" secondItem="4Hb-Ak-DBc" secondAttribute="bottom" id="VHe-Y2-Apm"/>
+                            <constraint firstItem="vdK-z0-t9U" firstAttribute="trailing" secondItem="4Hb-Ak-DBc" secondAttribute="trailing" id="nRN-VW-AeW"/>
+                            <constraint firstItem="vdK-z0-t9U" firstAttribute="top" secondItem="eHr-hI-kG9" secondAttribute="top" id="sEE-fD-IW9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Hb-Ak-DBc"/>
                     </view>
                     <navigationItem key="navigationItem" id="DTA-rb-ACs"/>
