@@ -29,45 +29,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-DL-U2J">
-                                <rect key="frame" x="181.5" y="273" width="405" height="150"/>
-                                <color key="backgroundColor" red="1" green="0.54878095550022721" blue="0.51411642573663352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="fHk-2i-o1r"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="100"/>
-                                <state key="normal" title="Scan VIN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="yhV-Yd-TLF" kind="show" id="RHp-ei-R8P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJW-HN-Z97">
-                                <rect key="frame" x="90" y="581" width="588" height="150"/>
-                                <color key="backgroundColor" red="1" green="0.54025958437336352" blue="0.49231062857590979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="5FG-lb-epW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="100"/>
-                                <state key="normal" title="Manual Input">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="EG7-FL-6lW" kind="show" id="ATy-2b-s3E"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="3gR-F5-PTN">
+                                <rect key="frame" x="25" y="554" width="718" height="325"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-DL-U2J">
+                                        <rect key="frame" x="0.0" y="0.0" width="718" height="150"/>
+                                        <color key="backgroundColor" red="1" green="0.54878095550022721" blue="0.51411642573663352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="suc-aU-z6B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="100"/>
+                                        <state key="normal" title="Scan VIN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="yhV-Yd-TLF" kind="show" id="RHp-ei-R8P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJW-HN-Z97">
+                                        <rect key="frame" x="0.0" y="175" width="718" height="150"/>
+                                        <color key="backgroundColor" red="1" green="0.54025958437336352" blue="0.49231062857590979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="q02-VN-N6J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="93"/>
+                                        <state key="normal" title="Manual Input">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="EG7-FL-6lW" kind="show" id="ATy-2b-s3E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rqc-DL-U2J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="209" id="8aR-Je-5Fx"/>
-                            <constraint firstItem="rqc-DL-U2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fua-LH-NFp"/>
-                            <constraint firstItem="SJW-HN-Z97" firstAttribute="top" secondItem="rqc-DL-U2J" secondAttribute="bottom" constant="158" id="udo-dl-wuc"/>
-                            <constraint firstItem="SJW-HN-Z97" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ymm-Oa-x4J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gR-F5-PTN" secondAttribute="trailing" constant="25" id="cI9-qD-NiD"/>
+                            <constraint firstItem="3gR-F5-PTN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="te5-y7-lSj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3gR-F5-PTN" secondAttribute="bottom" constant="145" id="ypD-Bm-qGi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="kId-3u-UaR"/>
+                    <connections>
+                        <outlet property="manualButton" destination="SJW-HN-Z97" id="jTS-D4-0VQ"/>
+                        <outlet property="scanButton" destination="rqc-DL-U2J" id="4QS-Se-vfh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -612,7 +620,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mrQ-Ia-42B"/>
+        <segue reference="rmM-Xd-mot"/>
         <segue reference="TuX-OR-o8z"/>
     </inferredMetricsTieBreakers>
 </document>
