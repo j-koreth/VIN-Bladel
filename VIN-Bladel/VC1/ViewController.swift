@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         scanButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
-//        scanButton.layer.cornerRadius = 75
+        scanButton.layer.cornerRadius = 75
         manualButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
-//        manualButton.layer.cornerRadius = 75
+        manualButton.layer.cornerRadius = 75
 
     }
 

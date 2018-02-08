@@ -8,24 +8,25 @@
 
 import UIKit
 
-class NewCutomerViewController: UIViewController {
+class NewCutomerViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var newFirstName: UITextField!
     @IBOutlet weak var newLastName: UITextField!
     @IBOutlet weak var newEmail: UITextField!
+    @IBOutlet weak var confirmButton: UIButton!
     
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
     
     @IBAction func confirmNewInfo(_ sender: UIButton) {
-        if newFirstName.text == ""
-        { newFirstName.placeholder = "Please enter a First Name" }
-        
-        if newLastName.text == ""
-        { newLastName.placeholder = "Please enter a Last Name" }
-        
-        if newEmail.text == ""
-        { newEmail.placeholder = "Please enter an Email" }
+//        if newFirstName.text == ""
+//        { newFirstName.placeholder = "Please enter a First Name" }
+//
+//        if newLastName.text == ""
+//        { newLastName.placeholder = "Please enter a Last Name" }
+//
+//        if newEmail.text == ""
+//        { newEmail.placeholder = "Please enter an Email" }
         
         if newFirstName.text != "" && newLastName.text != "" && newEmail.text != ""
         {
@@ -36,8 +37,20 @@ class NewCutomerViewController: UIViewController {
         }
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if newFirstName.text != nil && newLastName.text != nil && newEmail.text != nil
+        {
+            confirmButton.isEnabled = false
+            confirmButton.backgroundColor =     UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0)
+
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        confirmButton.isEnabled = false
+        confirmButton.layer.cornerRadius = 40
 
     }
 
