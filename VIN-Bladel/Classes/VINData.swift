@@ -8,21 +8,12 @@
 
 import Foundation
 
-class VINData{
-    var vinNumber: String!
-    var modelyear: String!
-    var make: String!
-    var model: String!
-    var displacement: String!
-    var cylinder: String!
-    var error: String?
-    var transmission: String!
-    var drivetype: String!
-    var submodel: String!
+class VINData: VehicleData{
     
     init(vinNumber: String) {
-        self.vinNumber = vinNumber
+        super.init()
         if Reachability.isConnectedToNetwork(){
+            VIN = vinNumber
             getData(vinNumber: vinNumber)
         }
         else {
@@ -48,7 +39,7 @@ class VINData{
         let jsonerror = results.value(forKey: "ErrorCode") as! NSArray
         let errorc = Array(jsonerror[0] as! String)
         if (errorc[0] != "0"){
-            self.error = (jsonerror[0] as! String)
+            error = (jsonerror[0] as! String)
             return false
         }
         return true
@@ -57,31 +48,31 @@ class VINData{
     func serializeJSON(results : NSArray)
     {
         let modelyear = results.value(forKey: "ModelYear") as! NSArray
-        self.modelyear = modelyear[0] as! String
+        vehicleModelYear = modelyear[0] as! String
         
         let make = results.value(forKey: "Make") as! NSArray
-        self.make = make[0] as! String
+        vehicleMake = make[0] as! String
         
         let model = results.value(forKey: "Model") as! NSArray
-        self.model = model[0] as! String
+        vehicleModel = model[0] as! String
         
         let submodel = results.value(forKey: "Series") as! NSArray
-        self.submodel = submodel[0] as! String
+        vehicleSubModel = submodel[0] as! String
         
         let displacement = results.value(forKey: "DisplacementL") as! NSArray
-        self.displacement = displacement[0] as! String
-        if (self.displacement != nil && self.displacement != ""){
-            self.displacement = String(round(Double(self.displacement)!*10)/10)
+        vehicleDisplacement = displacement[0] as! String
+        if (vehicleDisplacement != nil && vehicleDisplacement != ""){
+            vehicleDisplacement = String(round(Double(vehicleDisplacement)!*10)/10)
         }
         
         let cylinder = results.value(forKey: "EngineCylinders") as! NSArray
-        self.cylinder = cylinder[0] as! String
+        vehicleCylinder = cylinder[0] as! String
         
         let transmission = results.value(forKey: "TransmissionStyle") as! NSArray
-        self.transmission = transmission[0] as! String
+        vehicleTransmission = transmission[0] as! String
         
         let drivetype = results.value(forKey: "DriveType") as! NSArray
-        self.drivetype = drivetype[0] as! String
-        
+        vehicleDriveType = drivetype[0] as! String
+        print("VIN Data \(Date().timeIntervalSince1970)")
     }
 }

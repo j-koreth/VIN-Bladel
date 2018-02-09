@@ -12,13 +12,14 @@ class DataNotFoundViewController: UIViewController {
     
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
+    var carData = VehicleData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
         if segue.destination is SearchCustomerViewController
         {
             let destination = segue.destination as? SearchCustomerViewController
@@ -32,6 +33,6 @@ class DataNotFoundViewController: UIViewController {
             destination?.vehicleDB = vehicleDB
             destination?.customerArray = customerArray
         }
+        
     }
-
 }
