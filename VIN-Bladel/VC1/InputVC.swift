@@ -19,6 +19,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         
         searchButton.layer.cornerRadius = 20
@@ -26,6 +27,11 @@ class InputVC: UIViewController, UITextFieldDelegate {
         searchButton.isEnabled = false
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
