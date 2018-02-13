@@ -39,18 +39,7 @@ class LoadingViewController: UIViewController {
         firstSegu()
         
     }
-    
-    override func viewDidAppear(_ animated: Bool)
-    {
-        if seugeInstantly == true
-        {
-            otherSegu()
-        }
-    }
-    
-    
-    
-    
+
     
     func loops(array: [UIImage] )
     {
@@ -72,11 +61,7 @@ class LoadingViewController: UIViewController {
         }
 
     }
-    
-    func otherSegu()
-    {
-        self.performSegue(withIdentifier: "loadingToMain", sender: nil)
-    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is ViewController

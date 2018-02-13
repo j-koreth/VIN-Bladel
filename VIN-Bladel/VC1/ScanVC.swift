@@ -25,7 +25,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
@@ -82,6 +81,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
         barcodeLabel.text = "No barcode is detected"
         sessionQueue.async {
             self.session.startRunning()

@@ -19,6 +19,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         
         searchButton.backgroundColor = UIColor(red:0.20, green:0.62, blue:0.91, alpha:1.0)
@@ -27,6 +28,11 @@ class InputVC: UIViewController, UITextFieldDelegate {
         searchButton.isEnabled = false
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
@@ -49,14 +55,11 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func searchVIN(_ sender: Any)
     {
-        if carData != nil {
+        if (carData?.fromDatabase)! {
             self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
         }
         else {
-            carData = VINData(vinNumber: vinTextfield.text!)
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                self.performSegue(withIdentifier: "inputNotFound", sender: nil)
-            }
+            self.performSegue(withIdentifier: "inputNotFound", sender: nil)
         }
     }
     

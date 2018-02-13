@@ -29,7 +29,9 @@ class ViewController: UIViewController {
 
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ScanVC
