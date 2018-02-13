@@ -21,7 +21,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         
-        searchButton.layer.cornerRadius = 20
+        searchButton.backgroundColor = UIColor(red:0.20, green:0.62, blue:0.91, alpha:1.0)
+        //        searchButton.layer.cornerRadius = 20
         searchButton.backgroundColor = UIColor.lightGray
         searchButton.isEnabled = false
 
