@@ -28,6 +28,7 @@ class VehicleData
     var vehicleHomePhone: String!
     var vehicleWorkPhone: String!
     
+    var fromDatabase = false
     var error: String!
     
     init(){}

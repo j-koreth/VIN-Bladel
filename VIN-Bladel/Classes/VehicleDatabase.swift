@@ -26,10 +26,11 @@ class VehicleDatabase
         {
             if vehicle.VIN.lowercased() == vin.lowercased()
             {
+                vehicle.fromDatabase = true
                 return vehicle
             }
         }
-        return nil
+        return VINData(vinNumber: vin)
     }
     
     func pullFromFirebase()

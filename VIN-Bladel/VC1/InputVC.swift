@@ -48,14 +48,11 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func searchVIN(_ sender: Any)
     {
-        if carData != nil {
+        if (carData?.fromDatabase)! {
             self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
         }
         else {
-            carData = VINData(vinNumber: vinTextfield.text!)
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-                self.performSegue(withIdentifier: "inputNotFound", sender: nil)
-            }
+            self.performSegue(withIdentifier: "inputNotFound", sender: nil)
         }
     }
     
