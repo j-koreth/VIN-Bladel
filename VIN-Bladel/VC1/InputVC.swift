@@ -13,7 +13,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var vinTextfield: UITextField!
     
-    var barcode = ""
     var carData : VehicleData?
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
@@ -34,13 +33,11 @@ class InputVC: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-
         if vinTextfield.text?.count == 17
         {
             searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
             searchButton.isEnabled = true
             carData = vehicleDB.searchByVIN(vin: vinTextfield.text!)
-
         }
         else
         {
@@ -51,10 +48,15 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func searchVIN(_ sender: Any)
     {
-        if carData != nil
-        { self.performSegue(withIdentifier: "manualToCarInfo", sender: nil) }
-        else
-        { self.performSegue(withIdentifier: "inputNotFound", sender: nil) }
+        if carData != nil {
+            self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
+        }
+        else {
+            carData = VINData(vinNumber: vinTextfield.text!)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                self.performSegue(withIdentifier: "inputNotFound", sender: nil)
+            }
+        }
     }
     
     
@@ -67,20 +69,18 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         if segue.destination is DataNotFoundViewController
         {
-            let destination = segue.destination as? DataNotFoundViewController
-            destination?.customerArray = customerArray
-            destination?.vehicleDB = vehicleDB
+            if(self.carData?.error != nil) {
+                let alert = UIAlertController(title: "Error", message: self.carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else {
+                let destination = segue.destination as? DataNotFoundViewController
+                destination?.carData = carData!
+                destination?.customerArray = customerArray
+                destination?.vehicleDB = vehicleDB
+            }
         }
-        
-        
-//        if(self.carData?.error != nil){
-//            let alert = UIAlertController(title: "ERROR", message: self.carData?.error, preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
-//        else
-//        {
-//
-//        }
+    
     }
 }

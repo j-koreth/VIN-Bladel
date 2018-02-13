@@ -24,7 +24,7 @@ class VehicleDatabase
     {
         for vehicle in database
         {
-            if vehicle.vehicleVIN.lowercased() == vin.lowercased()
+            if vehicle.VIN.lowercased() == vin.lowercased()
             {
                 return vehicle
             }
