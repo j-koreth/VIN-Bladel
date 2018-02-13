@@ -38,10 +38,11 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if newFirstName.text != nil && newLastName.text != nil && newEmail.text != nil
+        if newFirstName.text != "" && newLastName.text != "" && newEmail.text != ""
         {
-            confirmButton.isEnabled = false
-            confirmButton.backgroundColor =     UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0)
+            confirmButton.isEnabled = true
+            confirmButton.backgroundColor = UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0)
+
 
         }
     }
@@ -51,6 +52,12 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         
         confirmButton.isEnabled = false
         confirmButton.layer.cornerRadius = 40
+        confirmButton.layer.borderColor = UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0).cgColor
+        confirmButton.setTitleColor(UIColor.white, for: .normal)
+        confirmButton.setTitleColor(UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0), for: .disabled)
+        confirmButton.layer.borderWidth = 3
+
+
 
     }
 

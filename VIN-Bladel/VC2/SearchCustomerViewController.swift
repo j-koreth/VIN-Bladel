@@ -41,7 +41,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if inputLastName.text != "" && inputFirstName.text != ""
+        if inputLastName.text != "" && inputFirstName.text != "" 
         {
             searchButton.isEnabled = true
             searchButton.backgroundColor = UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0)
@@ -55,12 +55,19 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         searchButton.isEnabled = false
         searchButton.setTitleColor(UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0), for: .disabled)
         searchButton.setTitleColor(UIColor.white, for: .normal)
-        searchButton.layer.borderColor = UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0) as! CGColor
+        searchButton.layer.borderColor = UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0).cgColor
+        searchButton.layer.borderWidth = 3
+        searchButton.layer.cornerRadius = 40
+
         
         confirmButton.isEnabled = false
         confirmButton.setTitleColor(UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0), for: .disabled)
         confirmButton.setTitleColor(UIColor.white, for: .normal)
-        confirmButton.layer.borderColor = UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0) as! CGColor
+        confirmButton.layer.borderColor = UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0).cgColor
+        confirmButton.layer.borderWidth = 3
+        confirmButton.layer.cornerRadius = 40
+
+
 
         
 
