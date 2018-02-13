@@ -38,5 +38,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OpenSans-Regular.ttf</string>
+		<string>Lato-Regular.tff</string>
+	</array>
 </dict>
 </plist>

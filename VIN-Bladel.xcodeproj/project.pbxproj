@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */; };
 		06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */; };
 		06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */; };
 		20884E5020262C5400D5BEE5 /* VehicleDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06D53F682033638700BD40C1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
 		06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
 		0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +107,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		06D53F672033636A00BD40C1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				06D53F682033638700BD40C1 /* OpenSans-Regular.ttf */,
+				06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		1E984257C2BB36315B5A7580 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +155,7 @@
 				67F7B2511FD1A04500AD9532 /* Assets.xcassets */,
 				67F7B2561FD1A04500AD9532 /* Info.plist */,
 				67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */,
+				06D53F672033636A00BD40C1 /* Fonts */,
 			);
 			path = "VIN-Bladel";
 			sourceTree = "<group>";
@@ -219,6 +232,7 @@
 			files = (
 				67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */,
 				67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */,
+				06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */,
 				67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */,
 				67F7B2501FD1A04500AD9532 /* Main.storyboard in Resources */,
 			);
