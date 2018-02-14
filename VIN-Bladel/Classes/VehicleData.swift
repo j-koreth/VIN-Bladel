@@ -44,14 +44,5 @@ class VehicleData
         vehicleTransmission = ""
         vehicleSubModel = drivetype
         VIN = vin
-
-    }
-    
-    func updateToDatabase() {
-        let newVehicle = ["Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": VIN]
-
-        vehicleDatabase.child(vehicleIndex).setValue(newVehicle)
-
-
     }
 }
