@@ -109,9 +109,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             {
                 barcode = scan.stringValue!
             }
-            
-            carData = self.vehicleDB.searchByVIN(vin: barcode)
-            
            
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
@@ -130,6 +127,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     @IBAction func segueToCarInfo(_ sender: Any)
     {
+        carData = self.vehicleDB.searchByVIN(vin: barcode)
+        
+        
         session.stopRunning()
         confirmButton.tintColor = UIColor.lightGray
         
