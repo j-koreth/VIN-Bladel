@@ -153,9 +153,17 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         
         if segue.destination is DataNotFoundViewController
         {
-            let destination = segue.destination as? DataNotFoundViewController
-            destination?.customerArray = customerArray
-            destination?.vehicleDB = vehicleDB
+            if(self.carData?.error != nil) {
+                let alert = UIAlertController(title: "Error", message: "Invalid VIN", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else {
+                let destination = segue.destination as? DataNotFoundViewController
+                destination?.carData = carData!
+                destination?.customerArray = customerArray
+                destination?.vehicleDB = vehicleDB
+            }
         }
     }
 //        if(carData?.error != nil)
