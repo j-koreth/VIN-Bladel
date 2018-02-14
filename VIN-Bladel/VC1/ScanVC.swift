@@ -129,11 +129,10 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     {
         carData = self.vehicleDB.searchByVIN(vin: barcode)
         
-        
         session.stopRunning()
         confirmButton.tintColor = UIColor.lightGray
         
-        if carData != nil
+        if (carData?.fromDatabase)!
         {
             self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
         }
