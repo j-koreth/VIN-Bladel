@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        print(self.navigationController?.navigationBar.barStyle.rawValue)
         scanButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
         scanButton.layer.cornerRadius = 60
         manualButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)

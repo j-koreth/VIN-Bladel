@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3sU-98-frM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9oJ-WI-ibL">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,6 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
-            <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-Regular</string>
         </array>
         <array key="Lato-Regular.ttf">
@@ -89,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978.90625" y="89.6484375"/>
+            <point key="canvasLocation" x="1144.53125" y="89.6484375"/>
         </scene>
         <!--InputVC-->
         <scene sceneID="s8K-sc-nxV">
@@ -105,7 +104,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ics-jx-VKw">
                                         <rect key="frame" x="0.0" y="0.0" width="538" height="47"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Xfn-S7-xAU">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter VIN" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="Xfn-S7-xAU">
                                                 <rect key="frame" x="0.0" y="0.0" width="538" height="41"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
@@ -138,6 +137,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ics-jx-VKw" firstAttribute="centerX" secondItem="OM3-eJ-Wh1" secondAttribute="centerX" id="qGT-M1-5P9"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,6 +147,7 @@
                             <constraint firstItem="OM3-eJ-Wh1" firstAttribute="leading" secondItem="PYT-By-74B" secondAttribute="leading" constant="115" id="EBj-LW-1kh"/>
                             <constraint firstItem="PYT-By-74B" firstAttribute="trailing" secondItem="OM3-eJ-Wh1" secondAttribute="trailing" constant="115" id="m9i-j3-rlR"/>
                             <constraint firstItem="OM3-eJ-Wh1" firstAttribute="top" secondItem="PYT-By-74B" secondAttribute="top" constant="200" id="vLJ-PC-UcF"/>
+                            <constraint firstItem="OM3-eJ-Wh1" firstAttribute="centerX" secondItem="KwT-tA-gXg" secondAttribute="centerX" id="zIg-f0-v4d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PYT-By-74B"/>
                     </view>
@@ -157,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eE8-Dq-uOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826.5625" y="507.42187499999994"/>
+            <point key="canvasLocation" x="1992.1875" y="507.42187499999994"/>
         </scene>
         <!--ScanVC-->
         <scene sceneID="SR8-bp-K5x">
@@ -202,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-Wx-YPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813.28125" y="-191.015625"/>
+            <point key="canvasLocation" x="1978.90625" y="-191.015625"/>
         </scene>
         <!--Data Not Found View Controller-->
         <scene sceneID="h32-7H-LXh">
@@ -274,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGV-YU-abG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2814.84375" y="141.796875"/>
+            <point key="canvasLocation" x="2878.125" y="160.546875"/>
         </scene>
         <!--New Cutomer View Controller-->
         <scene sceneID="icm-qz-fPY">
@@ -284,10 +287,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Input Car Owners Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US6-g2-BsV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Input Car Owners Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US6-g2-BsV">
                                 <rect key="frame" x="30" y="80" width="709" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="51"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -386,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mX6-q4-05R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3517.1875" y="-316.40625"/>
+            <point key="canvasLocation" x="3682.8125" y="-316.40625"/>
         </scene>
         <!--Search Customer View Controller-->
         <scene sceneID="w7w-AJ-1pW">
@@ -466,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pr0-n5-VcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3516.40625" y="549.609375"/>
+            <point key="canvasLocation" x="3682.03125" y="549.609375"/>
         </scene>
         <!--Car Info View Controller-->
         <scene sceneID="uLw-Co-Y8q">
@@ -567,7 +570,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xL-ro-9GS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4468.75" y="141.796875"/>
+            <point key="canvasLocation" x="4634.375" y="141.796875"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="hMh-rF-k4V">
@@ -598,32 +601,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhb-Xd-fna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="203.125" y="89.6484375"/>
+            <point key="canvasLocation" x="368.75" y="89.6484375"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="0eN-a0-zrX">
+        <scene sceneID="Cih-xh-Aaz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3sU-98-frM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9oJ-WI-ibL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S55-vc-96P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cA9-uE-Lvc">
                         <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="sge-Yk-sEO" kind="relationship" relationship="rootViewController" id="rpf-cu-VZE"/>
+                        <segue destination="sge-Yk-sEO" kind="relationship" relationship="rootViewController" id="pgz-0n-AnR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kiv-HG-gFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxO-2e-oPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-429" y="90"/>
+            <point key="canvasLocation" x="-282" y="90"/>
         </scene>
     </scenes>
     <resources>
         <image name="car" width="190" height="114"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3R2-gQ-Mk5"/>
-        <segue reference="TuX-OR-o8z"/>
+        <segue reference="mrQ-Ia-42B"/>
+        <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>
