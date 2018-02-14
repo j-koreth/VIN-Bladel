@@ -476,7 +476,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="siW-7l-JFf">
                                         <rect key="frame" x="0.0" y="0.0" width="508" height="81"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euj-P1-unE">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euj-P1-unE">
                                                 <rect key="frame" x="0.0" y="0.0" width="508" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="UOe-42-gJ3"/>
@@ -500,7 +500,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="evk-bO-odg">
                                         <rect key="frame" x="0.0" y="156" width="508" height="81"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPi-lv-wF2">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPi-lv-wF2">
                                                 <rect key="frame" x="0.0" y="0.0" width="508" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="75" id="bpJ-rN-4iq"/>
