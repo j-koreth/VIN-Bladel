@@ -78,6 +78,5 @@ class InputVC: UIViewController, UITextFieldDelegate {
                 destination?.vehicleDB = vehicleDB
             }
         }
-    
     }
 }
