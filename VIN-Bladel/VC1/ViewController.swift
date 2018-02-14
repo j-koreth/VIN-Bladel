@@ -33,6 +33,10 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        self.navigationController?.isNavigationBarHidden = false
+
+        
         if let destination = segue.destination as? ScanVC
         {
             destination.vehicleDB = vehicleDB
