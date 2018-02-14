@@ -26,9 +26,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        
+                
         confirmButton.isEnabled = false
         confirmButton.tintColor = UIColor.lightGray
 
@@ -113,7 +111,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             }
             
             carData = self.vehicleDB.searchByVIN(vin: barcode)
-
+            
            
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white

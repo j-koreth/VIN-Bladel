@@ -19,9 +19,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        
+                
         searchButton.backgroundColor = UIColor(red:0.20, green:0.62, blue:0.91, alpha:1.0)
         searchButton.backgroundColor = UIColor.lightGray
         searchButton.isEnabled = false

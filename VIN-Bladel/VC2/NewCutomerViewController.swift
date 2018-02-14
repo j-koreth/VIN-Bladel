@@ -51,7 +51,7 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         confirmButton.isEnabled = false
-        confirmButton.layer.cornerRadius = 40
+        confirmButton.layer.cornerRadius = 50
         confirmButton.layer.borderColor = UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0).cgColor
         confirmButton.setTitleColor(UIColor.white, for: .normal)
         confirmButton.setTitleColor(UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0), for: .disabled)

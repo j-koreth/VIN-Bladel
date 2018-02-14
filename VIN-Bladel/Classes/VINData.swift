@@ -73,6 +73,5 @@ class VINData: VehicleData{
         
         let drivetype = results.value(forKey: "DriveType") as! NSArray
         vehicleDriveType = drivetype[0] as! String
-        print("VIN Data \(Date().timeIntervalSince1970)")
     }
 }
