@@ -80,7 +80,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        carData = nil
         barcodeLabel.text = "No barcode is detected"
+        barcodeLabel.textColor = .white
         sessionQueue.async {
             self.session.startRunning()
         }
