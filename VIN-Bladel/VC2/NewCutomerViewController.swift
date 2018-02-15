@@ -28,7 +28,7 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
             customerArray.addNewCustomer(newCustomer: newCustomer)
         }
         
-        performSegue(withIdentifier: "searchCustomerToCarInfo", sender: nil)
+        performSegue(withIdentifier: "newCustomerToCarInfo", sender: nil)
 
     }
     
@@ -57,7 +57,7 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CarInfoViewController
         {
-            destination.customer = newCustomer
+            destination.car = newCar
         }
     }
 

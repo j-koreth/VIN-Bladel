@@ -53,7 +53,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         searchButton.isEnabled = false
         searchButton.setTitleColor(UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0), for: .disabled)
         searchButton.setTitleColor(UIColor.white, for: .normal)
@@ -74,7 +74,6 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CarInfoViewController
         {
-            destination.customer = customer
             destination.car = newCar
         }
     }

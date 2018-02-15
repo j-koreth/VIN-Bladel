@@ -16,10 +16,11 @@ class DataNotFoundViewController: UIViewController {
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
     var newCar: VehicleData!
+    var unknownCustomer: CustomerData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         newCustomerButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
         newCustomerButton.layer.cornerRadius = 60
         
@@ -29,18 +30,20 @@ class DataNotFoundViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if segue.destination is SearchCustomerViewController
+        if let destination = segue.destination as? SearchCustomerViewController
         {
-            let destination = segue.destination as? SearchCustomerViewController
-            destination?.vehicleDB = vehicleDB
-            destination?.customerArray = customerArray
+            destination.vehicleDB = vehicleDB
+            destination.customerArray = customerArray
+            destination.newCar = newCar
         }
         
-        if segue.destination is NewCutomerViewController
+        if let destination = segue.destination as? NewCutomerViewController
         {
-            let destination = segue.destination as? NewCutomerViewController
-            destination?.vehicleDB = vehicleDB
-            destination?.customerArray = customerArray
+            destination.vehicleDB = vehicleDB
+            destination.customerArray = customerArray
+            destination.newCar = newCar
+
+
         }
         
     }

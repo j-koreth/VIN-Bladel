@@ -75,7 +75,7 @@ class VehicleDatabase
                 
                 let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleKey, make: vehicleKey, model: vehicleMake, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
                 
-//                let vehicle = VehicleData(customerID: vehicleCustomerID, key: vehicleKey, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
+                //    !            let vehicle = VehicleData(customerID: vehicleCustomerID, key: vehicleKey, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
                 
                 self.database.append(vehicle)
                 
