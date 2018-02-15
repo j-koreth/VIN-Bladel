@@ -15,7 +15,7 @@ class VehicleData
 {
     var vehicleIndex: String!
     var vehicleCustomerID: String!
-    var vehicleID: String!
+    var vehicleKey: String!
     var vehicleMake: String!
     var vehicleModel: String!
     var vehicleModelYear: String!
@@ -33,9 +33,9 @@ class VehicleData
     
     init(){}
     
-    init(customerID: String, ID: String, make: String, model: String, modelyear: String, displacement: String, cylinder: String, drivetype: String, submodel: String, vin: String) {
+    init(customerID: String, key: String, make: String, model: String, modelyear: String, displacement: String, cylinder: String, drivetype: String, submodel: String, vin: String) {
         vehicleCustomerID = customerID
-        vehicleID = ID
+        vehicleKey = key
         vehicleMake = make
         vehicleModel = model
         vehicleModelYear = modelyear
@@ -44,5 +44,15 @@ class VehicleData
         vehicleTransmission = ""
         vehicleSubModel = drivetype
         VIN = vin
+    }
+    
+    func updateAField(field: String, value: String)
+    {
+        let vehicle = vehicleDatabase.child(vehicleKey)
+        let vehicleField = [field: value]
+        
+        //        Update one field
+        vehicle.updateChildValues(vehicleField)
+
     }
 }

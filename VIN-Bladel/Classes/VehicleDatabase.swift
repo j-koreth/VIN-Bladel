@@ -40,7 +40,7 @@ class VehicleDatabase
             {
                 let object = vehicles.value as? [String: AnyObject]
                 let vehicleCustomerID = object?["Customer ID"] as! String
-                let vehicleID = object?["Vehicle ID"] as! String
+                let vehicleKey = object?["Vehicle ID"] as! String
                 let vehicleMake = object?["Make Description"] as! String
                 let vehicleModel = object?["Model Description"] as! String
                 
@@ -54,13 +54,15 @@ class VehicleDatabase
 //                    Add transmission key to all vehicles in database
 //                let vehicleTransmission = object?["Customer State"] as! String
                 
-                let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleID, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
+                let vehicle = VehicleData(customerID: vehicleCustomerID, key: vehicleKey, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
                 
                 self.database.append(vehicle)
                 
             }
         }
     }
+    
+
     
     func updateToDatabase() {
 //        let newVehicle = ["Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": VIN]

@@ -31,7 +31,7 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         if newFirstName.text != "" && newLastName.text != "" && newEmail.text != ""
         {
             var newCustomer = CustomerData(ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
-            customerArray.addCustomer(newCustomer: newCustomer)
+            customerArray.addNewCustomer(newCustomer: newCustomer)
 
 
         }
@@ -56,7 +56,6 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         confirmButton.setTitleColor(UIColor.white, for: .normal)
         confirmButton.setTitleColor(UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0), for: .disabled)
         confirmButton.layer.borderWidth = 3
-
 
 
     }

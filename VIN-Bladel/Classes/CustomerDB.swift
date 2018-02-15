@@ -16,17 +16,21 @@ var customerReference = Database.database().reference().root.child("customers")
 class CustomerDB
 {
     var database = [CustomerData]()
+    var lastID = 0
     
-    func addCustomer(newCustomer: CustomerData)
+    func addNewCustomer(newCustomer: CustomerData)
     {
         let key = customerReference.childByAutoId().key
         let num = database.count
+        
         newCustomer.customerIndex = String(num)
+        newCustomer.customerID = String(lastID + 1)
         
         database.append(newCustomer)
         let customerDictionary = newCustomer.createNewCustomer()
         customerReference.child(key).setValue(customerDictionary)
     }
+    
     
     func getCustomerByName(first: String, last: String) -> CustomerData?
     {
@@ -80,7 +84,10 @@ class CustomerDB
                 
                 num += 1
             }
+            self.lastID = Int((self.database.last?.customerID)!)!
+            print(self.database.last?.customerID)
         }
+
     }
     
     
