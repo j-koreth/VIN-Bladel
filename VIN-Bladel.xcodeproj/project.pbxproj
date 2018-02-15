@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		068E1CB1203481B00075BE93 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */; };
 		06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */; };
 		06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */; };
 		06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		06D53F682033638700BD40C1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		06D53F672033636A00BD40C1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */,
 				06D53F682033638700BD40C1 /* OpenSans-Regular.ttf */,
 				06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */,
 			);
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */,
+				068E1CB1203481B00075BE93 /* Quicksand-Regular.ttf in Resources */,
 				67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */,
 				06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */,
 				67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */,

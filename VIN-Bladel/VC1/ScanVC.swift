@@ -27,9 +27,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        
+                
         confirmButton.isEnabled = false
         confirmButton.tintColor = UIColor.lightGray
 
@@ -82,8 +80,10 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+        
+        carData = nil
         barcodeLabel.text = "No barcode is detected"
+        barcodeLabel.textColor = .white
         sessionQueue.async {
             self.session.startRunning()
         }
@@ -135,12 +135,16 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     @IBAction func segueToCarInfo(_ sender: Any)
     {
+        
         session.stopRunning()
         confirmButton.tintColor = UIColor.lightGray
         
-        if carData != nil
-        {
-            self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
+        if (self.carData?.error != nil) {
+            let alert = UIAlertController(title: "Error", message: "Invalid VIN", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            session.startRunning()
+            confirmButton.tintColor = UIColor.white
         }
         else
         {
@@ -160,22 +164,10 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         if segue.destination is DataNotFoundViewController
         {
             let destination = segue.destination as? DataNotFoundViewController
+            destination?.carData = carData!
             destination?.customerArray = customerArray
             destination?.vehicleDB = vehicleDB
         }
     }
-//        if(carData?.error != nil)
-//        {
-//            let alert = UIAlertController(title: "ERROR", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
-//
-//        else
-//        {
-//
-//
-//        }
-    
 }
 
