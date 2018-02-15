@@ -58,6 +58,8 @@ class VehicleDatabase
                 
                 self.database.append(vehicle)
                 
+                
+                
             }
         }
     }

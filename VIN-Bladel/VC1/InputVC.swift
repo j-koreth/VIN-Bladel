@@ -16,6 +16,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     var carData : VehicleData?
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
+    var customer: CustomerData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +70,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         if let destination = segue.destination as? CarInfoViewController
         {
             destination.car = carData
+            destination.customer = customer
         }
         
         if segue.destination is DataNotFoundViewController

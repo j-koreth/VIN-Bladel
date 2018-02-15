@@ -9,10 +9,8 @@
 import UIKit
 
 class CarInfoTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var carLabel: UILabel!
     @IBOutlet weak var carTextField: UITextField!
-
 }
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
