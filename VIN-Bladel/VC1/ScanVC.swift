@@ -112,12 +112,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             {
                 barcode = scan.stringValue!
             }
-            
-            carData = self.vehicleDB.searchByVIN(vin: barcode)
-            //customer = self.customerArray.getVehicleByID
-            
-
-           
+            while(carData == nil){
+                carData = self.vehicleDB.searchByVIN(vin: barcode)
+            }
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
             
@@ -146,10 +143,15 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             session.startRunning()
             confirmButton.tintColor = UIColor.white
         }
-        else
-        {
-            self.performSegue(withIdentifier: "scanNotFound", sender: nil)
-            
+        else {
+            if (carData?.fromDatabase)!
+            {
+                self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
+            }
+            else
+            {
+                self.performSegue(withIdentifier: "scanNotFound", sender: nil)
+            }
         }
     }
     
