@@ -13,6 +13,7 @@ import Firebase
 class VehicleDatabase
 {
     var database = [VehicleData]()
+    var cdatabase = [CustomerData]()
     private var databaseReference = Database.database().reference()
     private var vehicleReference = DatabaseReference()
     
@@ -32,6 +33,15 @@ class VehicleDatabase
         }
         return VINData(vinNumber: vin)
     }
+    
+//    func getVehicleByID(vehicleCustomerID: String) -> VehicleData?
+//    {
+//        for vehicle in database
+//        {
+//            if vehicle.vehicleCustomerID =
+//            
+//        }
+//    }
     
     func pullFromFirebase()
     {
@@ -57,6 +67,8 @@ class VehicleDatabase
                 let vehicle = VehicleData(customerID: vehicleCustomerID, key: vehicleKey, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
                 
                 self.database.append(vehicle)
+                
+                
                 
             }
         }
