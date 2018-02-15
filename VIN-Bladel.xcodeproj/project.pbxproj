@@ -1,517 +1,516 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 48;
-	objects = {
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 48;
+    objects = {
 
 /* Begin PBXBuildFile section */
-		068E1CB1203481B00075BE93 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */; };
-		06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */; };
-		06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */; };
-		06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */; };
-		20884E5020262C5400D5BEE5 /* VehicleDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */; };
-		20884E5120262C5400D5BEE5 /* CustomerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4B20262C5400D5BEE5 /* CustomerData.swift */; };
-		20884E5220262C5400D5BEE5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4C20262C5400D5BEE5 /* Reachability.swift */; };
-		20884E5320262C5400D5BEE5 /* VINData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4D20262C5400D5BEE5 /* VINData.swift */; };
-		20884E5420262C5400D5BEE5 /* CustomerDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4E20262C5400D5BEE5 /* CustomerDB.swift */; };
-		20884E5520262C5400D5BEE5 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4F20262C5400D5BEE5 /* VehicleData.swift */; };
-		67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */; };
-		67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24C1FD1A04500AD9532 /* ViewController.swift */; };
-		67F7B2501FD1A04500AD9532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B24E1FD1A04500AD9532 /* Main.storyboard */; };
-		67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2511FD1A04500AD9532 /* Assets.xcassets */; };
-		67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */; };
-		67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */; };
-		9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */; };
-		9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */; };
-		9DF36A58201A248000B6A11C /* NewCutomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */; };
-		9DF36A5A201A24FA00B6A11C /* SearchCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */; };
-		B7CF84D62016315A00B1A182 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF84D52016315A00B1A182 /* LoadingViewController.swift */; };
-		BB5102B01E83BEC5459F612A /* Pods_VIN_Bladel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */; };
+        06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */; };
+        06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */; };
+        06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */; };
+        20884E5020262C5400D5BEE5 /* VehicleDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */; };
+        20884E5120262C5400D5BEE5 /* CustomerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4B20262C5400D5BEE5 /* CustomerData.swift */; };
+        20884E5220262C5400D5BEE5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4C20262C5400D5BEE5 /* Reachability.swift */; };
+        20884E5320262C5400D5BEE5 /* VINData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4D20262C5400D5BEE5 /* VINData.swift */; };
+        20884E5420262C5400D5BEE5 /* CustomerDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4E20262C5400D5BEE5 /* CustomerDB.swift */; };
+        20884E5520262C5400D5BEE5 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4F20262C5400D5BEE5 /* VehicleData.swift */; };
+        67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */; };
+        67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24C1FD1A04500AD9532 /* ViewController.swift */; };
+        67F7B2501FD1A04500AD9532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B24E1FD1A04500AD9532 /* Main.storyboard */; };
+        67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2511FD1A04500AD9532 /* Assets.xcassets */; };
+        67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */; };
+        67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */; };
+        9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */; };
+        9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */; };
+        9DF36A58201A248000B6A11C /* NewCutomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */; };
+        9DF36A5A201A24FA00B6A11C /* SearchCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */; };
+        B7CF84D62016315A00B1A182 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CF84D52016315A00B1A182 /* LoadingViewController.swift */; };
+        BB5102B01E83BEC5459F612A /* Pods_VIN_Bladel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
-		06D53F682033638700BD40C1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
-		06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
-		0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.release.xcconfig"; sourceTree = "<group>"; };
-		20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleDatabase.swift; path = "VIN-Bladel/Classes/VehicleDatabase.swift"; sourceTree = "<group>"; };
-		20884E4B20262C5400D5BEE5 /* CustomerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerData.swift; path = "VIN-Bladel/Classes/CustomerData.swift"; sourceTree = "<group>"; };
-		20884E4C20262C5400D5BEE5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = "VIN-Bladel/Classes/Reachability.swift"; sourceTree = "<group>"; };
-		20884E4D20262C5400D5BEE5 /* VINData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VINData.swift; path = "VIN-Bladel/Classes/VINData.swift"; sourceTree = "<group>"; };
-		20884E4E20262C5400D5BEE5 /* CustomerDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerDB.swift; path = "VIN-Bladel/Classes/CustomerDB.swift"; sourceTree = "<group>"; };
-		20884E4F20262C5400D5BEE5 /* VehicleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleData.swift; path = "VIN-Bladel/Classes/VehicleData.swift"; sourceTree = "<group>"; };
-		67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIN-Bladel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		67F7B24C1FD1A04500AD9532 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		67F7B24F1FD1A04500AD9532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		67F7B2511FD1A04500AD9532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		67F7B2541FD1A04500AD9532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		67F7B2561FD1A04500AD9532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIN_Bladel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
-		9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNotFoundViewController.swift; sourceTree = "<group>"; };
-		9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCutomerViewController.swift; sourceTree = "<group>"; };
-		9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCustomerViewController.swift; sourceTree = "<group>"; };
-		A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.debug.xcconfig"; sourceTree = "<group>"; };
-		B7CF84D52016315A00B1A182 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+        068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+        06D53F682033638700BD40C1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+        06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+        06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
+        06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
+        0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.release.xcconfig"; sourceTree = "<group>"; };
+        20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleDatabase.swift; path = "VIN-Bladel/Classes/VehicleDatabase.swift"; sourceTree = "<group>"; };
+        20884E4B20262C5400D5BEE5 /* CustomerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerData.swift; path = "VIN-Bladel/Classes/CustomerData.swift"; sourceTree = "<group>"; };
+        20884E4C20262C5400D5BEE5 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = "VIN-Bladel/Classes/Reachability.swift"; sourceTree = "<group>"; };
+        20884E4D20262C5400D5BEE5 /* VINData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VINData.swift; path = "VIN-Bladel/Classes/VINData.swift"; sourceTree = "<group>"; };
+        20884E4E20262C5400D5BEE5 /* CustomerDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerDB.swift; path = "VIN-Bladel/Classes/CustomerDB.swift"; sourceTree = "<group>"; };
+        20884E4F20262C5400D5BEE5 /* VehicleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleData.swift; path = "VIN-Bladel/Classes/VehicleData.swift"; sourceTree = "<group>"; };
+        67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIN-Bladel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+        67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+        67F7B24C1FD1A04500AD9532 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+        67F7B24F1FD1A04500AD9532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+        67F7B2511FD1A04500AD9532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        67F7B2541FD1A04500AD9532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+        67F7B2561FD1A04500AD9532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+        99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIN_Bladel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+        9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
+        9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNotFoundViewController.swift; sourceTree = "<group>"; };
+        9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCutomerViewController.swift; sourceTree = "<group>"; };
+        9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCustomerViewController.swift; sourceTree = "<group>"; };
+        A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIN-Bladel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel.debug.xcconfig"; sourceTree = "<group>"; };
+        B7CF84D52016315A00B1A182 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		67F7B2441FD1A04500AD9532 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB5102B01E83BEC5459F612A /* Pods_VIN_Bladel.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        67F7B2441FD1A04500AD9532 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                BB5102B01E83BEC5459F612A /* Pods_VIN_Bladel.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		066F8EE42020BC7300B9A8CE /* VC1 */ = {
-			isa = PBXGroup;
-			children = (
-				B7CF84D52016315A00B1A182 /* LoadingViewController.swift */,
-				67F7B24C1FD1A04500AD9532 /* ViewController.swift */,
-				06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */,
-				06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */,
-			);
-			path = VC1;
-			sourceTree = "<group>";
-		};
-		066F8EE62020BCED00B9A8CE /* VC2 */ = {
-			isa = PBXGroup;
-			children = (
-				9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */,
-				9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */,
-				9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */,
-				9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */,
-			);
-			path = VC2;
-			sourceTree = "<group>";
-		};
-		066F8EE72020BD6C00B9A8CE /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				20884E4B20262C5400D5BEE5 /* CustomerData.swift */,
-				20884E4E20262C5400D5BEE5 /* CustomerDB.swift */,
-				20884E4C20262C5400D5BEE5 /* Reachability.swift */,
-				20884E4F20262C5400D5BEE5 /* VehicleData.swift */,
-				20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */,
-				20884E4D20262C5400D5BEE5 /* VINData.swift */,
-			);
-			name = Classes;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		06D53F672033636A00BD40C1 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */,
-				06D53F682033638700BD40C1 /* OpenSans-Regular.ttf */,
-				06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		1E984257C2BB36315B5A7580 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */,
-				0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		67F7B23E1FD1A04500AD9532 = {
-			isa = PBXGroup;
-			children = (
-				67F7B2491FD1A04500AD9532 /* VIN-Bladel */,
-				67F7B2481FD1A04500AD9532 /* Products */,
-				1E984257C2BB36315B5A7580 /* Pods */,
-				D0863621B18205990DF04980 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		67F7B2481FD1A04500AD9532 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		67F7B2491FD1A04500AD9532 /* VIN-Bladel */ = {
-			isa = PBXGroup;
-			children = (
-				066F8EE72020BD6C00B9A8CE /* Classes */,
-				066F8EE42020BC7300B9A8CE /* VC1 */,
-				066F8EE62020BCED00B9A8CE /* VC2 */,
-				67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */,
-				67F7B24E1FD1A04500AD9532 /* Main.storyboard */,
-				67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */,
-				67F7B2511FD1A04500AD9532 /* Assets.xcassets */,
-				67F7B2561FD1A04500AD9532 /* Info.plist */,
-				67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */,
-				06D53F672033636A00BD40C1 /* Fonts */,
-			);
-			path = "VIN-Bladel";
-			sourceTree = "<group>";
-		};
-		D0863621B18205990DF04980 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
+        066F8EE42020BC7300B9A8CE /* VC1 */ = {
+            isa = PBXGroup;
+            children = (
+                B7CF84D52016315A00B1A182 /* LoadingViewController.swift */,
+                67F7B24C1FD1A04500AD9532 /* ViewController.swift */,
+                06EC6F6B1FD5C25A00DFCD78 /* ScanVC.swift */,
+                06EC6F6D1FD5C27D00DFCD78 /* InputVC.swift */,
+            );
+            path = VC1;
+            sourceTree = "<group>";
+        };
+        066F8EE62020BCED00B9A8CE /* VC2 */ = {
+            isa = PBXGroup;
+            children = (
+                9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */,
+                9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */,
+                9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */,
+                9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */,
+            );
+            path = VC2;
+            sourceTree = "<group>";
+        };
+        066F8EE72020BD6C00B9A8CE /* Classes */ = {
+            isa = PBXGroup;
+            children = (
+                20884E4B20262C5400D5BEE5 /* CustomerData.swift */,
+                20884E4E20262C5400D5BEE5 /* CustomerDB.swift */,
+                20884E4C20262C5400D5BEE5 /* Reachability.swift */,
+                20884E4F20262C5400D5BEE5 /* VehicleData.swift */,
+                20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */,
+                20884E4D20262C5400D5BEE5 /* VINData.swift */,
+            );
+            name = Classes;
+            path = ..;
+            sourceTree = "<group>";
+        };
+        06D53F672033636A00BD40C1 /* Fonts */ = {
+            isa = PBXGroup;
+            children = (
+                068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */,
+                06D53F682033638700BD40C1 /* OpenSans-Regular.ttf */,
+                06D53F69203363EB00BD40C1 /* Lato-Regular.ttf */,
+            );
+            path = Fonts;
+            sourceTree = "<group>";
+        };
+        1E984257C2BB36315B5A7580 /* Pods */ = {
+            isa = PBXGroup;
+            children = (
+                A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */,
+                0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */,
+            );
+            name = Pods;
+            sourceTree = "<group>";
+        };
+        67F7B23E1FD1A04500AD9532 = {
+            isa = PBXGroup;
+            children = (
+                67F7B2491FD1A04500AD9532 /* VIN-Bladel */,
+                67F7B2481FD1A04500AD9532 /* Products */,
+                1E984257C2BB36315B5A7580 /* Pods */,
+                D0863621B18205990DF04980 /* Frameworks */,
+            );
+            sourceTree = "<group>";
+        };
+        67F7B2481FD1A04500AD9532 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        67F7B2491FD1A04500AD9532 /* VIN-Bladel */ = {
+            isa = PBXGroup;
+            children = (
+                066F8EE72020BD6C00B9A8CE /* Classes */,
+                066F8EE42020BC7300B9A8CE /* VC1 */,
+                066F8EE62020BCED00B9A8CE /* VC2 */,
+                67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */,
+                67F7B24E1FD1A04500AD9532 /* Main.storyboard */,
+                67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */,
+                67F7B2511FD1A04500AD9532 /* Assets.xcassets */,
+                67F7B2561FD1A04500AD9532 /* Info.plist */,
+                67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */,
+                06D53F672033636A00BD40C1 /* Fonts */,
+            );
+            path = "VIN-Bladel";
+            sourceTree = "<group>";
+        };
+        D0863621B18205990DF04980 /* Frameworks */ = {
+            isa = PBXGroup;
+            children = (
+                99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */,
+            );
+            name = Frameworks;
+            sourceTree = "<group>";
+        };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67F7B2461FD1A04500AD9532 /* VIN-Bladel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 67F7B2591FD1A04500AD9532 /* Build configuration list for PBXNativeTarget "VIN-Bladel" */;
-			buildPhases = (
-				6C7E1664CA87FF8AF4F868AB /* [CP] Check Pods Manifest.lock */,
-				67F7B2431FD1A04500AD9532 /* Sources */,
-				67F7B2441FD1A04500AD9532 /* Frameworks */,
-				67F7B2451FD1A04500AD9532 /* Resources */,
-				EA8CF7D6D8D785A3F1693B8B /* [CP] Embed Pods Frameworks */,
-				5DCB1512697A329EFC1C8505 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "VIN-Bladel";
-			productName = "VIN-Bladel";
-			productReference = 67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */;
-			productType = "com.apple.product-type.application";
-		};
+        67F7B2461FD1A04500AD9532 /* VIN-Bladel */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 67F7B2591FD1A04500AD9532 /* Build configuration list for PBXNativeTarget "VIN-Bladel" */;
+            buildPhases = (
+                6C7E1664CA87FF8AF4F868AB /* [CP] Check Pods Manifest.lock */,
+                67F7B2431FD1A04500AD9532 /* Sources */,
+                67F7B2441FD1A04500AD9532 /* Frameworks */,
+                67F7B2451FD1A04500AD9532 /* Resources */,
+                EA8CF7D6D8D785A3F1693B8B /* [CP] Embed Pods Frameworks */,
+                5DCB1512697A329EFC1C8505 /* [CP] Copy Pods Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = "VIN-Bladel";
+            productName = "VIN-Bladel";
+            productReference = 67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */;
+            productType = "com.apple.product-type.application";
+        };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		67F7B23F1FD1A04500AD9532 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
-				ORGANIZATIONNAME = "John Hersey High School";
-				TargetAttributes = {
-					67F7B2461FD1A04500AD9532 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-					};
-				};
-			};
-			buildConfigurationList = 67F7B2421FD1A04500AD9532 /* Build configuration list for PBXProject "VIN-Bladel" */;
-			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 67F7B23E1FD1A04500AD9532;
-			productRefGroup = 67F7B2481FD1A04500AD9532 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				67F7B2461FD1A04500AD9532 /* VIN-Bladel */,
-			);
-		};
+        67F7B23F1FD1A04500AD9532 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastSwiftUpdateCheck = 0910;
+                LastUpgradeCheck = 0910;
+                ORGANIZATIONNAME = "John Hersey High School";
+                TargetAttributes = {
+                    67F7B2461FD1A04500AD9532 = {
+                        CreatedOnToolsVersion = 9.1;
+                        ProvisioningStyle = Automatic;
+                    };
+                };
+            };
+            buildConfigurationList = 67F7B2421FD1A04500AD9532 /* Build configuration list for PBXProject "VIN-Bladel" */;
+            compatibilityVersion = "Xcode 8.0";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+                Base,
+            );
+            mainGroup = 67F7B23E1FD1A04500AD9532;
+            productRefGroup = 67F7B2481FD1A04500AD9532 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                67F7B2461FD1A04500AD9532 /* VIN-Bladel */,
+            );
+        };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		67F7B2451FD1A04500AD9532 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */,
-				068E1CB1203481B00075BE93 /* Quicksand-Regular.ttf in Resources */,
-				67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */,
-				06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */,
-				67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */,
-				67F7B2501FD1A04500AD9532 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        67F7B2451FD1A04500AD9532 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */,
+                068E1CB1203481B00075BE93 /* Quicksand-Regular.ttf in Resources */,
+                67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */,
+                06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */,
+                67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */,
+                67F7B2501FD1A04500AD9532 /* Main.storyboard in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5DCB1512697A329EFC1C8505 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C7E1664CA87FF8AF4F868AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VIN-Bladel-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA8CF7D6D8D785A3F1693B8B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
+        5DCB1512697A329EFC1C8505 /* [CP] Copy Pods Resources */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+            );
+            name = "[CP] Copy Pods Resources";
+            outputPaths = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-resources.sh\"\n";
+            showEnvVarsInLog = 0;
+        };
+        6C7E1664CA87FF8AF4F868AB /* [CP] Check Pods Manifest.lock */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+                "${PODS_ROOT}/Manifest.lock",
+            );
+            name = "[CP] Check Pods Manifest.lock";
+            outputPaths = (
+                "$(DERIVED_FILE_DIR)/Pods-VIN-Bladel-checkManifestLockResult.txt",
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+            showEnvVarsInLog = 0;
+        };
+        EA8CF7D6D8D785A3F1693B8B /* [CP] Embed Pods Frameworks */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+                "${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-frameworks.sh",
+                "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+                "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+                "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+                "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+            );
+            name = "[CP] Embed Pods Frameworks";
+            outputPaths = (
+                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIN-Bladel/Pods-VIN-Bladel-frameworks.sh\"\n";
+            showEnvVarsInLog = 0;
+        };
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		67F7B2431FD1A04500AD9532 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20884E5020262C5400D5BEE5 /* VehicleDatabase.swift in Sources */,
-				9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */,
-				20884E5320262C5400D5BEE5 /* VINData.swift in Sources */,
-				67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */,
-				20884E5520262C5400D5BEE5 /* VehicleData.swift in Sources */,
-				06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */,
-				20884E5120262C5400D5BEE5 /* CustomerData.swift in Sources */,
-				20884E5420262C5400D5BEE5 /* CustomerDB.swift in Sources */,
-				B7CF84D62016315A00B1A182 /* LoadingViewController.swift in Sources */,
-				9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */,
-				9DF36A5A201A24FA00B6A11C /* SearchCustomerViewController.swift in Sources */,
-				9DF36A58201A248000B6A11C /* NewCutomerViewController.swift in Sources */,
-				20884E5220262C5400D5BEE5 /* Reachability.swift in Sources */,
-				67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */,
-				06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        67F7B2431FD1A04500AD9532 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                20884E5020262C5400D5BEE5 /* VehicleDatabase.swift in Sources */,
+                9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */,
+                20884E5320262C5400D5BEE5 /* VINData.swift in Sources */,
+                67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */,
+                20884E5520262C5400D5BEE5 /* VehicleData.swift in Sources */,
+                06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */,
+                20884E5120262C5400D5BEE5 /* CustomerData.swift in Sources */,
+                20884E5420262C5400D5BEE5 /* CustomerDB.swift in Sources */,
+                B7CF84D62016315A00B1A182 /* LoadingViewController.swift in Sources */,
+                9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */,
+                9DF36A5A201A24FA00B6A11C /* SearchCustomerViewController.swift in Sources */,
+                9DF36A58201A248000B6A11C /* NewCutomerViewController.swift in Sources */,
+                20884E5220262C5400D5BEE5 /* Reachability.swift in Sources */,
+                67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */,
+                06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		67F7B24E1FD1A04500AD9532 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67F7B24F1FD1A04500AD9532 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67F7B2541FD1A04500AD9532 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
+        67F7B24E1FD1A04500AD9532 /* Main.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                67F7B24F1FD1A04500AD9532 /* Base */,
+            );
+            name = Main.storyboard;
+            sourceTree = "<group>";
+        };
+        67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                67F7B2541FD1A04500AD9532 /* Base */,
+            );
+            name = LaunchScreen.storyboard;
+            sourceTree = "<group>";
+        };
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		67F7B2571FD1A04500AD9532 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		67F7B2581FD1A04500AD9532 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		67F7B25A1FD1A04500AD9532 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
-				INFOPLIST_FILE = "VIN-Bladel/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs.VIN-Bladel";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		67F7B25B1FD1A04500AD9532 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
-				INFOPLIST_FILE = "VIN-Bladel/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs.VIN-Bladel";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
+        67F7B2571FD1A04500AD9532 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                ENABLE_TESTABILITY = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+                MTL_ENABLE_DEBUG_INFO = YES;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            };
+            name = Debug;
+        };
+        67F7B2581FD1A04500AD9532 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                SDKROOT = iphoneos;
+                SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        67F7B25A1FD1A04500AD9532 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = A7D49FA02C2297F6062E1130 /* Pods-VIN-Bladel.debug.xcconfig */;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_STYLE = Automatic;
+                DEVELOPMENT_TEAM = BWYT76Q3DS;
+                INFOPLIST_FILE = "VIN-Bladel/Info.plist";
+                IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs.VIN-Bladel";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SWIFT_VERSION = 4.0;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        67F7B25B1FD1A04500AD9532 /* Release */ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = 0F5DB10EB3688378E7A19247 /* Pods-VIN-Bladel.release.xcconfig */;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_STYLE = Automatic;
+                DEVELOPMENT_TEAM = BWYT76Q3DS;
+                INFOPLIST_FILE = "VIN-Bladel/Info.plist";
+                IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                PRODUCT_BUNDLE_IDENTIFIER = "org.jhhs.VIN-Bladel";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SWIFT_VERSION = 4.0;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Release;
+        };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67F7B2421FD1A04500AD9532 /* Build configuration list for PBXProject "VIN-Bladel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				67F7B2571FD1A04500AD9532 /* Debug */,
-				67F7B2581FD1A04500AD9532 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		67F7B2591FD1A04500AD9532 /* Build configuration list for PBXNativeTarget "VIN-Bladel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				67F7B25A1FD1A04500AD9532 /* Debug */,
-				67F7B25B1FD1A04500AD9532 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
+        67F7B2421FD1A04500AD9532 /* Build configuration list for PBXProject "VIN-Bladel" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                67F7B2571FD1A04500AD9532 /* Debug */,
+                67F7B2581FD1A04500AD9532 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        67F7B2591FD1A04500AD9532 /* Build configuration list for PBXNativeTarget "VIN-Bladel" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                67F7B25A1FD1A04500AD9532 /* Debug */,
+                67F7B25B1FD1A04500AD9532 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
 /* End XCConfigurationList section */
-	};
-	rootObject = 67F7B23F1FD1A04500AD9532 /* Project object */;
+    };
+    rootObject = 67F7B23F1FD1A04500AD9532 /* Project object */;
 }

@@ -48,6 +48,8 @@ class CustomerDB
         return nil
     }
     
+    
+    
     func pullFromFirebase()
     {
         var num = 0
