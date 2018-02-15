@@ -111,7 +111,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             {
                 barcode = scan.stringValue!
             }
-           
+            while(carData == nil){
+                carData = self.vehicleDB.searchByVIN(vin: barcode)
+            }
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
             
@@ -129,18 +131,26 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     @IBAction func segueToCarInfo(_ sender: Any)
     {
-        carData = self.vehicleDB.searchByVIN(vin: barcode)
         
         session.stopRunning()
         confirmButton.tintColor = UIColor.lightGray
         
-        if (carData?.fromDatabase)!
-        {
-            self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
+        if (self.carData?.error != nil) {
+            let alert = UIAlertController(title: "Error", message: "Invalid VIN", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            session.startRunning()
+            confirmButton.tintColor = UIColor.white
         }
-        else
-        {
-            self.performSegue(withIdentifier: "scanNotFound", sender: nil)
+        else {
+            if (carData?.fromDatabase)!
+            {
+                self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
+            }
+            else
+            {
+                self.performSegue(withIdentifier: "scanNotFound", sender: nil)
+            }
         }
     }
     
@@ -153,31 +163,11 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         
         if segue.destination is DataNotFoundViewController
         {
-            if(self.carData?.error != nil) {
-                let alert = UIAlertController(title: "Error", message: "Invalid VIN", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-            else {
-                let destination = segue.destination as? DataNotFoundViewController
-                destination?.carData = carData!
-                destination?.customerArray = customerArray
-                destination?.vehicleDB = vehicleDB
-            }
+            let destination = segue.destination as? DataNotFoundViewController
+            destination?.carData = carData!
+            destination?.customerArray = customerArray
+            destination?.vehicleDB = vehicleDB
         }
     }
-//        if(carData?.error != nil)
-//        {
-//            let alert = UIAlertController(title: "ERROR", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
-//
-//        else
-//        {
-//
-//
-//        }
-    
 }
 
