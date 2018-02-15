@@ -15,7 +15,7 @@ class DataNotFoundViewController: UIViewController {
     
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
-    var carData = VehicleData()
+    var newCar: VehicleData!
     
     override func viewDidLoad() {
         super.viewDidLoad()

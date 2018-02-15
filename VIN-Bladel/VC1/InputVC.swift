@@ -75,7 +75,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
             }
             else {
                 let destination = segue.destination as? DataNotFoundViewController
-                destination?.carData = carData!
+                destination?.newCar = carData!
                 destination?.customerArray = customerArray
                 destination?.vehicleDB = vehicleDB
             }

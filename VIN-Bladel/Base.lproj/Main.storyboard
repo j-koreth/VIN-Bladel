@@ -387,7 +387,6 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmNewInfo:" destination="oia-Ym-obO" eventType="touchUpInside" id="wTV-KK-lwi"/>
-                                    <segue destination="8Fv-st-vBI" kind="show" identifier="newCustomerToCarInfo" id="3R2-gQ-Mk5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Car Owners Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US6-g2-BsV">
@@ -421,6 +420,7 @@
                         <outlet property="newEmail" destination="yAe-Dc-qAl" id="RkH-H2-DmX"/>
                         <outlet property="newFirstName" destination="5AZ-cb-cZt" id="brD-yn-RQ1"/>
                         <outlet property="newLastName" destination="5AZ-cb-cZt" id="6qf-V3-3mX"/>
+                        <segue destination="8Fv-st-vBI" kind="show" identifier="newCustomerToCarInfo" id="Nia-pj-q8t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mX6-q4-05R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -566,11 +566,12 @@
                         <outlet property="inputLastName" destination="gPi-lv-wF2" id="rdm-4N-kn6"/>
                         <outlet property="pulledText" destination="SsA-go-LpL" id="XNE-VG-HcQ"/>
                         <outlet property="searchButton" destination="Nkb-W8-Wnb" id="kMz-UA-uwz"/>
+                        <segue destination="8Fv-st-vBI" kind="show" identifier="searchCustomerToCarInfo" id="ec1-db-CaG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pr0-n5-VcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3682.03125" y="549.609375"/>
+            <point key="canvasLocation" x="3745" y="690"/>
         </scene>
         <!--Car Info View Controller-->
         <scene sceneID="uLw-Co-Y8q">
@@ -727,7 +728,7 @@
         <image name="car" width="190" height="114"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mrQ-Ia-42B"/>
+        <segue reference="Nia-pj-q8t"/>
         <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>

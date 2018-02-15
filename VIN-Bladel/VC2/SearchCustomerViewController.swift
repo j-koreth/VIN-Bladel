@@ -11,6 +11,7 @@ import UIKit
 class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     
     var customer: CustomerData!
+    var newCar: VehicleData!
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
 
@@ -30,7 +31,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            pulledText.text = "Try Again"
+            pulledText.text = "Customer not found. Try Again"
         }
     }
     
@@ -38,6 +39,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     @IBAction func confirm(_ sender: UIButton)
     {
         
+        performSegue(withIdentifier: "searchCustomerToCarInfo", sender: nil)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -67,11 +69,14 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         confirmButton.layer.borderWidth = 3
         confirmButton.layer.cornerRadius = 35
 
-
-
-        
-
-        // Do any additional setup after loading the view.
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CarInfoViewController
+        {
+            destination.customer = customer
+            destination.car = newCar
+        }
     }
 
 

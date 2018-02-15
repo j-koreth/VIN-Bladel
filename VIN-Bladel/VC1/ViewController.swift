@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         scanButton.layer.cornerRadius = 60
         manualButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
         manualButton.layer.cornerRadius = 60
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {

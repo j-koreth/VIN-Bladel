@@ -23,7 +23,7 @@ class CustomerDB
         let key = customerReference.childByAutoId().key
         let num = database.count
         
-        newCustomer.customerIndex = String(num)
+        newCustomer.customerKey = String(num)
         newCustomer.customerID = String(lastID + 1)
         
         database.append(newCustomer)
@@ -43,15 +43,14 @@ class CustomerDB
         return nil
     }
     
-    func getCustomerByIndex(index: String) -> CustomerData?
+    func getCustomerByKey(key: String) -> CustomerData?
     {
         for customer in database
         {
-            if customer.customerIndex == index { return customer }
+            if customer.customerKey == key { return customer }
         }
         return nil
     }
-    
     
     
     func pullFromFirebase()
@@ -64,6 +63,7 @@ class CustomerDB
                 let object = customers.value as? [String: AnyObject]
 //                let index = object?["Customer Index"] as! String
                 let ID = object?["Customer ID"] as! String
+                let key = customers.key
                 let title = object?["Customer Title"] as! String
                 let first = object?["Customer First Name"] as! String
                 let last = object?["Customer Last Name"] as! String
@@ -80,18 +80,24 @@ class CustomerDB
                 let work = object?["Customer Work Phone"] as! String
                 
                 
-                let customer = CustomerData(index: String(num), ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
+                let customer = CustomerData(key: key, ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.database.append(customer)
                 
                 num += 1
             }
             self.lastID = Int((self.database.last?.customerID)!)!
-            print(self.database.last?.customerID)
         }
 
     }
     
+    func pushToFirebase()
+    {
+        for customers in database
+        {
+            customers.updateToDatabase()
+        }
+    }
     
     //Work in Progress
 //    func deleteCustomerByName(first: String, last: String)

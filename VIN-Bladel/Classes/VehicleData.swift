@@ -13,9 +13,9 @@ var vehicleDatabase = Database.database().reference().root.child("vehicles")
 
 class VehicleData
 {
-    var vehicleIndex: String!
-    var vehicleCustomerID: String!
     var vehicleKey: String!
+    var vehicleCustomerID: String!
+    var vehicleID: String!
     var vehicleMake: String!
     var vehicleModel: String!
     var vehicleModelYear: String!
@@ -33,9 +33,9 @@ class VehicleData
     
     init(){}
     
-    init(customerID: String, key: String, make: String, model: String, modelyear: String, displacement: String, cylinder: String, drivetype: String, submodel: String, vin: String) {
+    init(customerID: String, ID: String, make: String, model: String, modelyear: String, displacement: String, cylinder: String, drivetype: String, submodel: String, vin: String) {
         vehicleCustomerID = customerID
-        vehicleKey = key
+        vehicleID = ID
         vehicleMake = make
         vehicleModel = model
         vehicleModelYear = modelyear
@@ -50,9 +50,21 @@ class VehicleData
     {
         let vehicle = vehicleDatabase.child(vehicleKey)
         let vehicleField = [field: value]
-        
-        //        Update one field
         vehicle.updateChildValues(vehicleField)
 
+    }
+    
+    func updateToDatabase() {
+        let newVehicle = createANewVehicle()
+        
+        vehicleDatabase.child(vehicleKey).setValue(newVehicle)
+        
+    }
+    
+    func createANewVehicle() -> [String: String?] {
+        let newVehicle = ["Vehicle Key": vehicleKey, "Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": VIN]
+        
+        return newVehicle
+        
     }
 }
