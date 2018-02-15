@@ -57,7 +57,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         searchButton.setTitleColor(UIColor.white, for: .normal)
         searchButton.layer.borderColor = UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0).cgColor
         searchButton.layer.borderWidth = 3
-        searchButton.layer.cornerRadius = 40
+        searchButton.layer.cornerRadius = 35
 
         
         confirmButton.isEnabled = false
@@ -65,7 +65,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         confirmButton.setTitleColor(UIColor.white, for: .normal)
         confirmButton.layer.borderColor = UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0).cgColor
         confirmButton.layer.borderWidth = 3
-        confirmButton.layer.cornerRadius = 40
+        confirmButton.layer.cornerRadius = 35
 
 
 
