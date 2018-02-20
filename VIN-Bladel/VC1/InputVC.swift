@@ -27,25 +27,30 @@ class InputVC: UIViewController, UITextFieldDelegate {
 
     }
     
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
-        return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if vinTextfield.text?.count == 17
         {
             searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
             searchButton.isEnabled = true
             carData = vehicleDB.searchByVIN(vin: vinTextfield.text!)
+
         }
         else
         {
             searchButton.isEnabled = false
             searchButton.backgroundColor = UIColor.lightGray
         }
+        return true
     }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+    
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//    }
     
     @IBAction func searchVIN(_ sender: Any)
     {
