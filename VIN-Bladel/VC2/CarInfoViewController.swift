@@ -14,9 +14,8 @@ class CarInfoTableViewCell: UITableViewCell {
 }
 
 class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-    @IBOutlet weak var firstName: UILabel!
-    @IBOutlet weak var lastName: UILabel!
-    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     var labelTitles = ["VIN:", "Make:", "Model:", "Submodel:", "Model Year:", "Engine (L):", "Cylinders:", "Transmission:", "Drive Type:"]
     var textViewInformation = [String?]()
@@ -30,9 +29,8 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        firstName.text = customer?.customerFirst
-        lastName.text = customer?.customerLast
-        email.text = customer?.customerEmail
+        nameLabel.text = (customer?.customerFirst)! + " " + (customer?.customerLast)!
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
