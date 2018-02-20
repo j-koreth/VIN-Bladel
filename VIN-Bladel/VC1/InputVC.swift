@@ -20,40 +20,45 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         searchButton.backgroundColor = UIColor(red:0.20, green:0.62, blue:0.91, alpha:1.0)
         searchButton.backgroundColor = UIColor.lightGray
         searchButton.isEnabled = false
+        
+        vinTextfield.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
 
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    @objc func textFieldDidChange()
+    {
         if vinTextfield.text?.count == 17
-        {
-            searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
-            searchButton.isEnabled = true
-            carData = vehicleDB.searchByVIN(vin: vinTextfield.text!)
-
-        }
-        else
-        {
-            searchButton.isEnabled = false
-            searchButton.backgroundColor = UIColor.lightGray
-        }
-        return true
-    }
+            {
+                searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
+                searchButton.isEnabled = true
+                print(vinTextfield.text)
     
+            }
+            else
+            {
+                searchButton.isEnabled = false
+                searchButton.backgroundColor = UIColor.lightGray
+            }
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         return true
     }
     
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//    }
-    
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+        carData = vehicleDB.searchByVIN(vin: vinTextfield.text!)
+    }
+
     @IBAction func searchVIN(_ sender: Any)
     {
+        view.endEditing(true)
+
         if (carData?.fromDatabase)! {
             self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
         }
@@ -61,7 +66,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
             self.performSegue(withIdentifier: "inputNotFound", sender: nil)
         }
     }
-    
+  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
