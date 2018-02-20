@@ -13,6 +13,7 @@ import Firebase
 class VehicleDatabase
 {
     var database = [VehicleData]()
+    var cdatabase = [CustomerData]()
     private var databaseReference = Database.database().reference()
     private var vehicleReference = DatabaseReference()
     
@@ -33,12 +34,30 @@ class VehicleDatabase
         return VINData(vinNumber: vin)
     }
     
+    func pushToFirebase()
+    {
+        for vehicles in database
+        {
+            vehicles.updateToDatabase()
+        }
+    }
+    
+//    func getVehicleByID(vehicleCustomerID: String) -> VehicleData?
+//    {
+//        for vehicle in database
+//        {
+//            if vehicle.vehicleCustomerID =
+//            
+//        }
+//    }
+    
     func pullFromFirebase()
     {
         vehicleReference.observe(.value) { (snapshot) in
             for vehicles in snapshot.children.allObjects as! [DataSnapshot]
             {
                 let object = vehicles.value as? [String: AnyObject]
+                let vehicleKey = vehicles.key
                 let vehicleCustomerID = object?["Customer ID"] as! String
                 let vehicleID = object?["Vehicle ID"] as! String
                 let vehicleMake = object?["Make Description"] as! String
@@ -54,7 +73,9 @@ class VehicleDatabase
 //                    Add transmission key to all vehicles in database
 //                let vehicleTransmission = object?["Customer State"] as! String
                 
-                let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleID, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
+                let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleKey, make: vehicleKey, model: vehicleMake, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
+                
+                //    !            let vehicle = VehicleData(customerID: vehicleCustomerID, key: vehicleKey, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
                 
                 self.database.append(vehicle)
                 
@@ -64,12 +85,5 @@ class VehicleDatabase
         }
     }
     
-    func updateToDatabase() {
-//        let newVehicle = ["Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": VIN]
-//
-//        vehicleDatabase.child(vehicleIndex).setValue(newVehicle)
-        
-        
-    }
 }
 

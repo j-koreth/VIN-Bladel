@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewController: UIViewController {
     
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
     
+    var customerReference = Database.database().reference().root.child("customers")
+
     @IBOutlet weak var scanButton: UIButton!
     @IBOutlet weak var manualButton: UIButton!
     
@@ -24,7 +27,6 @@ class ViewController: UIViewController {
         scanButton.layer.cornerRadius = 60
         manualButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
         manualButton.layer.cornerRadius = 60
-
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -11,6 +11,7 @@ import UIKit
 class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     
     var customer: CustomerData!
+    var newCar: VehicleData!
     var customerArray = CustomerDB()
     var vehicleDB = VehicleDatabase()
 
@@ -30,7 +31,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            pulledText.text = "Try Again"
+            pulledText.text = "Customer not found. Try Again"
         }
     }
     
@@ -38,6 +39,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     @IBAction func confirm(_ sender: UIButton)
     {
         
+        performSegue(withIdentifier: "searchCustomerToCarInfo", sender: nil)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -51,7 +53,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         searchButton.isEnabled = false
         searchButton.setTitleColor(UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0), for: .disabled)
         searchButton.setTitleColor(UIColor.white, for: .normal)
@@ -67,11 +69,13 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         confirmButton.layer.borderWidth = 3
         confirmButton.layer.cornerRadius = 35
 
-
-
-        
-
-        // Do any additional setup after loading the view.
+        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CarInfoViewController
+        {
+            destination.car = newCar
+        }
     }
 
 

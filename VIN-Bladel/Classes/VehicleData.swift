@@ -13,7 +13,7 @@ var vehicleDatabase = Database.database().reference().root.child("vehicles")
 
 class VehicleData
 {
-    var vehicleIndex: String!
+    var vehicleKey: String!
     var vehicleCustomerID: String!
     var vehicleID: String!
     var vehicleMake: String!
@@ -44,5 +44,27 @@ class VehicleData
         vehicleTransmission = ""
         vehicleSubModel = drivetype
         VIN = vin
+    }
+    
+    func updateAField(field: String, value: String)
+    {
+        let vehicle = vehicleDatabase.child(vehicleKey)
+        let vehicleField = [field: value]
+        vehicle.updateChildValues(vehicleField)
+
+    }
+    
+    func updateToDatabase() {
+        let newVehicle = createANewVehicle()
+        
+        vehicleDatabase.child(vehicleKey).setValue(newVehicle)
+        
+    }
+    
+    func createANewVehicle() -> [String: String?] {
+        let newVehicle = ["Vehicle Key": vehicleKey, "Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": VIN]
+        
+        return newVehicle
+        
     }
 }
