@@ -33,6 +33,29 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        car?.updateAField(field: "VIN:", value: textViewInformation[0]!)
+        
+//        car?.updateAField(field: "Make:", value: !)
+//        car?.updateAField(field: "Model:", value: [2]!)
+//        car?.updateAField(field: "Submodel:", value: [3]!)
+//        car?.updateAField(field: "Model Year:", value: [4]!)
+//        car?.updateAField(field: "Engine (L):", value: )
+//        car?.updateAField(field: "Cylinders:", value: <#T##String#>)
+//        car?.updateAField(field: "Transmission:", value: <#T##String#>)
+//        car?.updateAField(field: "Drive Type:", value: <#T##String#>)
+
+
+
+
+        
+
+
+
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return labelTitles.count
     }
