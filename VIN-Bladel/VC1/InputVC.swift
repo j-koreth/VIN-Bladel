@@ -59,7 +59,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
     {
         view.endEditing(true)
 
-        if (carData?.fromDatabase)! {
+        if (carData?.fromDatabase)!
+        {
+            customer = customerArray.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
             self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
         }
         else {

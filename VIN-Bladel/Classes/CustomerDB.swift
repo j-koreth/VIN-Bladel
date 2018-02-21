@@ -52,6 +52,15 @@ class CustomerDB
         return nil
     }
     
+    func getCustomerByID(ID: String) -> CustomerData?
+    {
+        for customer in database
+        {
+            if customer.customerID == ID { return customer }
+        }
+        return nil
+    }
+    
     
     func pullFromFirebase()
     {
