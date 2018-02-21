@@ -37,20 +37,14 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         car?.updateAField(field: "VIN:", value: textViewInformation[0]!)
         
-//        car?.updateAField(field: "Make:", value: !)
-//        car?.updateAField(field: "Model:", value: [2]!)
-//        car?.updateAField(field: "Submodel:", value: [3]!)
-//        car?.updateAField(field: "Model Year:", value: [4]!)
-//        car?.updateAField(field: "Engine (L):", value: )
-//        car?.updateAField(field: "Cylinders:", value: <#T##String#>)
-//        car?.updateAField(field: "Transmission:", value: <#T##String#>)
-//        car?.updateAField(field: "Drive Type:", value: <#T##String#>)
-
-
-
-
-        
-
+        car?.updateAField(field: "Make:", value: textViewInformation[1]!)
+        car?.updateAField(field: "Model:", value: textViewInformation[2]!)
+        car?.updateAField(field: "Submodel:", value: textViewInformation[3]!)
+        car?.updateAField(field: "Model Year:", value: textViewInformation[4]!)
+        car?.updateAField(field: "Engine (L):", value: textViewInformation[5]!)
+        car?.updateAField(field: "Cylinders:", value: textViewInformation[6]!)
+        car?.updateAField(field: "Transmission:", value: textViewInformation[7]!)
+        car?.updateAField(field: "Drive Type:", value: textViewInformation[8]!)
 
 
     }
