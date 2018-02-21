@@ -17,6 +17,8 @@ class VehicleDatabase
     private var databaseReference = Database.database().reference()
     private var vehicleReference = DatabaseReference()
     
+    var lastID = 0
+    
     init() {
         vehicleReference = databaseReference.root.child("vehicles")
     }
@@ -42,14 +44,18 @@ class VehicleDatabase
         }
     }
     
-//    func getVehicleByID(vehicleCustomerID: String) -> VehicleData?
-//    {
-//        for vehicle in database
-//        {
-//            if vehicle.vehicleCustomerID =
-//            
-//        }
-//    }
+    func addNewVehicle(newVehicle: VehicleData)
+    {
+        let key = vehicleReference.childByAutoId().key
+        let num = database.count
+        
+        newVehicle.vehicleKey = String(num)
+        newVehicle.vehicleID = String(lastID + 1)
+        
+        database.append(newVehicle)
+        let vehicleDictionary = newVehicle.createANewVehicle()
+        customerReference.child(key).setValue(vehicleDictionary)
+    }
     
     func pullFromFirebase()
     {
@@ -74,14 +80,11 @@ class VehicleDatabase
 //                let vehicleTransmission = object?["Customer State"] as! String
                 
                 let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleKey, make: vehicleKey, model: vehicleMake, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
-                
-                //    !            let vehicle = VehicleData(customerID: vehicleCustomerID, key: vehicleKey, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
-                
+
                 self.database.append(vehicle)
-                
-                
-                
             }
+            
+            self.lastID = Int((self.database.last?.vehicleID)!)!
         }
     }
     
