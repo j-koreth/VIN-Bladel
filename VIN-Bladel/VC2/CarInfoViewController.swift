@@ -29,7 +29,7 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        nameLabel.text = (customer?.customerFirst)! + " " + (customer?.customerLast)!
+        nameLabel.text = "Customer: " + (customer?.customerFirst)! + " " + (customer?.customerLast)!
         
     }
     
