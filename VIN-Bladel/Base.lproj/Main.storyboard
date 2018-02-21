@@ -692,8 +692,6 @@
                         <viewLayoutGuide key="safeArea" id="cMO-oz-ljR"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="trK-Hd-tWx" id="gAx-gC-xzE"/>
-                        <outlet property="firstName" destination="bX6-ti-hu2" id="wSg-QL-XOe"/>
                         <outlet property="nameLabel" destination="bX6-ti-hu2" id="C0H-Ye-67q"/>
                     </connections>
                 </viewController>
