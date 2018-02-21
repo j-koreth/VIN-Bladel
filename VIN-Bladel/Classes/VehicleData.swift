@@ -60,7 +60,7 @@ class VehicleData
         vehicleDatabase.child(vehicleKey).setValue(newVehicle)
         
     }
-    
+
     func createANewVehicle() -> [String: String?] {
         let newVehicle = ["Vehicle Key": vehicleKey, "Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": VIN]
         
