@@ -205,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-Wx-YPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978.90625" y="-191.015625"/>
+            <point key="canvasLocation" x="1976" y="-248"/>
         </scene>
         <!--Data Not Found View Controller-->
         <scene sceneID="h32-7H-LXh">
@@ -738,7 +738,7 @@
         <image name="car" width="190" height="114"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nia-pj-q8t"/>
-        <segue reference="TuX-OR-o8z"/>
+        <segue reference="mrQ-Ia-42B"/>
+        <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>

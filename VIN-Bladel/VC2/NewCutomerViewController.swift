@@ -58,6 +58,7 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         if let destination = segue.destination as? CarInfoViewController
         {
             destination.car = newCar
+            destination.customer = newCustomer
         }
     }
 

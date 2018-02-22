@@ -46,13 +46,13 @@ class VehicleData
         VIN = vin
     }
     
-    func updateAField(field: String, value: String)
-    {
-        let vehicle = vehicleDatabase.child(vehicleKey)
-        let vehicleField = [field: value]
-        vehicle.updateChildValues(vehicleField)
-
-    }
+//    func updateAField(field: String, value: String)
+//    {
+//        let vehicle = vehicleDatabase.child(vehicleKey)
+//        let vehicleField = [field: value]
+//        vehicle.updateChildValues(vehicleField)
+//
+//    }
     
     func updateToDatabase() {
         let newVehicle = createANewVehicle()
