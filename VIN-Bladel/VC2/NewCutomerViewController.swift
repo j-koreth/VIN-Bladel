@@ -26,6 +26,8 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         {
             var newCustomer = CustomerData(key: "", ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
             customerArray.addNewCustomer(newCustomer: newCustomer)
+            
+            newCar.vehicleCustomerID = newCustomer.customerID
         }
         
         performSegue(withIdentifier: "newCustomerToCarInfo", sender: nil)
@@ -59,6 +61,7 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         {
             destination.car = newCar
             destination.customer = newCustomer
+            destination.vehicleDB = vehicleDB
         }
     }
 

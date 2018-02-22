@@ -35,7 +35,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
             {
                 searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
                 searchButton.isEnabled = true
-                print(vinTextfield.text)
     
             }
             else

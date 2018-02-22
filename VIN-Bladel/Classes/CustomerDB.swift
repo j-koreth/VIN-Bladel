@@ -64,7 +64,6 @@ class CustomerDB
     
     func pullFromFirebase()
     {
-        var num = 0
 
         customerReference.observe(.value) { (snapshot) in
             for customers in snapshot.children.allObjects as! [DataSnapshot]
@@ -93,7 +92,6 @@ class CustomerDB
                 
                 self.database.append(customer)
                 
-                num += 1
             }
             self.lastID = Int((self.database.last?.customerID)!)!
         }

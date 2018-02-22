@@ -46,13 +46,13 @@ class VehicleData
         VIN = vin
     }
     
-//    func updateAField(field: String, value: String)
-//    {
-//        let vehicle = vehicleDatabase.child(vehicleKey)
-//        let vehicleField = [field: value]
-//        vehicle.updateChildValues(vehicleField)
-//
-//    }
+    func updateAField(field: String, value: String)
+    {
+        let vehicle = vehicleDatabase.child(vehicleKey)
+        let vehicleField = [field: value]
+        vehicle.updateChildValues(vehicleField)
+
+    }
     
     func updateToDatabase() {
         let newVehicle = createANewVehicle()
@@ -62,7 +62,7 @@ class VehicleData
     }
 
     func createANewVehicle() -> [String: String?] {
-        let newVehicle = ["Vehicle Key": vehicleKey, "Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType, "Vehicle ID": VIN]
+        let newVehicle = ["Vehicle Key": vehicleKey, "Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType]
         
         return newVehicle
         

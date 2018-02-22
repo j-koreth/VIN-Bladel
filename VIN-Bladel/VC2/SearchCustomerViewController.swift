@@ -28,6 +28,8 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
             customer = customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)
             pulledText.text = customer.customerFirst + " " + customer.customerLast
             confirmButton.isEnabled = true
+            newCar.vehicleCustomerID = customer.customerID
+
         }
         else
         {
@@ -76,6 +78,8 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         {
             destination.car = newCar
             destination.customer = customer
+            destination.vehicleDB = vehicleDB
+
 
         }
     }
