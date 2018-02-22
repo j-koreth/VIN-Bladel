@@ -24,7 +24,8 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         
         if newFirstName.text != "" && newLastName.text != "" && newEmail.text != ""
         {
-            var newCustomer = CustomerData(key: "", ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
+            newCustomer = CustomerData(key: "", ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
+            
             customerArray.addNewCustomer(newCustomer: newCustomer)
         }
         
