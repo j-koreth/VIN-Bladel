@@ -46,6 +46,7 @@ class LoadingViewController: UIViewController {
         imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
         self.customerArray.pullFromFirebase()
         self.vehicleDB.pullFromFirebase()
+        
     }
     
     

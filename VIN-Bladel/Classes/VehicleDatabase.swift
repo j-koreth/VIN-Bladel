@@ -10,18 +10,15 @@ import Foundation
 import FirebaseDatabase
 import Firebase
 
+var vehicleReference = Database.database().reference().root.child("vehicles")
+
+
 class VehicleDatabase
 {
     var database = [VehicleData]()
-    var cdatabase = [CustomerData]()
-    private var databaseReference = Database.database().reference()
-    private var vehicleReference = DatabaseReference()
     
     var lastID = 0
     
-    init() {
-        vehicleReference = databaseReference.root.child("vehicles")
-    }
     
     func searchByVIN(vin: String) -> VehicleData?
     {
@@ -54,7 +51,7 @@ class VehicleDatabase
         
         database.append(newVehicle)
         let vehicleDictionary = newVehicle.createANewVehicle()
-        customerReference.child(key).setValue(vehicleDictionary)
+        vehicleReference.child(key).setValue(vehicleDictionary)
     }
     
     func pullFromFirebase()
@@ -83,9 +80,10 @@ class VehicleDatabase
 
                 self.database.append(vehicle)
             }
-            
             self.lastID = Int((self.database.last?.vehicleID)!)!
+
         }
+
     }
     
 }
