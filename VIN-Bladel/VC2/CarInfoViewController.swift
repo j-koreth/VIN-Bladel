@@ -33,21 +33,21 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        car?.updateAField(field: "VIN:", value: textViewInformation[0]!)
-        
-        car?.updateAField(field: "Make:", value: textViewInformation[1]!)
-        car?.updateAField(field: "Model:", value: textViewInformation[2]!)
-        car?.updateAField(field: "Submodel:", value: textViewInformation[3]!)
-        car?.updateAField(field: "Model Year:", value: textViewInformation[4]!)
-        car?.updateAField(field: "Engine (L):", value: textViewInformation[5]!)
-        car?.updateAField(field: "Cylinders:", value: textViewInformation[6]!)
-        car?.updateAField(field: "Transmission:", value: textViewInformation[7]!)
-        car?.updateAField(field: "Drive Type:", value: textViewInformation[8]!)
-
-
-    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//
+//        car?.updateAField(field: "VIN:", value: textViewInformation[0]!)
+//
+//        car?.updateAField(field: "Make:", value: textViewInformation[1]!)
+//        car?.updateAField(field: "Model:", value: textViewInformation[2]!)
+//        car?.updateAField(field: "Submodel:", value: textViewInformation[3]!)
+//        car?.updateAField(field: "Model Year:", value: textViewInformation[4]!)
+//        car?.updateAField(field: "Engine (L):", value: textViewInformation[5]!)
+//        car?.updateAField(field: "Cylinders:", value: textViewInformation[6]!)
+//        car?.updateAField(field: "Transmission:", value: textViewInformation[7]!)
+//        car?.updateAField(field: "Drive Type:", value: textViewInformation[8]!)
+//
+//
+//    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
