@@ -76,8 +76,7 @@ class VehicleDatabase
                 let vehicleMileage = object?["Mileage"] as! String
 
                 
-                let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleKey, make: vehicleKey, model: vehicleMake, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
-
+                let vehicle = VehicleData(vin: vehicleVIN, key: vehicleKey, customerID: vehicleCustomerID, ID: vehicleID, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, transmission: vehicleTransmission, mileage: vehicleMileage)
                 self.database.append(vehicle)
             }
             self.lastID = Int((self.database.last?.vehicleID)!)!
