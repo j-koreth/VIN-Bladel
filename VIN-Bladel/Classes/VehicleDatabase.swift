@@ -71,10 +71,10 @@ class VehicleDatabase
                 let vehicleCylinder = object?["Number of Cylinders"] as! String
                 let vehicleSubModel = object?["VehicleSubModel"] as! String
                 let vehicleVIN = object?["VIN"] as! String
+//                let vehicleDriveType = object?["VIN"] as! String
+                let vehicleTransmission = object?["Transmission"] as! String
+                let vehicleMileage = object?["Mileage"] as! String
 
-//                TO DO -
-//                    Add transmission key to all vehicles in database
-//                let vehicleTransmission = object?["Customer State"] as! String
                 
                 let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleKey, make: vehicleKey, model: vehicleMake, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
 
