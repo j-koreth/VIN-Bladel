@@ -73,6 +73,8 @@ class VehicleDatabase
                 let vehicleVIN = object?["VIN"] as! String
 //                let vehicleDriveType = object?["VIN"] as! String
                 let vehicleTransmission = object?["Transmission"] as! String
+                let vehicleMileage = object?["Mileage"] as! String
+
                 
                 let vehicle = VehicleData(customerID: vehicleCustomerID, ID: vehicleKey, make: vehicleKey, model: vehicleMake, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, vin: vehicleVIN)
 
