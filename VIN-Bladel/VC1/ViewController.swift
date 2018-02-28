@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(vehicleDB.database.count)
+
+        vehicleDB.pushToFirebase()
         
         scanButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
         scanButton.layer.cornerRadius = 60
