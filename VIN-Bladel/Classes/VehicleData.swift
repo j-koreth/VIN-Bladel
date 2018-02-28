@@ -13,7 +13,7 @@ var vehicleDatabase = Database.database().reference().root.child("vehicles")
 
 class VehicleData
 {
-    var vehicleKey: String!
+    var vehicleKey: String! = " "
     var vehicleCustomerID: String!
     var vehicleID: String!
     var vehicleMake: String!
@@ -21,8 +21,8 @@ class VehicleData
     var vehicleModelYear: String!
     var vehicleDisplacement: String!
     var vehicleCylinder: String!
-    var vehicleTransmission: String!
-    var vehicleDriveType: String!
+    var vehicleTransmission: String! = " "
+    var vehicleDriveType: String! = " "
     var vehicleSubModel: String!
     var VIN: String!
     var vehicleHomePhone: String!
@@ -41,7 +41,7 @@ class VehicleData
         vehicleModelYear = modelyear
         vehicleDisplacement = displacement
         vehicleCylinder = cylinder
-        vehicleTransmission = ""
+//        vehicleTransmission = ""
         vehicleSubModel = drivetype
         VIN = vin
     }
@@ -62,7 +62,7 @@ class VehicleData
     }
 
     func createANewVehicle() -> [String: String?] {
-        let newVehicle = ["Vehicle Key": vehicleKey, "Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleTransmission, "VehicleDriveType": vehicleDriveType]
+        let newVehicle = ["VIN": VIN, "Customer ID": vehicleCustomerID, "Vehicle Key": vehicleKey, "Vehicle ID": vehicleID, "Make Description": vehicleMake, "Model Description": vehicleModel, "Year": vehicleModelYear, "Engine Description": vehicleDisplacement, "Number of Cylinders": vehicleCylinder, "VehicleDriveType": vehicleDriveType, "VehicleSubModel": vehicleSubModel, "Transmission": vehicleTransmission]
         
         return newVehicle
         
