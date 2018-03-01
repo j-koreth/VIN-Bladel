@@ -26,6 +26,7 @@
 		67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */; };
 		67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */; };
 		9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */; };
+		9D824096204847EA00E23483 /* PDFInvoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D824095204847EA00E23483 /* PDFInvoice.swift */; };
 		9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */; };
 		9DF36A58201A248000B6A11C /* NewCutomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */; };
 		9DF36A5A201A24FA00B6A11C /* SearchCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */; };
@@ -59,6 +60,7 @@
 		67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIN_Bladel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
+		9D824095204847EA00E23483 /* PDFInvoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFInvoice.swift; sourceTree = "<group>"; };
 		9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNotFoundViewController.swift; sourceTree = "<group>"; };
 		9DF36A57201A248000B6A11C /* NewCutomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCutomerViewController.swift; sourceTree = "<group>"; };
 		9DF36A59201A24FA00B6A11C /* SearchCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCustomerViewController.swift; sourceTree = "<group>"; };
@@ -105,10 +107,11 @@
 			children = (
 				20884E4B20262C5400D5BEE5 /* CustomerData.swift */,
 				20884E4E20262C5400D5BEE5 /* CustomerDB.swift */,
-				20884E4C20262C5400D5BEE5 /* Reachability.swift */,
 				20884E4F20262C5400D5BEE5 /* VehicleData.swift */,
 				20884E4A20262C5400D5BEE5 /* VehicleDatabase.swift */,
 				20884E4D20262C5400D5BEE5 /* VINData.swift */,
+				9D824095204847EA00E23483 /* PDFInvoice.swift */,
+				20884E4C20262C5400D5BEE5 /* Reachability.swift */,
 			);
 			name = Classes;
 			path = ..;
@@ -327,6 +330,7 @@
 				20884E5020262C5400D5BEE5 /* VehicleDatabase.swift in Sources */,
 				06B680C520487B5B001544FE /* CustomerCarsVC.swift in Sources */,
 				9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */,
+				9D824096204847EA00E23483 /* PDFInvoice.swift in Sources */,
 				20884E5320262C5400D5BEE5 /* VINData.swift in Sources */,
 				67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */,
 				06B680C120487AFB001544FE /* ServiceVC.swift in Sources */,
