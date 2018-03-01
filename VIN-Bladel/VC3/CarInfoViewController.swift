@@ -17,7 +17,7 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var nameLabel: UILabel!
     
     
-    var labelTitles = ["VIN:", "Make:", "Model:", "Submodel:", "Model Year:", "Engine (L):", "Cylinders:", "Transmission:", "Drive Type:"]
+    var labelTitles = ["VIN:", "Make:", "Model:", "Submodel:", "Model Year:", "Engine (L):", "Cylinders:", "Transmission:", "Drive Type:", "Milege:"]
     var textViewInformation = [String?]()
     
     var customer: CustomerData?
@@ -32,29 +32,36 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         vehicleDB.addNewVehicle(newVehicle: car!)
     
-        textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType]
+        textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType, car?.vehicleMileage]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        
         nameLabel.text = "Customer: " + (customer?.customerFirst)! + " " + (customer?.customerLast)!
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        car?.VIN = textViewInformation[0]
+        car?.vehicleMake = textViewInformation[1]
+        car?.vehicleModel = textViewInformation[2]
+        car?.vehicleSubModel = textViewInformation[3]
+        car?.vehicleModelYear = textViewInformation[4]
+        car?.vehicleDisplacement = textViewInformation[5]
+        car?.vehicleCylinder = textViewInformation[6]
+        car?.vehicleTransmission = textViewInformation[7]
+        car?.vehicleDriveType = textViewInformation[8]
+        car?.vehicleMileage = textViewInformation[9]
 
-        car?.updateAField(field: "VIN:", value: textViewInformation[0]!)
-
-        car?.updateAField(field: "Make Description", value: textViewInformation[1]!)
-        car?.updateAField(field: "Model Description", value: textViewInformation[2]!)
-        car?.updateAField(field: "VehicleSubModel", value: textViewInformation[3]!)
-        car?.updateAField(field: "Year", value: textViewInformation[4]!)
-        car?.updateAField(field: "Engine Description", value: textViewInformation[5]!)
-        car?.updateAField(field: "Number of Cylinders", value: textViewInformation[6]!)
-        car?.updateAField(field: "Transmission", value: textViewInformation[7]!)
-//        car?.updateAField(field: "Drive Type", value: textViewInformation[8]!)
+        car?.updateToDatabase()
 
 
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return labelTitles.count
