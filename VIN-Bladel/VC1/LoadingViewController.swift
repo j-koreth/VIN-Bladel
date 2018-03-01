@@ -22,30 +22,32 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             
-        loops(array: array as! [UIImage])
-        if Reachability.isConnectedToNetwork(){
-            
-    
+            loops(array: array as! [UIImage])
+
  
-        }
-        else {
-//            TODO
-//                Add Error dialog without internet
-//            let alert = UIAlertController(title: "ERROR", message: "No Internet Connection", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-        }
+
         
-        firstSegu()
         
     }
 
     
     func loops(array: [UIImage] )
     {
-        imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
-        self.customerArray.pullFromFirebase()
-        self.vehicleDB.pullFromFirebase()
+        if Reachability.isConnectedToNetwork(){
+
+            imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
+            self.customerArray.pullFromFirebase()
+            self.vehicleDB.pullFromFirebase()
+            
+        }
+    
+        else {
+        //       TODO
+        //        Add Error dialog without internet
+            let alert = UIAlertController(title: "ERROR", message: "No Internet Connection", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: loops(array: [UIImage])))
+            self.present(alert, animated: true, completion: nil)
+        }
         
     }
     
