@@ -13,8 +13,7 @@ class DataNotFoundViewController: UIViewController {
     @IBOutlet weak var newCustomerButton: UIButton!
     @IBOutlet weak var previousCustomerButton: UIButton!
     
-    var customerArray = CustomerDB()
-    var vehicleDB = VehicleDatabase()
+//    var customerArray = CustomerDB()
     var newCar: VehicleData!
     var unknownCustomer: CustomerData!
     
@@ -32,15 +31,11 @@ class DataNotFoundViewController: UIViewController {
 
         if let destination = segue.destination as? SearchCustomerViewController
         {
-            destination.vehicleDB = vehicleDB
-            destination.customerArray = customerArray
             destination.newCar = newCar
         }
         
         if let destination = segue.destination as? NewCutomerViewController
         {
-            destination.vehicleDB = vehicleDB
-            destination.customerArray = customerArray
             destination.newCar = newCar
 
 

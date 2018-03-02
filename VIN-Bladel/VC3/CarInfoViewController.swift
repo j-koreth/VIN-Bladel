@@ -28,9 +28,14 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.tabBar.isHidden = false
+
         self.navigationItem.setHidesBackButton(true, animated:true)
         
-        vehicleDB.addNewVehicle(newVehicle: car!)
+        if car?.fromDatabase == false
+        {
+            vehicleDB.addNewVehicle(newVehicle: car!)
+        }
     
         textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType, car?.vehicleMileage]
         

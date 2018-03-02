@@ -15,8 +15,6 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var newEmail: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
     
-    var customerArray = CustomerDB()
-    var vehicleDB = VehicleDatabase()
     var newCustomer: CustomerData!
     var newCar: VehicleData!
     
@@ -28,7 +26,7 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
             print(newLastName.text)
             newCustomer = CustomerData(key: "", ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
             
-            customerArray.addNewCustomer(newCustomer: newCustomer)
+            customerArray.customerArray.addNewCustomer(newCustomer: newCustomer)
             newCar.vehicleCustomerID = newCustomer.customerID
         }
         
@@ -70,7 +68,6 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         {
             destination.car = newCar
             destination.customer = newCustomer
-            destination.vehicleDB = vehicleDB
         }
     }
 
