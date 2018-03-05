@@ -17,13 +17,7 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
-            checkConnection()
-
- 
-
-        
-        
+        checkConnection()
     }
     
     func checkConnection()
