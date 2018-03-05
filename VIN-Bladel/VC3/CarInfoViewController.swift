@@ -28,8 +28,9 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tbc = (tabBarController as? TabBarVC)!
+        tbc = tabBarController as? TabBarVC
         tbc?.car = car
+
         tbc?.customer = customer
         
         self.navigationItem.setHidesBackButton(true, animated:true)

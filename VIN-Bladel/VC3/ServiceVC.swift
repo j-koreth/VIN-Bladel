@@ -12,15 +12,15 @@ class ServiceVC: UIViewController {
 
     var car = VehicleData()
     var customer: CustomerData!
-    var tbc: TabBarVC!
+    var tbc: TabBarVC?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tbc = (tabBarController as? TabBarVC)!
-        tbc.car = car
-        tbc.customer = customer
+        tbc = tabBarController as? TabBarVC
+        tbc?.car = car
+        tbc?.customer = customer
 
         // Do any additional setup after loading the view.
     }
@@ -30,9 +30,9 @@ class ServiceVC: UIViewController {
         {
             customer = tbc?.customer
         }
-        if car == nil
+        if customer == nil
         {
-            car = tbc.car
+            car = (tbc?.car)!
         }
     }
 
