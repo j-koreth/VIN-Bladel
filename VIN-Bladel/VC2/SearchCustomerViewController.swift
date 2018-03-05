@@ -74,8 +74,8 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CarInfoViewController
         {
-            destination.car = newCar
-            destination.customer = customer
+            destination.tbc?.car = newCar
+            destination.tbc?.customer = customer
 
 
         }

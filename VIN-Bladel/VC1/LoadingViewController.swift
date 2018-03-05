@@ -29,7 +29,7 @@ class LoadingViewController: UIViewController {
             let alert = UIAlertController(title: "ERROR", message: "No Internet Connection", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
                 self.checkConnection()
-            })) 
+            }))
             self.present(alert, animated: true, completion: nil)
         }
     }
@@ -47,9 +47,6 @@ class LoadingViewController: UIViewController {
             self.seugeInstantly = true
             self.performSegue(withIdentifier: "loadingToMain", sender: nil)
         }
-
+        
     }
-
-    
-
 }

@@ -66,8 +66,8 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CarInfoViewController
         {
-            destination.car = newCar
-            destination.customer = newCustomer
+            destination.tbc?.car = newCar
+            destination.tbc?.customer = newCustomer
         }
     }
 
