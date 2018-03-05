@@ -28,10 +28,15 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType, car?.vehicleMileage]
+        
         tbc = tabBarController as? TabBarVC
-        tbc?.car = car
-
-        tbc?.customer = customer
+        if tbc?.car == nil && tbc?.customer == nil
+        {
+            tbc?.car = car
+            tbc?.customer = customer
+        }
         
         self.navigationItem.setHidesBackButton(true, animated:true)
         
@@ -39,12 +44,22 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         {
             vehicleDB.addNewVehicle(newVehicle: car!)
         }
-    
-        textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType, car?.vehicleMileage]
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         
-        nameLabel.text = "Customer: " + (customer?.customerFirst)! + " " + (customer?.customerLast)!
+        if tbc?.customer == nil && customer != nil
+        {
+            nameLabel.text = "Customer: " + (customer?.customerFirst)! + " " + (customer?.customerLast)!
+
+        }
+        else if tbc?.customer != nil && customer == nil
+        {
+            nameLabel.text = "Customer: " + (tbc?.customer?.customerFirst)! + " " + (tbc?.customer?.customerLast)!
+        }
+        else
+        {
+            nameLabel.text = "Customer: Error"
+        }
         
     }
     
