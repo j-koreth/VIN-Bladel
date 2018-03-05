@@ -14,8 +14,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var vinTextfield: UITextField!
     
     var carData : VehicleData?
-    var customerArray = CustomerDB()
-    var vehicleDB = VehicleDatabase()
     var customer: CustomerData?
     
     override func viewDidLoad() {
@@ -51,16 +49,16 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField)
     {
-        carData = vehicleDB.searchByVIN(vin: vinTextfield.text!)
+        carData = vehicleDB.vehicleDB.searchByVIN(vin: vinTextfield.text!)
     }
 
     @IBAction func searchVIN(_ sender: Any)
     {
         view.endEditing(true)
 
-        if (carData?.fromDatabase)!
+        if carData?.fromDatabase == true
         {
-            customer = customerArray.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
+            customer = customerArray.customerArray.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
             self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
         }
         else {
@@ -80,15 +78,13 @@ class InputVC: UIViewController, UITextFieldDelegate {
         if segue.destination is DataNotFoundViewController
         {
             if(self.carData?.error != nil) {
-                let alert = UIAlertController(title: "Error", message: "Invalid VIN", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Error", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
             else {
                 let destination = segue.destination as? DataNotFoundViewController
                 destination?.newCar = carData!
-                destination?.customerArray = customerArray
-                destination?.vehicleDB = vehicleDB
             }
         }
     }

@@ -14,8 +14,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 {
     var barcode = ""
     var carData: VehicleData?
-    var vehicleDB = VehicleDatabase()
-    var customerArray = CustomerDB()
     var customer: CustomerData?
     
     @IBOutlet weak var barcodeLabel: UILabel!
@@ -113,7 +111,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                 barcode = scan.stringValue!
             }
             while(carData == nil){
-                carData = self.vehicleDB.searchByVIN(vin: barcode)
+                carData = vehicleDB.vehicleDB.searchByVIN(vin: barcode)
             }
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
@@ -137,7 +135,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         confirmButton.tintColor = UIColor.lightGray
         
         if (self.carData?.error != nil) {
-            let alert = UIAlertController(title: "Error", message: "Invalid VIN", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Error", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             session.startRunning()
@@ -146,7 +144,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         else {
             if (carData?.fromDatabase)!
             {
-                customer = customerArray.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
+                customer = customerArray.customerArray.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
                 self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
             }
             else
@@ -167,8 +165,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         if let destination = segue.destination as? DataNotFoundViewController
         {
             destination.newCar = carData!
-            destination.customerArray = customerArray
-            destination.vehicleDB = vehicleDB
         }
     }
 }

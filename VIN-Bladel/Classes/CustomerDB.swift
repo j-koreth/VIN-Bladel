@@ -128,3 +128,8 @@ class CustomerDB
 //    }
     
 }
+
+
+struct customerArray {
+    static var customerArray = CustomerDB()
+}
