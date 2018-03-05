@@ -87,3 +87,7 @@ class VehicleDatabase
     
 }
 
+struct vehicleDB {
+    static var vehicleDB = VehicleDatabase()
+}
+

@@ -12,8 +12,6 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     
     var customer: CustomerData!
     var newCar: VehicleData!
-    var customerArray = CustomerDB()
-    var vehicleDB = VehicleDatabase()
 
     @IBOutlet weak var inputFirstName: UITextField!
     @IBOutlet weak var inputLastName: UITextField!
@@ -23,9 +21,9 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func search(_ sender: UIButton)
     {
-        if customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
+        if customerArray.customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
         {
-            customer = customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)
+            customer = customerArray.customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)
             pulledText.text = customer.customerFirst + " " + customer.customerLast
             confirmButton.isEnabled = true
             newCar.vehicleCustomerID = customer.customerID
@@ -78,7 +76,6 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         {
             destination.car = newCar
             destination.customer = customer
-            destination.vehicleDB = vehicleDB
 
 
         }
