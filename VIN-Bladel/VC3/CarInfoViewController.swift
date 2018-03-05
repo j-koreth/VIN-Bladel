@@ -23,13 +23,15 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     var customer: CustomerData?
     var car: VehicleData?
     var vehicleDB = VehicleDatabase()
+    var tbc: TabBarVC?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tbc = (tabBarController as? TabBarVC)!
+        tbc?.car = car
+        tbc?.customer = customer
         
-        self.tabBarController?.tabBar.isHidden = false
-
         self.navigationItem.setHidesBackButton(true, animated:true)
         
         if car?.fromDatabase == false
@@ -61,6 +63,17 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         car?.updateToDatabase()
 
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if customer == nil
+        {
+            customer = tbc?.customer
+        }
+        if car == nil
+        {
+            car = tbc?.car
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
