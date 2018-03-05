@@ -18,7 +18,7 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             
-            loops(array: array as! [UIImage])
+            checkConnection()
 
  
 
@@ -26,29 +26,25 @@ class LoadingViewController: UIViewController {
         
     }
     
-    func segue(array: [UIImage])
+    func checkConnection()
     {
         if Reachability.isConnectedToNetwork(){
-
-            imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
-            self.customerArray.pullFromFirebase()
-            self.vehicleDB.pullFromFirebase()
-            
+            segue(array: array as! [UIImage])
         }
-    
         else {
-        //       TODO
-        //        Add Error dialog without internet
             let alert = UIAlertController(title: "ERROR", message: "No Internet Connection", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: loops(array: [UIImage])))
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+                self.checkConnection()
+            }))
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
     
-    
-    func firstSegu()
+    func segue(array: [UIImage])
     {
+        imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
+        customerArray.customerArray.pullFromFirebase()
+        vehicleDB.vehicleDB.pullFromFirebase()
         
         let randomNumber = Int(arc4random_uniform(3) + 5)
         let when = DispatchTime.now() + Double(randomNumber)
@@ -57,9 +53,6 @@ class LoadingViewController: UIViewController {
             self.seugeInstantly = true
             self.performSegue(withIdentifier: "loadingToMain", sender: nil)
         }
-
+        
     }
-
-    
-
 }
