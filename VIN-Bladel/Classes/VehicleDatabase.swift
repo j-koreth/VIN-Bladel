@@ -15,12 +15,12 @@ var vehicleReference = Database.database().reference().root.child("vehicles")
 
 class VehicleDatabase
 {
-    var database = [VehicleData]()
+    static var database = [VehicleData]()
     
-    var lastID = 0
+    static var lastID = 0
     
     
-    func searchByVIN(vin: String) -> VehicleData?
+    static func searchByVIN(vin: String) -> VehicleData?
     {
         for vehicle in database
         {
@@ -33,7 +33,7 @@ class VehicleDatabase
         return VINData(vinNumber: vin)
     }
     
-    func pushToFirebase()
+    static func pushToFirebase()
     {
         for vehicles in database
         {
@@ -41,7 +41,7 @@ class VehicleDatabase
         }
     }
     
-    func addNewVehicle(newVehicle: VehicleData)
+    static func addNewVehicle(newVehicle: VehicleData)
     {
         let key = vehicleReference.childByAutoId().key
         let num = database.count
@@ -54,7 +54,7 @@ class VehicleDatabase
         vehicleReference.child(key).setValue(vehicleDictionary)
     }
     
-    func pullFromFirebase()
+    static func pullFromFirebase()
     {
         vehicleReference.observe(.value) { (snapshot) in
             for vehicles in snapshot.children.allObjects as! [DataSnapshot]
@@ -86,8 +86,3 @@ class VehicleDatabase
     }
     
 }
-
-struct vehicleDB {
-    static var vehicleDB = VehicleDatabase()
-}
-

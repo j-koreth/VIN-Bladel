@@ -42,7 +42,8 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         if car?.fromDatabase == false
         {
-            vehicleDB.addNewVehicle(newVehicle: car!)
+            VehicleDatabase.addNewVehicle(newVehicle: car!)
+            
         }
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black

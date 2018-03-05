@@ -49,7 +49,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField)
     {
-        carData = vehicleDB.vehicleDB.searchByVIN(vin: vinTextfield.text!)
+        carData = VehicleDatabase.searchByVIN(vin: vinTextfield.text!)
     }
 
     @IBAction func searchVIN(_ sender: Any)
