@@ -10,9 +10,6 @@ import UIKit
 
 class TabBarVC: UITabBarController {
     
-    var car: VehicleData?
-    var customer: CustomerData?
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

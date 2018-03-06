@@ -13,8 +13,6 @@ import FirebaseDatabase
 class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 {
     var barcode = ""
-    var carData: VehicleData?
-    var customer: CustomerData?
     
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var confirmButton: UIBarButtonItem!
@@ -79,7 +77,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        carData = nil
+        car = nil
         barcodeLabel.text = "No barcode is detected"
         barcodeLabel.textColor = .white
         sessionQueue.async {
@@ -110,8 +108,8 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             {
                 barcode = scan.stringValue!
             }
-            while(carData == nil){
-                carData = VehicleDatabase.searchByVIN(vin: barcode)
+            while(car == nil){
+                car = VehicleDatabase.searchByVIN(vin: barcode)
             }
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
@@ -134,37 +132,23 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         session.stopRunning()
         confirmButton.tintColor = UIColor.lightGray
         
-        if (self.carData?.error != nil) {
-            let alert = UIAlertController(title: "Error", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+        if (car?.error != nil) {
+            let alert = UIAlertController(title: "Error", message: car?.error, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             session.startRunning()
             confirmButton.tintColor = UIColor.white
         }
         else {
-            if (carData?.fromDatabase)!
+            if (car?.fromDatabase)!
             {
-                customer = CustomerDatabase.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
+                customer = CustomerDatabase.getCustomerByID(ID: (car?.vehicleCustomerID)!)
                 self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
             }
             else
             {
                 self.performSegue(withIdentifier: "scanNotFound", sender: nil)
             }
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let destination = segue.destination as? CarInfoViewController
-        {
-            destination.car = carData
-            destination.customer = customer
-        }
-        
-        if let destination = segue.destination as? DataNotFoundViewController
-        {
-            destination.newCar = carData!
         }
     }
 }

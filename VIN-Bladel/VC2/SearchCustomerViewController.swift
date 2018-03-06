@@ -10,9 +10,6 @@ import UIKit
 
 class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     
-    var customer: CustomerData!
-    var newCar: VehicleData!
-
     @IBOutlet weak var inputFirstName: UITextField!
     @IBOutlet weak var inputLastName: UITextField!
     @IBOutlet weak var pulledText: UILabel!
@@ -24,9 +21,9 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         if CustomerDatabase.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
         {
             customer = CustomerDatabase.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)
-            pulledText.text = customer.customerFirst + " " + customer.customerLast
+            pulledText.text = (customer?.customerFirst)! + " " + (customer?.customerLast)!
             confirmButton.isEnabled = true
-            newCar.vehicleCustomerID = customer.customerID
+            car?.vehicleCustomerID = customer?.customerID
 
         }
         else
@@ -70,17 +67,4 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         confirmButton.layer.cornerRadius = 35
 
         }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CarInfoViewController
-        {
-            destination.tbc?.car = newCar
-            destination.tbc?.customer = customer
-
-
-        }
-    }
-
-
-
 }

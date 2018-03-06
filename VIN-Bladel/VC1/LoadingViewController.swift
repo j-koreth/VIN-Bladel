@@ -40,7 +40,7 @@ class LoadingViewController: UIViewController {
         CustomerDatabase.pullFromFirebase()
         VehicleDatabase.pullFromFirebase()
         
-        let randomNumber = Int(arc4random_uniform(3) + 5)
+        let randomNumber = Int(arc4random_uniform(3) + 2)
         let when = DispatchTime.now() + Double(randomNumber)
         DispatchQueue.main.asyncAfter(deadline: when)
         {

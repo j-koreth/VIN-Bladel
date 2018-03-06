@@ -10,8 +10,6 @@ import UIKit
 
 class ServiceVC: UIViewController {
 
-    var car = VehicleData()
-    var customer: CustomerData!
     var tbc: TabBarVC?
 
     
@@ -19,21 +17,8 @@ class ServiceVC: UIViewController {
         super.viewDidLoad()
         
         tbc = tabBarController as? TabBarVC
-        tbc?.car = car
-        tbc?.customer = customer
-
+        
         // Do any additional setup after loading the view.
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        if customer == nil
-        {
-            customer = tbc?.customer
-        }
-        if customer == nil
-        {
-            car = (tbc?.car)!
-        }
     }
 
 }

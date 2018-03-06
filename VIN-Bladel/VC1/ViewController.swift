@@ -9,17 +9,18 @@
 import UIKit
 import FirebaseDatabase
 
+var car : VehicleData?
+var customer : CustomerData?
+
 class ViewController: UIViewController {
     
-    var customerReference = Database.database().reference().root.child("customers")
-
     @IBOutlet weak var scanButton: UIButton!
     @IBOutlet weak var manualButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         scanButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
         scanButton.layer.cornerRadius = 60
         manualButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)

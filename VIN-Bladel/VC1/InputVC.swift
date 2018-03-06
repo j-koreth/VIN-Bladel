@@ -12,10 +12,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var vinTextfield: UITextField!
-    
-    var carData : VehicleData?
-    var customer: CustomerData?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,16 +46,16 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField)
     {
-        carData = VehicleDatabase.searchByVIN(vin: vinTextfield.text!)
+        car = VehicleDatabase.searchByVIN(vin: vinTextfield.text!)
     }
 
     @IBAction func searchVIN(_ sender: Any)
     {
         view.endEditing(true)
 
-        if carData?.fromDatabase == true
+        if car?.fromDatabase == true
         {
-            customer = CustomerDatabase.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
+            customer = CustomerDatabase.getCustomerByID(ID: (car?.vehicleCustomerID)!)
             self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
         }
         else {
@@ -69,22 +66,12 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let destination = segue.destination as? CarInfoViewController
-        {
-            destination.car = carData
-            destination.customer = customer
-        }
-        
         if segue.destination is DataNotFoundViewController
         {
-            if(self.carData?.error != nil) {
-                let alert = UIAlertController(title: "Error", message: carData?.error, preferredStyle: UIAlertControllerStyle.alert)
+            if(car?.error != nil) {
+                let alert = UIAlertController(title: "Error", message: car?.error, preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
-            }
-            else {
-                let destination = segue.destination as? DataNotFoundViewController
-                destination?.newCar = carData!
             }
         }
     }

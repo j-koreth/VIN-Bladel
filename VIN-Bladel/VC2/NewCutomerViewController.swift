@@ -15,19 +15,16 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var newEmail: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
     
-    var newCustomer: CustomerData!
-    var newCar: VehicleData!
-    
     @IBAction func confirmNewInfo(_ sender: UIButton) {
         
         if newFirstName.text != "" && newLastName.text != "" && newEmail.text != ""
         {
             print(newFirstName.text)
             print(newLastName.text)
-            newCustomer = CustomerData(key: "", ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
+            customer = CustomerData(key: "", ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
             
-            CustomerDatabase.addNewCustomer(newCustomer: newCustomer)
-            newCar.vehicleCustomerID = newCustomer.customerID
+            CustomerDatabase.addNewCustomer(newCustomer: customer!)
+            car?.vehicleCustomerID = customer?.customerID
         }
         
         performSegue(withIdentifier: "newCustomerToCarInfo", sender: nil)
@@ -63,14 +60,4 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CarInfoViewController
-        {
-            destination.tbc?.car = newCar
-            destination.tbc?.customer = newCustomer
-        }
-    }
-
-
-
 }

@@ -20,9 +20,6 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     var labelTitles = ["VIN:", "Make:", "Model:", "Submodel:", "Model Year:", "Engine (L):", "Cylinders:", "Transmission:", "Drive Type:", "Milege:"]
     var textViewInformation = [String?]()
     
-    var customer: CustomerData?
-    var car: VehicleData?
-    var vehicleDB = VehicleDatabase()
     var tbc: TabBarVC?
 
     
@@ -30,13 +27,6 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType, car?.vehicleMileage]
-        
-        tbc = tabBarController as? TabBarVC
-        if tbc?.car == nil && tbc?.customer == nil
-        {
-            tbc?.car = car
-            tbc?.customer = customer
-        }
         
         self.navigationItem.setHidesBackButton(true, animated:true)
         
@@ -47,20 +37,8 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        
-        if tbc?.customer == nil && customer != nil
-        {
-            nameLabel.text = "Customer: " + (customer?.customerFirst)! + " " + (customer?.customerLast)!
 
-        }
-        else if tbc?.customer != nil && customer == nil
-        {
-            nameLabel.text = "Customer: " + (tbc?.customer?.customerFirst)! + " " + (tbc?.customer?.customerLast)!
-        }
-        else
-        {
-            nameLabel.text = "Customer: Error"
-        }
+        nameLabel.text = "Customer: " + (customer?.customerFirst)! + " " + (customer?.customerLast)!
         
     }
     
@@ -79,18 +57,6 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         car?.updateToDatabase()
 
-
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if customer == nil
-        {
-            customer = tbc?.customer
-        }
-        if car == nil
-        {
-            car = tbc?.car
-        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
