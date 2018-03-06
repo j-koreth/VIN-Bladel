@@ -39,7 +39,6 @@ class VINData: VehicleData{
         let jsonerror = results.value(forKey: "ErrorCode") as! NSArray
         let errorc = Array(jsonerror[0] as! String)
         if (errorc[0] != "0"){
-//            error = (jsonerror[0] as! String)
             error = "Invalid VIN"
             return false
         }
