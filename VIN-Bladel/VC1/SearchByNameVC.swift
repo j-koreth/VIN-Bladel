@@ -10,10 +10,14 @@ import UIKit
 
 class SearchByNameVC: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var extraLabel: UILabel!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     

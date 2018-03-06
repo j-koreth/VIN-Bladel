@@ -16,15 +16,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scanButton: UIButton!
     @IBOutlet weak var manualButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scanButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
-        scanButton.layer.cornerRadius = 60
+        scanButton.layer.cornerRadius = 40
         manualButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
-        manualButton.layer.cornerRadius = 60
+        manualButton.layer.cornerRadius = 40
+        searchButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
+        searchButton.layer.cornerRadius = 40
         
         VehicleDatabase.pullFromFirebase()
 

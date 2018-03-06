@@ -9,11 +9,12 @@
 import UIKit
 
 class CustomerCarsVC: UIViewController {
-
+    
+    @IBOutlet weak var customerCarTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
