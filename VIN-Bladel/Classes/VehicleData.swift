@@ -9,6 +9,7 @@
 import Foundation
 import Firebase
 import FirebaseDatabase
+
 var vehicleDatabase = Database.database().reference().root.child("vehicles")
 
 class VehicleData
