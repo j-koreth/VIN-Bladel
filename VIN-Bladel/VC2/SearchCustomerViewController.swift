@@ -21,9 +21,9 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func search(_ sender: UIButton)
     {
-        if customerArray.customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
+        if CustomerDatabase.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!) != nil
         {
-            customer = customerArray.customerArray.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)
+            customer = CustomerDatabase.getCustomerByName(first: inputFirstName.text!, last: inputLastName.text!)
             pulledText.text = customer.customerFirst + " " + customer.customerLast
             confirmButton.isEnabled = true
             newCar.vehicleCustomerID = customer.customerID

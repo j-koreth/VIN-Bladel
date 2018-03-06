@@ -37,7 +37,7 @@ class LoadingViewController: UIViewController {
     func segue(array: [UIImage])
     {
         imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
-        customerArray.customerArray.pullFromFirebase()
+        CustomerDatabase.pullFromFirebase()
         VehicleDatabase.pullFromFirebase()
         
         let randomNumber = Int(arc4random_uniform(3) + 5)

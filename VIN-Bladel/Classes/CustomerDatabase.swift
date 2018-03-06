@@ -13,12 +13,12 @@ import Firebase
 var customerReference = Database.database().reference().root.child("customers")
 
 
-class CustomerDB
+class CustomerDatabase
 {
-    var database = [CustomerData]()
-    var lastID = 0
+    static var database = [CustomerData]()
+    static var lastID = 0
     
-    func addNewCustomer(newCustomer: CustomerData)
+    static func addNewCustomer(newCustomer: CustomerData)
     {
         let key = customerReference.childByAutoId().key
         let num = database.count
@@ -32,7 +32,7 @@ class CustomerDB
     }
     
     
-    func getCustomerByName(first: String, last: String) -> CustomerData?
+    static func getCustomerByName(first: String, last: String) -> CustomerData?
     {
         for customer in database
         {
@@ -43,7 +43,7 @@ class CustomerDB
         return nil
     }
     
-    func getCustomerByKey(key: String) -> CustomerData?
+    static func getCustomerByKey(key: String) -> CustomerData?
     {
         for customer in database
         {
@@ -52,7 +52,7 @@ class CustomerDB
         return nil
     }
     
-    func getCustomerByID(ID: String) -> CustomerData?
+    static func getCustomerByID(ID: String) -> CustomerData?
     {
         for customer in database
         {
@@ -62,7 +62,7 @@ class CustomerDB
     }
     
     
-    func pullFromFirebase()
+    static func pullFromFirebase()
     {
 
         customerReference.observe(.value) { (snapshot) in
@@ -98,7 +98,7 @@ class CustomerDB
 
     }
     
-    func pushToFirebase()
+    static func pushToFirebase()
     {
         for customers in database
         {
@@ -130,6 +130,3 @@ class CustomerDB
 }
 
 
-struct customerArray {
-    static var customerArray = CustomerDB()
-}

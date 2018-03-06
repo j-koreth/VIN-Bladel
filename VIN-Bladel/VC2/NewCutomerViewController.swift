@@ -26,7 +26,7 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
             print(newLastName.text)
             newCustomer = CustomerData(key: "", ID: "", title: "", first: newFirstName.text!, last: newLastName.text!, address1: "1900 E Thomas", address2: "", city: "Arlington Heights", state: "IL", zip: "60004", country: "", email: newEmail.text!, home: "", work: "")
             
-            customerArray.customerArray.addNewCustomer(newCustomer: newCustomer)
+            CustomerDatabase.addNewCustomer(newCustomer: newCustomer)
             newCar.vehicleCustomerID = newCustomer.customerID
         }
         

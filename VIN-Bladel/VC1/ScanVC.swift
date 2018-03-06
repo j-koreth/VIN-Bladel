@@ -144,7 +144,7 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         else {
             if (carData?.fromDatabase)!
             {
-                customer = customerArray.customerArray.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
+                customer = CustomerDatabase.getCustomerByID(ID: (carData?.vehicleCustomerID)!)
                 self.performSegue(withIdentifier: "scanToCarInfo", sender: nil)
             }
             else
