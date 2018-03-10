@@ -5,7 +5,8 @@ An iOS app that manages the John Hersey High School Automobile Repair service.
 Our app utilizes Firebase to store the customers, vehicles, past invoices, and the parts and services offered. The user can scan/type in a car VIN or search a customer by name to bring up the information of an old vehicle or to add a new customer/car to the database. The students doing the repairs have the option to select the maintenance they're doing and send an invoice to the customer's email when the repair is complete. 
 
 ## Features
-* Scan or manually input a VIN or even look up an old customer by name to pull up their information and their vehicle. Uses the [NHTSA API](https://vpic.nhtsa.dot.gov/api/)
+* Scan or manually input a VIN or even look up an old customer by name to pull up their information and their vehicle.
+* Uses the [NHTSA API](https://vpic.nhtsa.dot.gov/api/) for VIN Decoding
  * Displays the following keys from the API
    * Make
    * Model 
