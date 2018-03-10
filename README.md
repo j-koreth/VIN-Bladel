@@ -17,9 +17,9 @@ Our app utilizes Firebase to store the customers, vehicles, past invoices, and t
    * Submodel
    
 * Firebase Integration
- * Add a new customer and identify and update a previous customer
- * Add a new customer and identify and update a previous vehicle
- * Look through a vehicle's past maintenance history and update when new reports are made
+  * Add a new customer and identify and update a previous customer
+  * Add a new customer and identify and update a previous vehicle
+  * Look through a vehicle's past maintenance history and update when new reports are made
   
 
 ## Installation
