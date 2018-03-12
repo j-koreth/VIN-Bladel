@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import SearchTextField
 
 class ServiceVC: UIViewController {
+    
+    var serviceArray = [SearchTextFieldItem(title: "")]
 
-    var tbc: TabBarVC?
-
+    @IBOutlet weak var serviceTextfield: SearchTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        serviceTextfield.filterItems(serviceArray)
         
-        tbc = tabBarController as? TabBarVC
         
         // Do any additional setup after loading the view.
     }

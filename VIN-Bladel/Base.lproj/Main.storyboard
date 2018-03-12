@@ -818,6 +818,9 @@
                         <viewLayoutGuide key="safeArea" id="obo-5W-xeD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icons8-engineer-symbol" id="FWu-R3-sjP"/>
+                    <connections>
+                        <outlet property="serviceTextfield" destination="CZp-zo-cU2" id="AmN-R8-91J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdH-us-N1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
