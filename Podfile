@@ -10,4 +10,5 @@ target 'VIN-Bladel' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   # pod 'SimplePDFSwift'
+  pod ‘SearchTextField’
 end
