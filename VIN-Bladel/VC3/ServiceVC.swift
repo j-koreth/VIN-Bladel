@@ -11,7 +11,7 @@ import SearchTextField
 
 class ServiceVC: UIViewController {
     
-    var serviceArray = [SearchTextFieldItem(title: "")]
+    var serviceArray = [SearchTextFieldItem(title: "Hi")]
 
     @IBOutlet weak var serviceTextfield: SearchTextField!
     
