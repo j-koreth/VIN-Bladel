@@ -842,6 +842,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="SearchButtonPressed:" destination="NE0-au-5Bm" eventType="touchUpInside" id="UK8-Jb-63i"/>
                                     <action selector="search:" destination="l21-Ei-0oO" eventType="touchUpInside" id="W9m-4L-zoy"/>
                                 </connections>
                             </button>
@@ -953,9 +954,11 @@
                     <tabBarItem key="tabBarItem" title="Service" id="9dI-Jg-6ey"/>
                     <navigationItem key="navigationItem" id="cog-mL-ikq"/>
                     <connections>
+                        <outlet property="buttonOutlet" destination="z4Y-tQ-5kA" id="7dj-8e-w5q"/>
                         <outlet property="extraLabel" destination="1NH-dx-Z57" id="dNt-cu-nlZ"/>
                         <outlet property="firstName" destination="QUD-7L-p5n" id="4N9-ti-hl3"/>
                         <outlet property="lastName" destination="XDi-ZZ-Xpo" id="xs6-jb-IZp"/>
+                        <outlet property="searchButtonPressed" destination="z4Y-tQ-5kA" id="cpP-8H-q3Y"/>
                         <segue destination="o4B-m0-aRh" kind="show" identifier="searchByNameToCars" id="hyU-9X-a7v"/>
                     </connections>
                 </viewController>
@@ -1128,7 +1131,7 @@
         <image name="icons8-purchase-order" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YYt-hK-Sus"/>
-        <segue reference="TuX-OR-o8z"/>
+        <segue reference="dkb-tk-CnQ"/>
+        <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>

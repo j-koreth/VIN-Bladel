@@ -8,18 +8,56 @@
 
 import UIKit
 
-class SearchByNameVC: UIViewController {
-
+class SearchByNameVC: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var extraLabel: UILabel!
+    @IBOutlet weak var buttonOutlet: UIButton!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
+        buttonOutlet.isEnabled = false
+        lastName.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        firstName.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        
     }
-
     
-
+    @IBAction func SearchButtonPressed(_ sender: UIButton)
+    {
+        if (car?.fromDatabase)!
+        {
+            customer = CustomerDatabase.getCustomerByID(ID: (car?.vehicleCustomerID)!)
+            self.performSegue(withIdentifier: "searchByNameToCars", sender: nil)
+        }
+        
+        
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+    
+    
+    @objc func textFieldDidChange()
+    {
+        if firstName.text?.count != 0 && lastName.text?.count != 0
+        {
+            buttonOutlet.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
+            buttonOutlet.titleLabel?.textColor = .white
+            buttonOutlet.isEnabled = true
+            
+        }
+        else
+        {
+            buttonOutlet.isEnabled = false
+            buttonOutlet.backgroundColor = UIColor.white
+        }
+    }
+    
+    
 }
