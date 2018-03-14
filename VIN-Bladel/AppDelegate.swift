@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import SearchTextField
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
