@@ -170,6 +170,7 @@
 		67F7B2491FD1A04500AD9532 /* VIN-Bladel */ = {
 			isa = PBXGroup;
 			children = (
+				9D1EA20420595C8300BCCCEE /* HTML */,
 				066F8EE72020BD6C00B9A8CE /* Classes */,
 				066F8EE42020BC7300B9A8CE /* VC1 */,
 				066F8EE62020BCED00B9A8CE /* VC2 */,
@@ -183,6 +184,14 @@
 				06D53F672033636A00BD40C1 /* Fonts */,
 			);
 			path = "VIN-Bladel";
+			sourceTree = "<group>";
+		};
+		9D1EA20420595C8300BCCCEE /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = HTML;
+			path = ../HTML;
 			sourceTree = "<group>";
 		};
 		D0863621B18205990DF04980 /* Frameworks */ = {
