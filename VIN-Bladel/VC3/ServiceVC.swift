@@ -11,13 +11,19 @@ import SearchTextField
 
 class ServiceVC: UIViewController {
     
-    var serviceArray = [SearchTextFieldItem(title: "Hi")]
+    var serviceArray = ["Hi", "I", "want", "to", "die"]
 
     @IBOutlet weak var serviceTextfield: SearchTextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        serviceTextfield.filterItems(serviceArray)
+        serviceTextfield.startVisible = true
+        serviceTextfield.inlineMode = true
+        serviceTextfield.filterStrings(serviceArray)
+        serviceTextfield.font = UIFont.init(name: "Avenir Next Regular", size: 50)
+
+        
         
         
         // Do any additional setup after loading the view.

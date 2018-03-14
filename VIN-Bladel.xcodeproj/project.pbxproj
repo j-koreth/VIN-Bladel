@@ -27,6 +27,9 @@
 		67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2511FD1A04500AD9532 /* Assets.xcassets */; };
 		67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B2531FD1A04500AD9532 /* LaunchScreen.storyboard */; };
 		67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */; };
+		9D1EA20820595D8600BCCCEE /* invoice.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D1EA20720595D8600BCCCEE /* invoice.html */; };
+		9D1EA20C20595DC700BCCCEE /* single_item.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D1EA20B20595DC700BCCCEE /* single_item.html */; };
+		9D1EA20E20595DDB00BCCCEE /* last_item.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D1EA20D20595DDB00BCCCEE /* last_item.html */; };
 		9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */; };
 		9D4B2228204D921B003DA6ED /* PDFInvoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B2227204D921A003DA6ED /* PDFInvoice.swift */; };
 		9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */; };
@@ -63,6 +66,9 @@
 		67F7B2561FD1A04500AD9532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67F7B25C1FD1A0C300AD9532 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99B7FC5FBB3C36F73FACEFCE /* Pods_VIN_Bladel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIN_Bladel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D1EA20720595D8600BCCCEE /* invoice.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = invoice.html; sourceTree = "<group>"; };
+		9D1EA20B20595DC700BCCCEE /* single_item.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = single_item.html; sourceTree = "<group>"; };
+		9D1EA20D20595DDB00BCCCEE /* last_item.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = last_item.html; sourceTree = "<group>"; };
 		9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
 		9D4B2227204D921A003DA6ED /* PDFInvoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFInvoice.swift; path = "VIN-Bladel/Classes/PDFInvoice.swift"; sourceTree = "<group>"; };
 		9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNotFoundViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 		67F7B2491FD1A04500AD9532 /* VIN-Bladel */ = {
 			isa = PBXGroup;
 			children = (
+				9D1EA20420595C8300BCCCEE /* HTML */,
 				066F8EE72020BD6C00B9A8CE /* Classes */,
 				066F8EE42020BC7300B9A8CE /* VC1 */,
 				066F8EE62020BCED00B9A8CE /* VC2 */,
@@ -186,6 +193,17 @@
 				06D53F672033636A00BD40C1 /* Fonts */,
 			);
 			path = "VIN-Bladel";
+			sourceTree = "<group>";
+		};
+		9D1EA20420595C8300BCCCEE /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				9D1EA20720595D8600BCCCEE /* invoice.html */,
+				9D1EA20B20595DC700BCCCEE /* single_item.html */,
+				9D1EA20D20595DDB00BCCCEE /* last_item.html */,
+			);
+			name = HTML;
+			path = ../HTML;
 			sourceTree = "<group>";
 		};
 		D0863621B18205990DF04980 /* Frameworks */ = {
@@ -258,7 +276,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1EA20C20595DC700BCCCEE /* single_item.html in Resources */,
+				9D1EA20820595D8600BCCCEE /* invoice.html in Resources */,
 				67F7B2551FD1A04500AD9532 /* LaunchScreen.storyboard in Resources */,
+				9D1EA20E20595DDB00BCCCEE /* last_item.html in Resources */,
 				67F7B25D1FD1A0C300AD9532 /* GoogleService-Info.plist in Resources */,
 				06D53F6A203363EB00BD40C1 /* Lato-Regular.ttf in Resources */,
 				67F7B2521FD1A04500AD9532 /* Assets.xcassets in Resources */,
