@@ -11,13 +11,18 @@ import SearchTextField
 
 class ServiceVC: UIViewController {
     
-    var serviceArray = [SearchTextFieldItem(title: "Hi")]
+    var serviceArray = ["Hi", "I", "want", "to", "die"]
 
     @IBOutlet weak var serviceTextfield: SearchTextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        serviceTextfield.filterItems(serviceArray)
+        serviceTextfield = SearchTextField()
+        serviceTextfield.inlineMode = true
+        serviceTextfield.filterStrings(serviceArray)
+        
+        view.addSubview(serviceTextfield)
         
         
         // Do any additional setup after loading the view.
