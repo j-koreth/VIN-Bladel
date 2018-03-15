@@ -22,6 +22,8 @@
 		20884E5420262C5400D5BEE5 /* CustomerDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4E20262C5400D5BEE5 /* CustomerDatabase.swift */; };
 		20884E5520262C5400D5BEE5 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20884E4F20262C5400D5BEE5 /* VehicleData.swift */; };
 		6758756020595B26007AA30D /* PartsAndServicesDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758755F20595B26007AA30D /* PartsAndServicesDatabase.swift */; };
+		67CAF6E4205AACCD00BC719D /* InvoiceDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF6E3205AACCD00BC719D /* InvoiceDatabase.swift */; };
+		67CAF6E6205AB1D600BC719D /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CAF6E5205AB1D600BC719D /* Invoice.swift */; };
 		67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */; };
 		67F7B24D1FD1A04500AD9532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7B24C1FD1A04500AD9532 /* ViewController.swift */; };
 		67F7B2501FD1A04500AD9532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67F7B24E1FD1A04500AD9532 /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		20884E4E20262C5400D5BEE5 /* CustomerDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerDatabase.swift; path = "VIN-Bladel/Classes/CustomerDatabase.swift"; sourceTree = "<group>"; };
 		20884E4F20262C5400D5BEE5 /* VehicleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleData.swift; path = "VIN-Bladel/Classes/VehicleData.swift"; sourceTree = "<group>"; };
 		6758755F20595B26007AA30D /* PartsAndServicesDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PartsAndServicesDatabase.swift; path = "VIN-Bladel/Classes/PartsAndServicesDatabase.swift"; sourceTree = "<group>"; };
+		67CAF6E3205AACCD00BC719D /* InvoiceDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InvoiceDatabase.swift; path = "VIN-Bladel/Classes/InvoiceDatabase.swift"; sourceTree = "<group>"; };
+		67CAF6E5205AB1D600BC719D /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Invoice.swift; path = "VIN-Bladel/Classes/Invoice.swift"; sourceTree = "<group>"; };
 		67F7B2471FD1A04500AD9532 /* VIN-Bladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIN-Bladel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F7B24A1FD1A04500AD9532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67F7B24C1FD1A04500AD9532 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				20884E4C20262C5400D5BEE5 /* Reachability.swift */,
 				6758755F20595B26007AA30D /* PartsAndServicesDatabase.swift */,
 				200C3FF62059F90B000CA70F /* PartOrService.swift */,
+				67CAF6E3205AACCD00BC719D /* InvoiceDatabase.swift */,
+				67CAF6E5205AB1D600BC719D /* Invoice.swift */,
 			);
 			name = Classes;
 			path = ..;
@@ -369,8 +375,10 @@
 				6758756020595B26007AA30D /* PartsAndServicesDatabase.swift in Sources */,
 				06B680C120487AFB001544FE /* ServiceVC.swift in Sources */,
 				20884E5520262C5400D5BEE5 /* VehicleData.swift in Sources */,
+				67CAF6E4205AACCD00BC719D /* InvoiceDatabase.swift in Sources */,
 				06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */,
 				20884E5120262C5400D5BEE5 /* CustomerData.swift in Sources */,
+				67CAF6E6205AB1D600BC719D /* Invoice.swift in Sources */,
 				20884E5420262C5400D5BEE5 /* CustomerDatabase.swift in Sources */,
 				06B680C320487B3A001544FE /* SearchByNameVC.swift in Sources */,
 				B7CF84D62016315A00B1A182 /* LoadingViewController.swift in Sources */,
