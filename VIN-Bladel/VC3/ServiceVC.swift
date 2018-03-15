@@ -18,11 +18,12 @@ class ServiceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        serviceTextfield = SearchTextField()
+        serviceTextfield.startVisible = true
         serviceTextfield.inlineMode = true
         serviceTextfield.filterStrings(serviceArray)
+        serviceTextfield.font = UIFont.init(name: "Avenir Next Regular", size: 50)
+
         
-        view.addSubview(serviceTextfield)
         
         
         // Do any additional setup after loading the view.
