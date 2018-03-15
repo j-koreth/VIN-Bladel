@@ -12,9 +12,15 @@ class CustomerCarsVC: UIViewController {
     
     @IBOutlet weak var customerCarTable: UITableView!
     
+    
+    var carThatGotPassed: CustomerData?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(carThatGotPassed?.customerFirst)
+        
     }
     
 
