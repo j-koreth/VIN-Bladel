@@ -10,7 +10,8 @@ import UIKit
 
 class PreviewViewController: UIViewController {
     
-
+    @IBOutlet weak var webPreview: UIWebView!
+    
     var invoiceInfo: [String: AnyObject]!
     
     var invoiceComposer: InvoiceComposer!
@@ -38,9 +39,9 @@ class PreviewViewController: UIViewController {
         }
     }
     
-    @IBAction func exportToPDF(_ sender: AnyObject) {
-        
-    }
+//    @IBAction func exportToPDF(_ sender: AnyObject) {
+//
+//    }
     
 }
 

@@ -13,10 +13,11 @@ class InvoiceComposer: NSObject {
     let pathToInvoiceHTMLTemplate = NSBundle.mainBundle().pathForResource("invoice", ofType: "html")
     let pathToSingleItemHTMLTemplate = NSBundle.mainBundle().pathForResource("single_item", ofType: "html")
     let pathToLastItemHTMLTemplate = NSBundle.mainBundle().pathForResource("last_item", ofType: "html")
-    let senderInfo = "Gabriel Theodoropoulos<br>123 Somewhere Str.<br>10000 - MyCity<br>MyCountry"
+    let senderInfo = "Jim Van Bladel<br>1900 East Thomas<br>Arlington Heights, IL<br>"
+    
     let dueDate = ""
     let paymentMethod = "Wire Transfer"
-    let logoImageURL = "http://www.appcoda.com/wp-content/uploads/2015/12/blog-logo-dark-400.png"
+    let logoImageURL = "https://blog.gopenske.com/wp-content/uploads/penske-is-ase-certified-training-provider.jpg"
     var invoiceNumber: String!
     var pdfFilename: String!
     
