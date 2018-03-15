@@ -764,6 +764,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirm:" destination="l21-Ei-0oO" eventType="touchUpInside" id="iIk-Rk-VrN"/>
+                                    <segue destination="3VF-Bi-MBb" kind="show" id="KOK-wQ-TnT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -806,6 +807,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOk-yc-CI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5967" y="306"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="sdf-v9-2lU">
+            <objects>
+                <viewController id="3VF-Bi-MBb" customClass="PreviewViewController" customModule="VIN_Bladel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rgx-Jb-pQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-3V-bNd">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ONE-83-fyI"/>
+                    </view>
+                    <connections>
+                        <outlet property="webPreview" destination="OmH-3V-bNd" id="Sxo-RL-Fln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TR8-TR-XkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6797.65625" y="373.828125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="q1v-G5-XY6">
@@ -958,7 +984,6 @@
                         <outlet property="extraLabel" destination="1NH-dx-Z57" id="dNt-cu-nlZ"/>
                         <outlet property="firstName" destination="QUD-7L-p5n" id="4N9-ti-hl3"/>
                         <outlet property="lastName" destination="XDi-ZZ-Xpo" id="xs6-jb-IZp"/>
-                        <outlet property="searchButtonPressed" destination="z4Y-tQ-5kA" id="cpP-8H-q3Y"/>
                         <segue destination="o4B-m0-aRh" kind="show" identifier="searchByNameToCars" id="hyU-9X-a7v"/>
                     </connections>
                 </viewController>
@@ -1131,7 +1156,7 @@
         <image name="icons8-purchase-order" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dkb-tk-CnQ"/>
+        <segue reference="YYt-hK-Sus"/>
         <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>
