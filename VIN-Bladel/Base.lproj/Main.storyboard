@@ -958,7 +958,6 @@
                         <outlet property="extraLabel" destination="1NH-dx-Z57" id="dNt-cu-nlZ"/>
                         <outlet property="firstName" destination="QUD-7L-p5n" id="4N9-ti-hl3"/>
                         <outlet property="lastName" destination="XDi-ZZ-Xpo" id="xs6-jb-IZp"/>
-                        <outlet property="searchButtonPressed" destination="z4Y-tQ-5kA" id="cpP-8H-q3Y"/>
                         <segue destination="o4B-m0-aRh" kind="show" identifier="searchByNameToCars" id="hyU-9X-a7v"/>
                     </connections>
                 </viewController>
@@ -1131,7 +1130,7 @@
         <image name="icons8-purchase-order" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dkb-tk-CnQ"/>
+        <segue reference="YYt-hK-Sus"/>
         <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>
