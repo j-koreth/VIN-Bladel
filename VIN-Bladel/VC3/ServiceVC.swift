@@ -12,8 +12,9 @@ import SearchTextField
 class ServiceVC: UIViewController {
     
     var serviceArray = ["Hi", "I", "want", "to", "die"]
+    var service = [PartOrService]()
 
-    var lastTextfieldY = 100
+    var lastTextfieldY = 186
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +38,9 @@ class ServiceVC: UIViewController {
     {
     }
     
-    func addNewTextfield()
+    func addNewTextfield() -> UITextField
     {
-        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY+186, width: 628, height: 60))
+        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY+100, width: 628, height: 60))
         serviceTextfield.placeholder = "Add Service"
         serviceTextfield.borderStyle = UITextBorderStyle.line
         serviceTextfield.font = UIFont.systemFont(ofSize: 35)
@@ -50,6 +51,8 @@ class ServiceVC: UIViewController {
         
         serviceTextfield.startSuggestingInmediately = true
         serviceTextfield.filterStrings(serviceArray)
+        
+        return serviceTextfield
     }
     
 }
