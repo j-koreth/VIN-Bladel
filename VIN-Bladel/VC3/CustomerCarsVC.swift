@@ -8,11 +8,10 @@
 
 import UIKit
 
-class CustomerCarsVC: UIViewController {
+class CustomerCarsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var customerCarTable: UITableView!
     
-    var numberOfCars = 0
     var carThatGotPassed: CustomerData?
     var arrayOfCarNames = [String]()
     var arrayOfCarIDs = [Int]()
@@ -23,6 +22,7 @@ class CustomerCarsVC: UIViewController {
         
         arrayOfCars = VehicleDatabase.searchForCarsWithACertainCustomerID(customerID: (carThatGotPassed?.customerID)!) as! [VehicleData]
         
+        print("esrdtfyguhijokpihugyftdrsdyfugioyftdrsterdyuiop[iuyt")
         
     }
     
