@@ -10,8 +10,6 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
-//var x = Database.database().reference().root.child("invoices")
-
 class Invoice
 {
     var vehicleID: String!

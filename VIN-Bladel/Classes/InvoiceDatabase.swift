@@ -11,14 +11,14 @@ import Firebase
 import FirebaseDatabase
 
 
-//var x = Database.database().reference().root.child("invoices")
+var invoiceReference = Database.database().reference().root.child("invoices")
 
 class InvoiceDatabase{
     static var database = [Invoice]()
     
     static func pullFromFirebase()
     {
-        partsandservicesReference.observe(.value) { (snapshot) in
+        invoiceReference.observe(.value) { (snapshot) in
             for invoice in snapshot.children.allObjects as! [DataSnapshot]
             {
                 let object = invoice.value as? [String: AnyObject]
