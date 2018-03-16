@@ -746,6 +746,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirm:" destination="l21-Ei-0oO" eventType="touchUpInside" id="iIk-Rk-VrN"/>
+                                    <segue destination="3VF-Bi-MBb" kind="show" id="KOK-wQ-TnT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-AS-RXp">
@@ -796,6 +797,31 @@
             </objects>
             <point key="canvasLocation" x="5967" y="306"/>
         </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="sdf-v9-2lU">
+            <objects>
+                <viewController id="3VF-Bi-MBb" customClass="PreviewViewController" customModule="VIN_Bladel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rgx-Jb-pQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-3V-bNd">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ONE-83-fyI"/>
+                    </view>
+                    <connections>
+                        <outlet property="webPreview" destination="OmH-3V-bNd" id="Sxo-RL-Fln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TR8-TR-XkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6797.65625" y="373.828125"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="q1v-G5-XY6">
             <objects>
@@ -831,6 +857,7 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="SearchButtonPressed:" destination="NE0-au-5Bm" eventType="touchUpInside" id="UK8-Jb-63i"/>
                                     <action selector="search:" destination="l21-Ei-0oO" eventType="touchUpInside" id="W9m-4L-zoy"/>
                                 </connections>
                             </button>
@@ -942,6 +969,7 @@
                     <tabBarItem key="tabBarItem" title="Service" id="9dI-Jg-6ey"/>
                     <navigationItem key="navigationItem" id="cog-mL-ikq"/>
                     <connections>
+                        <outlet property="buttonOutlet" destination="z4Y-tQ-5kA" id="7dj-8e-w5q"/>
                         <outlet property="extraLabel" destination="1NH-dx-Z57" id="dNt-cu-nlZ"/>
                         <outlet property="firstName" destination="QUD-7L-p5n" id="4N9-ti-hl3"/>
                         <outlet property="lastName" destination="XDi-ZZ-Xpo" id="xs6-jb-IZp"/>
@@ -1118,6 +1146,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YYt-hK-Sus"/>
-        <segue reference="TuX-OR-o8z"/>
+        <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>
