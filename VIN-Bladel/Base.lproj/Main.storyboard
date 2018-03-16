@@ -730,27 +730,9 @@
                                 <color key="textColor" red="0.31308466150000003" green="0.31858161940000002" blue="0.34419571760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaO-Yg-bNY">
-                                <rect key="frame" x="100" y="286" width="628" height="60"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Add a Service" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Tcr-ZN-bKa" customClass="SearchTextField" customModule="SearchTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="60"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-AS-RXp">
-                                        <rect key="frame" x="568" y="0.0" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="4TX-gl-SaA"/>
-                                            <constraint firstAttribute="height" constant="60" id="EFu-lT-mVO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uaO-Yg-bNY">
+                                <rect key="frame" x="100" y="286" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmj-0M-CGS">
                                 <rect key="frame" x="247" y="805" width="275" height="70"/>
@@ -766,14 +748,24 @@
                                     <action selector="confirm:" destination="l21-Ei-0oO" eventType="touchUpInside" id="iIk-Rk-VrN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-AS-RXp">
+                                <rect key="frame" x="631" y="286" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4TX-gl-SaA"/>
+                                    <constraint firstAttribute="height" constant="60" id="EFu-lT-mVO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewService:" destination="jeL-du-z62" eventType="touchUpInside" id="QHO-fX-eYi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="obo-5W-xeD" firstAttribute="trailing" secondItem="uaO-Yg-bNY" secondAttribute="trailing" constant="40" id="HhT-EI-SYj"/>
-                            <constraint firstItem="uaO-Yg-bNY" firstAttribute="centerX" secondItem="Fc7-NT-N5j" secondAttribute="centerX" id="IxQ-9T-Aze"/>
-                            <constraint firstItem="uaO-Yg-bNY" firstAttribute="top" secondItem="Erf-uS-Byo" secondAttribute="bottom" constant="56" id="LEw-sr-Wdg"/>
                             <constraint firstItem="Erf-uS-Byo" firstAttribute="top" secondItem="obo-5W-xeD" secondAttribute="top" constant="36" id="Ruf-Jz-9FW"/>
-                            <constraint firstItem="uaO-Yg-bNY" firstAttribute="leading" secondItem="obo-5W-xeD" secondAttribute="leading" constant="100" id="YDT-Jc-5RT"/>
                             <constraint firstItem="obo-5W-xeD" firstAttribute="trailing" secondItem="tmj-0M-CGS" secondAttribute="trailing" constant="246" id="eXH-cq-byD"/>
                             <constraint firstItem="tmj-0M-CGS" firstAttribute="leading" secondItem="obo-5W-xeD" secondAttribute="leading" constant="247" id="ioe-xQ-Ehm"/>
                             <constraint firstItem="Erf-uS-Byo" firstAttribute="centerX" secondItem="Fc7-NT-N5j" secondAttribute="centerX" id="zDK-P0-IfU"/>
@@ -783,9 +775,6 @@
                         <viewLayoutGuide key="safeArea" id="obo-5W-xeD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icons8-engineer-symbol" id="FWu-R3-sjP"/>
-                    <connections>
-                        <outlet property="serviceTextfield" destination="Tcr-ZN-bKa" id="LK1-vl-GCc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdH-us-N1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

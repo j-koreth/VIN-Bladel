@@ -13,20 +13,43 @@ class ServiceVC: UIViewController {
     
     var serviceArray = ["Hi", "I", "want", "to", "die"]
 
-    @IBOutlet weak var serviceTextfield: SearchTextField!
-    
+    var lastTextfieldY = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        serviceTextfield.startVisible = true
-        serviceTextfield.inlineMode = true
-        serviceTextfield.filterStrings(serviceArray)
-        serviceTextfield.font = UIFont.init(name: "Avenir Next Regular", size: 50)
 
+        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: 286, width: 628, height: 60))
+        serviceTextfield.placeholder = "Add Service"
+        serviceTextfield.borderStyle = UITextBorderStyle.line
+        serviceTextfield.font = UIFont.systemFont(ofSize: 35)
+        serviceTextfield.theme.font = UIFont.systemFont(ofSize: 30)
+        serviceTextfield.theme.cellHeight = 60
+
+        self.view.addSubview(serviceTextfield)
+        
+        serviceTextfield.startSuggestingInmediately = true
+        serviceTextfield.filterStrings(serviceArray)
         
         
-        
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func addNewService(_ sender: Any)
+    {
+    }
+    
+    func addNewTextfield()
+    {
+        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY+186, width: 628, height: 60))
+        serviceTextfield.placeholder = "Add Service"
+        serviceTextfield.borderStyle = UITextBorderStyle.line
+        serviceTextfield.font = UIFont.systemFont(ofSize: 35)
+        serviceTextfield.theme.font = UIFont.systemFont(ofSize: 30)
+        serviceTextfield.theme.cellHeight = 60
+        
+        self.view.addSubview(serviceTextfield)
+        
+        serviceTextfield.startSuggestingInmediately = true
+        serviceTextfield.filterStrings(serviceArray)
+    }
+    
 }
