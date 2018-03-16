@@ -9,7 +9,6 @@
 import Foundation
 import Firebase
 import FirebaseDatabase
-var partsAndServicesReference = Database.database().reference().root.child("parts+services")
 
 class PartOrService
 {
