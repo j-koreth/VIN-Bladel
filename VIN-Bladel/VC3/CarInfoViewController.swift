@@ -48,7 +48,6 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         car?.vehicleMake = textViewInformation[1]
         car?.vehicleModel = textViewInformation[2]
         car?.vehicleSubModel = textViewInformation[3]
-        print(textViewInformation[3])
         car?.vehicleModelYear = textViewInformation[4]
         car?.vehicleDisplacement = textViewInformation[5]
         car?.vehicleCylinder = textViewInformation[6]
@@ -58,6 +57,15 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         car?.updateToDatabase()
 
+    }
+    
+    override func viewWillLayoutSubviews() {
+        var customTabFrame = self.tabBarController?.tabBar.frame
+        customTabFrame?.size.height = CGFloat(90)
+        customTabFrame?.origin.y = self.view.frame.size.height - CGFloat(90)
+        self.tabBarController?.tabBar.frame = customTabFrame!
+        tabBarController?.tabBar.barStyle = .black
+        tabBarController?.tabBar.tintColor = .white
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
