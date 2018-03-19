@@ -85,4 +85,20 @@ class VehicleDatabase
 
     }
     
+    static func searchForCarsWithACertainCustomerID(customerID: String) -> [Any]
+    {
+        var arrayOfCars = [Any]()
+
+        for car in database
+        {
+            if car.vehicleCustomerID == customerID
+            {
+                arrayOfCars.append(car)
+                
+            }
+        }
+ 
+        return arrayOfCars
+    }
+    
 }
