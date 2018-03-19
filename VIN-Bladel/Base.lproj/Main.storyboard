@@ -749,8 +749,8 @@
                                     <segue destination="3VF-Bi-MBb" kind="show" id="KOK-wQ-TnT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-AS-RXp">
-                                <rect key="frame" x="631" y="286" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-AS-RXp">
+                                <rect key="frame" x="628" y="286" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="4TX-gl-SaA"/>
                                     <constraint firstAttribute="height" constant="60" id="EFu-lT-mVO"/>
@@ -766,6 +766,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="obo-5W-xeD" firstAttribute="trailing" secondItem="nyS-AS-RXp" secondAttribute="trailing" constant="80" id="9HA-Ej-gpb"/>
+                            <constraint firstItem="nyS-AS-RXp" firstAttribute="top" secondItem="Erf-uS-Byo" secondAttribute="bottom" constant="56" id="BXV-WP-QgF"/>
                             <constraint firstItem="Erf-uS-Byo" firstAttribute="top" secondItem="obo-5W-xeD" secondAttribute="top" constant="36" id="Ruf-Jz-9FW"/>
                             <constraint firstItem="obo-5W-xeD" firstAttribute="trailing" secondItem="tmj-0M-CGS" secondAttribute="trailing" constant="246" id="eXH-cq-byD"/>
                             <constraint firstItem="tmj-0M-CGS" firstAttribute="leading" secondItem="obo-5W-xeD" secondAttribute="leading" constant="247" id="ioe-xQ-Ehm"/>
