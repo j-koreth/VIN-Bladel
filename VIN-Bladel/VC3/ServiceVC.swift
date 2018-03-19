@@ -11,48 +11,52 @@ import SearchTextField
 
 class ServiceVC: UIViewController {
     
-    var serviceArray = ["Hi", "I", "want", "to", "die"]
-    var service = [PartOrService]()
+    var listOfServices = [String]()
+    var serviceArray = [PartOrService]()
+    var textFieldArray = [SearchTextField]()
 
-    var lastTextfieldY = 186
+    var lastTextfieldY = 211
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: 286, width: 628, height: 60))
-        serviceTextfield.placeholder = "Add Service"
-        serviceTextfield.borderStyle = UITextBorderStyle.line
-        serviceTextfield.font = UIFont.systemFont(ofSize: 35)
-        serviceTextfield.theme.font = UIFont.systemFont(ofSize: 30)
-        serviceTextfield.theme.cellHeight = 60
-
-        self.view.addSubview(serviceTextfield)
         
-        serviceTextfield.startSuggestingInmediately = true
-        serviceTextfield.filterStrings(serviceArray)
+        for partsOrService in PartsAndServicesDatabase.database
+        {
+            listOfServices.append(partsOrService.description)
+        }
+        addNewTextfield()
         
         
     }
 
     @IBAction func addNewService(_ sender: Any)
     {
+        if textFieldArray.count < 5
+        {
+            addNewTextfield()
+        }
+
     }
     
-    func addNewTextfield() -> UITextField
+    func addNewTextfield()
     {
-        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY+100, width: 628, height: 60))
+        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY + 75, width: 575, height: 60))
+        lastTextfieldY = Int(serviceTextfield.frame.midY)
+    
         serviceTextfield.placeholder = "Add Service"
+        serviceTextfield.filterStrings(listOfServices)
+
+        serviceTextfield.startSuggestingInmediately = true
         serviceTextfield.borderStyle = UITextBorderStyle.line
         serviceTextfield.font = UIFont.systemFont(ofSize: 35)
         serviceTextfield.theme.font = UIFont.systemFont(ofSize: 30)
         serviceTextfield.theme.cellHeight = 60
+        serviceTextfield.maxResultsListHeight = 600
         
         self.view.addSubview(serviceTextfield)
         
-        serviceTextfield.startSuggestingInmediately = true
-        serviceTextfield.filterStrings(serviceArray)
         
-        return serviceTextfield
+        textFieldArray.append(serviceTextfield)
     }
     
 }
