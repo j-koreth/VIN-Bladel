@@ -24,11 +24,14 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
             pulledText.text = (customer?.customerFirst)! + " " + (customer?.customerLast)!
             confirmButton.isEnabled = true
             car?.vehicleCustomerID = customer?.customerID
+            pulledText.textColor = UIColor.black
 
         }
         else
         {
             pulledText.text = "Customer not found. Try Again"
+            pulledText.textColor = UIColor(red:0.73, green:0.12, blue:0.20, alpha:1.0)
+
         }
     }
     
@@ -65,6 +68,7 @@ class SearchCustomerViewController: UIViewController, UITextFieldDelegate {
         confirmButton.layer.borderColor = UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0).cgColor
         confirmButton.layer.borderWidth = 3
         confirmButton.layer.cornerRadius = 35
+        
 
         }
 }

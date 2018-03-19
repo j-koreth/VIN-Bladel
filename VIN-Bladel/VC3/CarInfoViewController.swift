@@ -61,8 +61,8 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillLayoutSubviews() {
         var customTabFrame = self.tabBarController?.tabBar.frame
-        customTabFrame?.size.height = CGFloat(90)
-        customTabFrame?.origin.y = self.view.frame.size.height - CGFloat(90)
+        customTabFrame?.size.height = CGFloat(80)
+        customTabFrame?.origin.y = self.view.frame.size.height - CGFloat(80)
         self.tabBarController?.tabBar.frame = customTabFrame!
         tabBarController?.tabBar.barStyle = .black
         tabBarController?.tabBar.tintColor = .white

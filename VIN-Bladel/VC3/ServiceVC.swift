@@ -11,6 +11,8 @@ import SearchTextField
 
 class ServiceVC: UIViewController {
     
+    @IBOutlet weak var tooManyLabel: UILabel!
+    
     var listOfServices = [String]()
     var serviceArray = [PartOrService]()
     var textFieldArray = [SearchTextField]()
@@ -19,6 +21,8 @@ class ServiceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tooManyLabel.textColor = UIColor(red:0.73, green:0.12, blue:0.20, alpha:1.0)
         
         for partsOrService in PartsAndServicesDatabase.database
         {
@@ -31,9 +35,17 @@ class ServiceVC: UIViewController {
 
     @IBAction func addNewService(_ sender: Any)
     {
-        if textFieldArray.count < 5
+        if textFieldArray.count < 5 && textFieldArray.last?.text != ""
         {
             addNewTextfield()
+        }
+        else if textFieldArray.count == 5
+        {
+            tooManyLabel.text = "Max of 5 Services"
+        }
+        else
+        {
+            tooManyLabel.text = "Please add a Service"
         }
 
     }
