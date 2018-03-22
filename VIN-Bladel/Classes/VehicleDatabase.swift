@@ -93,6 +93,7 @@ class VehicleDatabase
         {
             if car.vehicleCustomerID == customerID
             {
+                car.fromDatabase = true
                 arrayOfCars.append(car)
                 
             }

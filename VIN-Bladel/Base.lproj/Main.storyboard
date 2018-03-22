@@ -994,14 +994,14 @@
                                 <rect key="frame" x="0.0" y="209" width="730" height="815"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="DK0-ij-9PT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="DK0-ij-9PT">
                                         <rect key="frame" x="0.0" y="28" width="730" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DK0-ij-9PT" id="08y-7F-Jbd">
                                             <rect key="frame" x="0.0" y="0.0" width="730" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014 Honda CRV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq3-Zp-esZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq3-Zp-esZ">
                                                     <rect key="frame" x="15" y="14" width="700" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="700" id="8dM-uV-Wrk"/>
@@ -1019,6 +1019,9 @@
                                                 <constraint firstItem="cq3-Zp-esZ" firstAttribute="top" secondItem="08y-7F-Jbd" secondAttribute="topMargin" constant="3" id="xuI-BF-JB9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uhD-MY-DGM" kind="show" id="ZkL-FU-XLu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1062,6 +1065,7 @@
                     <navigationItem key="navigationItem" id="zkk-8g-sgL"/>
                     <connections>
                         <outlet property="customerCarTable" destination="u4x-Ca-LGr" id="Txc-Bj-B0u"/>
+                        <outlet property="nameLabel" destination="EnG-Fh-bgk" id="vGt-TI-Hac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZ3-xt-cSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1118,7 +1122,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="085-vx-Dzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5164" y="137"/>
+            <point key="canvasLocation" x="5113" y="-110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7HL-8A-nwg">
@@ -1147,7 +1151,7 @@
         <image name="icons8-purchase-order" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YYt-hK-Sus"/>
+        <segue reference="ZkL-FU-XLu"/>
         <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>

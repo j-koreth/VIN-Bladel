@@ -11,39 +11,44 @@ import UIKit
 class CustomerCarsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var customerCarTable: UITableView!
+    @IBOutlet weak var nameLabel: UILabel!
     
-    var carThatGotPassed: CustomerData?
-    var arrayOfCarNames = [String]()
-    var arrayOfCarIDs = [Int]()
     var arrayOfCars = [VehicleData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        arrayOfCars = VehicleDatabase.searchForCarsWithACertainCustomerID(customerID: (carThatGotPassed?.customerID)!) as! [VehicleData]
+        customerCarTable.delegate = self
+        customerCarTable.dataSource = self
         
-        print("esrdtfyguhijokpihugyftdrsdyfugioyftdrsterdyuiop[iuyt")
+        nameLabel.text = (customer?.customerFirst)! + " " + (customer?.customerLast)!
+        
+        arrayOfCars = VehicleDatabase.searchForCarsWithACertainCustomerID(customerID: (customer?.customerID)!) as! [VehicleData]
+        
         
     }
     
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return arrayOfCars.count
- 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         
-        var theCarBeingShown = arrayOfCars[indexPath.row]
-        
-        cell.textLabel?.text = theCarBeingShown.vehicleMake
-        
-        
+        cell.textLabel?.text = "\(arrayOfCars[(indexPath as NSIndexPath).row].vehicleModelYear!)" + " " + "\(arrayOfCars[(indexPath as NSIndexPath).row].vehicleModel!)"
+
         return cell
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! TabBarVC
+        let indexPath = customerCarTable.indexPathForSelectedRow!
+        car = arrayOfCars[(indexPath as NSIndexPath).row]
     }
 
 }

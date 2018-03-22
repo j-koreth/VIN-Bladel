@@ -42,6 +42,10 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         
         car?.VIN = textViewInformation[0]

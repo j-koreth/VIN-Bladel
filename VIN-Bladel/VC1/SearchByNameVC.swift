@@ -15,8 +15,6 @@ class SearchByNameVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var extraLabel: UILabel!
     @IBOutlet weak var buttonOutlet: UIButton!
     
-    var customerToMaybeSend:CustomerData?
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -29,7 +27,7 @@ class SearchByNameVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func SearchButtonPressed(_ sender: UIButton)
     {
-        customerToMaybeSend = CustomerDatabase.getCustomerByName(first: firstName.text!, last: lastName.text!)
+        customer = CustomerDatabase.getCustomerByName(first: firstName.text!, last: lastName.text!)
         
         self.performSegue(withIdentifier: "searchByNameToCars", sender: nil)
 
@@ -57,13 +55,4 @@ class SearchByNameVC: UIViewController, UITextFieldDelegate {
             buttonOutlet.backgroundColor = UIColor.white
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        var newVC = segue.destination as! CustomerCarsVC
-        newVC.carThatGotPassed = customerToMaybeSend
-        
-        
-        
-    }
-    
 }
