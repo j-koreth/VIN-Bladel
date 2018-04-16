@@ -40,6 +40,7 @@ class LoadingViewController: UIViewController {
         CustomerDatabase.pullFromFirebase()
         VehicleDatabase.pullFromFirebase()
         PartsAndServicesDatabase.pullFromFirebase()
+        InvoiceDatabase.pullFromFirebase()
         
         let randomNumber = Int(arc4random_uniform(3) + 2)
         let when = DispatchTime.now() + Double(randomNumber)
