@@ -51,21 +51,17 @@ class CustomerData
         let customer = vehicleDatabase.child(customerKey)
         let customerField = [field: value]
         customer.updateChildValues(customerField)
-        
     }
     
     func updateToDatabase() {
         let newCustomer = createNewCustomer()
-        
         customerDatabase.child(customerKey).setValue(newCustomer)
-
         }
     
     func createNewCustomer() -> [String: String?]
     {
-         let newCustomer = ["Customer Key": customerKey, "Customer ID": customerID, "Customer Title": customerTitle, "Customer First Name": customerFirst, "Customer Last Name": customerLast, "Customer Addr1": customerAddress1, "Customer Addr2": customerAddress2, "Customer City": customerCity, "Customer State": customerState, "Customer Zip Code": customerZip, "Customer Country": customerCountry, "Customer Email": customerEmail, "Customer Home Phone": customerHomePhone, "Customer Work Phone": customerWorkPhone]
+        let newCustomer = ["Customer Key": customerKey, "Customer ID": customerID, "Customer Title": customerTitle, "Customer First Name": customerFirst, "Customer Last Name": customerLast, "Customer Addr1": customerAddress1, "Customer Addr2": customerAddress2, "Customer City": customerCity, "Customer State": customerState, "Customer Zip Code": customerZip, "Customer Country": customerCountry, "Customer Email": customerEmail, "Customer Home Phone": customerHomePhone, "Customer Work Phone": customerWorkPhone]
         
         return newCustomer
     }
-
 }

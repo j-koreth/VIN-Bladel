@@ -24,11 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barStyle = UIBarStyle.black
         UITabBar.appearance().frame.size.height = 100
 
-
 //        UIView.appearance().backgroundColor = UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0)
         // Override point for customization after application launch.
-
-
+        
         return true
     }
 
@@ -56,9 +54,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask(rawValue: UIInterfaceOrientationMask.portrait.rawValue)
     }
-    
-    
-    
-   
 }
 

@@ -22,23 +22,18 @@ class SearchByNameVC: UIViewController, UITextFieldDelegate {
         buttonOutlet.isEnabled = false
         lastName.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         firstName.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        
     }
     
     @IBAction func SearchButtonPressed(_ sender: UIButton)
     {
         customer = CustomerDatabase.getCustomerByName(first: firstName.text!, last: lastName.text!)
-        
         self.performSegue(withIdentifier: "searchByNameToCars", sender: nil)
-
     }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
         return true
     }
-    
     
     @objc func textFieldDidChange()
     {
@@ -47,7 +42,6 @@ class SearchByNameVC: UIViewController, UITextFieldDelegate {
             buttonOutlet.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
             buttonOutlet.titleLabel?.textColor = .white
             buttonOutlet.isEnabled = true
-            
         }
         else
         {

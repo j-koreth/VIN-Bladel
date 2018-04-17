@@ -54,8 +54,5 @@ class PartOrService
         self.serviceFlatRateID = serviceFlatRateID
         self.total = total
         self.vehicleID = vehicleID
-
-
-        
     }
 }

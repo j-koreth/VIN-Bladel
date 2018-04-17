@@ -10,7 +10,6 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
-
 var invoiceReference = Database.database().reference().root.child("invoices")
 
 class InvoiceDatabase{
@@ -43,8 +42,6 @@ class InvoiceDatabase{
                 let invoiceClosed = object?["Invoice Closed"] as! String
                 self.database.append(Invoice(vehicleID: vehicleID, invoiceID: invoiceID, invoiceNumber: invoiceNumber, invoiceDateStart: invoiceDateStart, invoiceTimeStart: invoiceTimeStart, invoiceDateComplete: invoiceDateComplete, invoiceTimeComplete: invoiceTimeComplete, mechanic: mechanic, invoiceTotal: invoiceTotal, invoicePartsTotal: invoicePartsTotal, invoiceLaborTotal: invoiceLaborTotal, invoiceOtherTotal: invoiceOtherTotal, invoiceProblem: invoiceProblem, invoicePaid: invoicePaid, invoiceBalance: invoiceBalance, invoiceMileage: invoiceMileage, invoiceSubtotal: invoiceSubtotal, invoiceShipName: invoiceShipName, invoiceClosed: invoiceClosed))
             }
-            
         }
-        
     }
 }

@@ -12,13 +12,10 @@ import Firebase
 
 var vehicleReference = Database.database().reference().root.child("vehicles")
 
-
 class VehicleDatabase
 {
     static var database = [VehicleData]()
-    
     static var lastID = 0
-    
     
     static func searchByVIN(vin: String) -> VehicleData?
     {
@@ -74,15 +71,12 @@ class VehicleDatabase
 //                let vehicleDriveType = object?["VIN"] as! String
                 let vehicleTransmission = object?["Transmission"] as! String
                 let vehicleMileage = object?["Mileage"] as! String
-
                 
                 let vehicle = VehicleData(vin: vehicleVIN, key: vehicleKey, customerID: vehicleCustomerID, ID: vehicleID, make: vehicleMake, model: vehicleModel, modelyear: vehicleModelYear, displacement: vehicleDisplacement, cylinder: vehicleCylinder, drivetype: "", submodel: vehicleSubModel, transmission: vehicleTransmission, mileage: vehicleMileage)
                 self.database.append(vehicle)
             }
             self.lastID = Int((self.database.last?.vehicleID)!)!
-
         }
-
     }
     
     static func searchForCarsWithACertainCustomerID(customerID: String) -> [Any]
@@ -95,11 +89,8 @@ class VehicleDatabase
             {
                 car.fromDatabase = true
                 arrayOfCars.append(car)
-                
             }
         }
- 
         return arrayOfCars
     }
-    
 }

@@ -43,8 +43,6 @@ class PartsAndServicesDatabase{
                 let vehicleID = object?["Sequence Number"] as! String
                 self.database.append(PartOrService(core: core, cost: cost, dialBrandID: dialBrandID, description: description, credit: credit, part: part, itemID: itemID, itemNumber: itemNumber, linkedService: linkedService, noteID: noteID, partTaxable: partTaxable, partCore: partCore, quantity: quantity, reportID: reportID, reportType: reportType, sequenceNumber: sequenceNumber, serviceFlatRate: serviceFlatRate, serviceFlatRateID: serviceFlatRateID, total: total, vehicleID: vehicleID))
             }
-            
         }
-        
     }
 }

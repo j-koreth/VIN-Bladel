@@ -12,7 +12,6 @@ import Firebase
 
 var customerReference = Database.database().reference().root.child("customers")
 
-
 class CustomerDatabase
 {
     static var database = [CustomerData]()
@@ -30,7 +29,6 @@ class CustomerDatabase
         let customerDictionary = newCustomer.createNewCustomer()
         customerReference.child(key).setValue(customerDictionary)
     }
-    
     
     static func getCustomerByName(first: String, last: String) -> CustomerData?
     {
@@ -61,10 +59,8 @@ class CustomerDatabase
         return nil
     }
     
-    
     static func pullFromFirebase()
     {
-
         customerReference.observe(.value) { (snapshot) in
             for customers in snapshot.children.allObjects as! [DataSnapshot]
             {
@@ -87,15 +83,12 @@ class CustomerDatabase
                 let home = object?["Customer Home Phone"] as! String
                 let work = object?["Customer Work Phone"] as! String
                 
-                
                 let customer = CustomerData(key: key, ID: ID, title: title, first: first, last: last, address1: add1, address2: add2, city: city, state: state, zip: zip, country: country, email: email, home: home, work: work)
                 
                 self.database.append(customer)
-                
             }
             self.lastID = Int((self.database.last?.customerID)!)!
         }
-
     }
     
     static func pushToFirebase()
@@ -122,11 +115,8 @@ class CustomerDatabase
 //        {
 //            customers.customerIndex = String(num)
 //            num += 1
-//
 //        }
-//
 //    }
-    
 }
 
 

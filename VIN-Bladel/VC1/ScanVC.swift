@@ -41,7 +41,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     session.addInput(videoDeviceInput!)
 //                }
 //            }
-        
             let metadataOutput = AVCaptureMetadataOutput()
             
 //            if (session.canAddOutput(metadataOutput)) {
@@ -92,7 +91,6 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             self.session.stopRunning()
         }
     }
-    
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if (metadataObjects.count > 0 && metadataObjects.first is AVMetadataMachineReadableCodeObject) {

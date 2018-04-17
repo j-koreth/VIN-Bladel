@@ -21,7 +21,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
         searchButton.isEnabled = false
         
         vinTextfield.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-
     }
     
     @objc func textFieldDidChange()
@@ -30,7 +29,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
             {
                 searchButton.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
                 searchButton.isEnabled = true
-    
             }
             else
             {
@@ -65,7 +63,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.destination is DataNotFoundViewController
         {
             if(car?.error != nil) {

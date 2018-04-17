@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var manualButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationItem.hidesBackButton = true
@@ -29,8 +28,5 @@ class ViewController: UIViewController {
         manualButton.layer.cornerRadius = 40
         searchButton.backgroundColor = UIColor(red:0.32, green:0.58, blue:0.79, alpha:1.0)
         searchButton.layer.cornerRadius = 40
-        
     }
-
-    
 }

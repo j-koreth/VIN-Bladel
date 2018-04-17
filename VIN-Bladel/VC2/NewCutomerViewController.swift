@@ -28,7 +28,6 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         }
         
         performSegue(withIdentifier: "newCustomerToCarInfo", sender: nil)
-
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -36,8 +35,6 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         {
             confirmButton.isEnabled = true
             confirmButton.backgroundColor = UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0)
-
-
         }
     }
     
@@ -45,8 +42,6 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
         return true
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +52,5 @@ class NewCutomerViewController: UIViewController, UITextFieldDelegate {
         confirmButton.setTitleColor(UIColor.white, for: .normal)
         confirmButton.setTitleColor(UIColor(red:0.31, green:0.63, blue:0.46, alpha:1.0), for: .disabled)
         confirmButton.layer.borderWidth = 3
-
     }
-    
 }

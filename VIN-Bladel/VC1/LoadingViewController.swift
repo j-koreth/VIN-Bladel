@@ -49,6 +49,5 @@ class LoadingViewController: UIViewController {
             self.seugeInstantly = true
             self.performSegue(withIdentifier: "loadingToMain", sender: nil)
         }
-        
     }
 }
