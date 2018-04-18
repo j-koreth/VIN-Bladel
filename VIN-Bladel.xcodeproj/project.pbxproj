@@ -33,8 +33,8 @@
 		9D1EA20820595D8600BCCCEE /* invoice.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D1EA20720595D8600BCCCEE /* invoice.html */; };
 		9D1EA20C20595DC700BCCCEE /* single_item.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D1EA20B20595DC700BCCCEE /* single_item.html */; };
 		9D1EA20E20595DDB00BCCCEE /* last_item.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D1EA20D20595DDB00BCCCEE /* last_item.html */; };
-		9D1EA210205960CC00BCCCEE /* InvoiceComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1EA20F205960CC00BCCCEE /* InvoiceComposer.swift */; };
 		9D2D60AB1FDECCDD009CADBC /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */; };
+		9D3867A920878488007251CA /* CustomPrintPageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3867A820878488007251CA /* CustomPrintPageRenderer.swift */; };
 		9D4B2228204D921B003DA6ED /* PDFInvoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B2227204D921A003DA6ED /* PDFInvoice.swift */; };
 		9DDF77CE205AB03E007D1D2D /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDF77CD205AB03E007D1D2D /* PreviewViewController.swift */; };
 		9DF36A56201A20A800B6A11C /* DataNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */; };
@@ -79,6 +79,7 @@
 		9D1EA20D20595DDB00BCCCEE /* last_item.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = last_item.html; sourceTree = "<group>"; };
 		9D1EA20F205960CC00BCCCEE /* InvoiceComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceComposer.swift; sourceTree = "<group>"; };
 		9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
+		9D3867A820878488007251CA /* CustomPrintPageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrintPageRenderer.swift; sourceTree = "<group>"; };
 		9D4B2227204D921A003DA6ED /* PDFInvoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFInvoice.swift; path = "VIN-Bladel/Classes/PDFInvoice.swift"; sourceTree = "<group>"; };
 		9DDF77CD205AB03E007D1D2D /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		9DF36A55201A20A800B6A11C /* DataNotFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNotFoundViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				9DDF77CD205AB03E007D1D2D /* PreviewViewController.swift */,
+				9D3867A820878488007251CA /* CustomPrintPageRenderer.swift */,
 				9D1EA20F205960CC00BCCCEE /* InvoiceComposer.swift */,
 				9D1EA20720595D8600BCCCEE /* invoice.html */,
 				9D1EA20B20595DC700BCCCEE /* single_item.html */,
@@ -395,6 +397,7 @@
 				9DF36A58201A248000B6A11C /* NewCutomerViewController.swift in Sources */,
 				20884E5220262C5400D5BEE5 /* Reachability.swift in Sources */,
 				67F7B24B1FD1A04500AD9532 /* AppDelegate.swift in Sources */,
+				9D3867A920878488007251CA /* CustomPrintPageRenderer.swift in Sources */,
 				06EC6F6C1FD5C25A00DFCD78 /* ScanVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
