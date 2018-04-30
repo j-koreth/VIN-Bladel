@@ -26,8 +26,18 @@ class SearchByNameVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func SearchButtonPressed(_ sender: UIButton)
     {
-        customer = CustomerDatabase.getCustomerByName(first: firstName.text!, last: lastName.text!)
-        self.performSegue(withIdentifier: "searchByNameToCars", sender: nil)
+        if CustomerDatabase.getCustomerByName(first: firstName.text!, last: lastName.text!) != nil
+        {
+            customer = CustomerDatabase.getCustomerByName(first: firstName.text!, last: lastName.text!)
+            self.performSegue(withIdentifier: "searchByNameToCars", sender: nil)
+        }
+            
+        else
+        {
+            let alert = UIAlertController(title: "Error", message: "Customer was not found in the database", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
