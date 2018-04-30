@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065ABC852097579D00C0FC00 /* PartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065ABC842097579D00C0FC00 /* PartsVC.swift */; };
 		06B680C120487AFB001544FE /* ServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B680C020487AFB001544FE /* ServiceVC.swift */; };
 		06B680C320487B3A001544FE /* SearchByNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B680C220487B3A001544FE /* SearchByNameVC.swift */; };
 		06B680C520487B5B001544FE /* CustomerCarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B680C420487B5B001544FE /* CustomerCarsVC.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		065ABC842097579D00C0FC00 /* PartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartsVC.swift; sourceTree = "<group>"; };
 		068E1CB0203481B00075BE93 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		06B680C020487AFB001544FE /* ServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceVC.swift; sourceTree = "<group>"; };
 		06B680C220487B3A001544FE /* SearchByNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByNameVC.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				9D2D60AA1FDECCDD009CADBC /* CarInfoViewController.swift */,
 				06B680C420487B5B001544FE /* CustomerCarsVC.swift */,
 				06B680C020487AFB001544FE /* ServiceVC.swift */,
+				065ABC842097579D00C0FC00 /* PartsVC.swift */,
 			);
 			path = VC3;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				67CAF6E4205AACCD00BC719D /* InvoiceDatabase.swift in Sources */,
 				06EC6F6E1FD5C27D00DFCD78 /* InputVC.swift in Sources */,
 				20884E5120262C5400D5BEE5 /* CustomerData.swift in Sources */,
+				065ABC852097579D00C0FC00 /* PartsVC.swift in Sources */,
 				67CAF6E6205AB1D600BC719D /* Invoice.swift in Sources */,
 				20884E5420262C5400D5BEE5 /* CustomerDatabase.swift in Sources */,
 				06B680C320487B3A001544FE /* SearchByNameVC.swift in Sources */,
