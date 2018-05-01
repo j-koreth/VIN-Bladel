@@ -9,13 +9,15 @@
 import UIKit
 import SearchTextField
 
-class ServiceVC: UIViewController {
+class ServiceVC: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var tooManyLabel: UILabel!
+    @IBOutlet weak var mechanicLabel: UITextField!
     
     var listOfServices = [String]()
     var serviceArray = [Service]()
     var textFieldArray = [SearchTextField]()
+    var mechanic = ""
 
     var lastTextfieldY = 211
     
@@ -35,13 +37,13 @@ class ServiceVC: UIViewController {
 
     @IBAction func addNewService(_ sender: Any)
     {
-        if textFieldArray.count < 5 && textFieldArray.last?.text != ""
+        if textFieldArray.count < 4 && textFieldArray.last?.text != ""
         {
             addNewTextfield()
         }
-        else if textFieldArray.count == 5
+        else if textFieldArray.count == 4
         {
-            tooManyLabel.text = "Max of 5 Services"
+            tooManyLabel.text = "Max of 4 Services"
         }
         else
         {
@@ -52,7 +54,7 @@ class ServiceVC: UIViewController {
     
     func addNewTextfield()
     {
-        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY + 75, width: 575, height: 60))
+        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY + 175, width: 550, height: 60))
         lastTextfieldY = Int(serviceTextfield.frame.midY)
     
         serviceTextfield.placeholder = "Add Service"
@@ -69,6 +71,11 @@ class ServiceVC: UIViewController {
         
         
         textFieldArray.append(serviceTextfield)
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        mechanic = mechanicLabel.text!
+        return true
     }
     
 }
