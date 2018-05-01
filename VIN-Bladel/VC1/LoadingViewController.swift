@@ -39,7 +39,8 @@ class LoadingViewController: UIViewController {
         imageView.image = UIImage.animatedImage(with: array, duration: 2.5)
         CustomerDatabase.pullFromFirebase()
         VehicleDatabase.pullFromFirebase()
-        PartsAndServicesDatabase.pullFromFirebase()
+        PartsDatabase.pullFromFirebase()
+        ServiceDatabase.pullFromFirebase()
         InvoiceDatabase.pullFromFirebase()
         
         let randomNumber = Int(arc4random_uniform(3) + 2)

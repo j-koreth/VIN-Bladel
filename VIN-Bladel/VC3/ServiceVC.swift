@@ -14,7 +14,7 @@ class ServiceVC: UIViewController {
     @IBOutlet weak var tooManyLabel: UILabel!
     
     var listOfServices = [String]()
-    var serviceArray = [PartOrService]()
+    var serviceArray = [Service]()
     var textFieldArray = [SearchTextField]()
 
     var lastTextfieldY = 211
@@ -24,9 +24,9 @@ class ServiceVC: UIViewController {
         
         tooManyLabel.textColor = UIColor(red:0.73, green:0.12, blue:0.20, alpha:1.0)
         
-        for partsOrService in PartsAndServicesDatabase.database
+        for service in ServiceDatabase.database
         {
-            listOfServices.append(partsOrService.description)
+            listOfServices.append(service.name)
         }
         addNewTextfield()
         
