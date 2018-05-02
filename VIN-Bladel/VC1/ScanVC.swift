@@ -107,7 +107,9 @@ class ScanVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                 barcode = scan.stringValue!
             }
             while(car == nil){
-                car = VehicleDatabase.searchByVIN(vin: barcode)
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    car = VehicleDatabase.searchByVIN(vin: self.barcode)
+                })
             }
             confirmButton.isEnabled = true
             confirmButton.tintColor = UIColor.white
