@@ -12,14 +12,12 @@ import SearchTextField
 class ServiceVC: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var tooManyLabel: UILabel!
-    @IBOutlet weak var mechanicLabel: UITextField!
     
     var listOfServices = [String]()
     var serviceArray = [Service]()
     var textFieldArray = [SearchTextField]()
-    var mechanic = ""
 
-    var lastTextfieldY = 111
+    var lastTextfieldY = 211
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +52,7 @@ class ServiceVC: UIViewController, UITextFieldDelegate{
     
     func addNewTextfield()
     {
-        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY + 175, width: 550, height: 60))
+        var serviceTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY + 75, width: 550, height: 60))
         lastTextfieldY = Int(serviceTextfield.frame.midY)
     
         serviceTextfield.placeholder = "Add Service"
@@ -73,9 +71,5 @@ class ServiceVC: UIViewController, UITextFieldDelegate{
         textFieldArray.append(serviceTextfield)
     }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        mechanic = mechanicLabel.text!
-        return true
-    }
     
 }
