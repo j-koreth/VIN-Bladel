@@ -19,7 +19,7 @@ class ServiceVC: UIViewController, UITextFieldDelegate{
     var textFieldArray = [SearchTextField]()
     var mechanic = ""
 
-    var lastTextfieldY = 211
+    var lastTextfieldY = 111
     
     override func viewDidLoad() {
         super.viewDidLoad()
