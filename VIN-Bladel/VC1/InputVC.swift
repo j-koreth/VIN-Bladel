@@ -50,15 +50,17 @@ class InputVC: UIViewController, UITextFieldDelegate {
     @IBAction func searchVIN(_ sender: Any)
     {
         view.endEditing(true)
-
-        if car?.fromDatabase == true
-        {
-            customer = CustomerDatabase.getCustomerByID(ID: (car?.vehicleCustomerID)!)
-            self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
-        }
-        else {
-            self.performSegue(withIdentifier: "inputNotFound", sender: nil)
-        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            if car?.fromDatabase == true
+            {
+                customer = CustomerDatabase.getCustomerByID(ID: (car?.vehicleCustomerID)!)
+                self.performSegue(withIdentifier: "manualToCarInfo", sender: nil)
+            }
+            else {
+                self.performSegue(withIdentifier: "inputNotFound", sender: nil)
+            }
+        })
     }
   
     
