@@ -15,7 +15,7 @@ class ServiceVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var mechanicLabel: UITextField!
     
     var listOfServices = [String]()
-    var serviceArray = [PartOrService]()
+    var serviceArray = [Service]()
     var textFieldArray = [SearchTextField]()
     var mechanic = ""
 
@@ -26,9 +26,9 @@ class ServiceVC: UIViewController, UITextFieldDelegate{
         
         tooManyLabel.textColor = UIColor(red:0.73, green:0.12, blue:0.20, alpha:1.0)
         
-        for partsOrService in PartsAndServicesDatabase.database
+        for service in ServiceDatabase.database
         {
-            listOfServices.append(partsOrService.description)
+            listOfServices.append(service.name)
         }
         addNewTextfield()
         
