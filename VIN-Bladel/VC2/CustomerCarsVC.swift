@@ -8,6 +8,12 @@
 
 import UIKit
 
+class CustomerTableViewCell: UITableViewCell
+{
+    @IBOutlet weak var carLabel: UITextField!
+    
+}
+
 class CustomerCarsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var customerCarTable: UITableView!
@@ -15,7 +21,8 @@ class CustomerCarsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var arrayOfCars = [VehicleData]()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         customerCarTable.delegate = self
@@ -24,10 +31,7 @@ class CustomerCarsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         nameLabel.text = (customer?.customerFirst)! + " " + (customer?.customerLast)!
         
         arrayOfCars = VehicleDatabase.searchForCarsWithACertainCustomerID(customerID: (customer?.customerID)!) as! [VehicleData]
-        
-        
     }
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -35,11 +39,11 @@ class CustomerCarsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         return arrayOfCars.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomerTableViewCell
         
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        
-        cell.textLabel?.text = "\(arrayOfCars[(indexPath as NSIndexPath).row].vehicleModelYear!)" + " " + "\(arrayOfCars[(indexPath as NSIndexPath).row].vehicleModel!)"
+        cell.carLabel?.text = "\(arrayOfCars[indexPath.row].vehicleModelYear!)" + " " + "\(arrayOfCars[indexPath.row].vehicleModel!)"
 
         return cell
         

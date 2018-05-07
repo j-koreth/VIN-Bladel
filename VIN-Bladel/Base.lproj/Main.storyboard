@@ -742,7 +742,6 @@
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="confirm:" destination="l21-Ei-0oO" eventType="touchUpInside" id="iIk-Rk-VrN"/>
                                     <segue destination="3VF-Bi-MBb" kind="show" id="KOK-wQ-TnT"/>
                                 </connections>
                             </button>
@@ -757,7 +756,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addNewService:" destination="jeL-du-z62" eventType="touchUpInside" id="QHO-fX-eYi"/>
+                                    <action selector="addNewService:" destination="jeL-du-z62" eventType="touchUpInside" id="tN6-Hs-HXB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6L-dG-hTC">
@@ -794,7 +793,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdH-us-N1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6835.15625" y="-345.1171875"/>
+            <point key="canvasLocation" x="6869" y="-414"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4vB-CQ-gCx">
@@ -810,7 +809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOk-yc-CI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5941" y="289"/>
+            <point key="canvasLocation" x="5941" y="279"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="sdf-v9-2lU">
@@ -835,9 +834,6 @@
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="confirm:" destination="l21-Ei-0oO" eventType="touchUpInside" id="a3K-cg-tyo"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -849,7 +845,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TR8-TR-XkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6835" y="371"/>
+            <point key="canvasLocation" x="6869" y="315"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="q1v-G5-XY6">
@@ -865,7 +861,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRs-3p-ZNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5514" y="1080"/>
+            <point key="canvasLocation" x="5378" y="976"/>
         </scene>
         <!--PartsVC-->
         <scene sceneID="R4B-07-9sJ">
@@ -897,7 +893,6 @@
                                 </state>
                                 <connections>
                                     <action selector="addNewPart:" destination="N8N-wD-bYD" eventType="touchUpInside" id="FKr-VD-Wpc"/>
-                                    <action selector="addNewService:" destination="jeL-du-z62" eventType="touchUpInside" id="42y-tR-xrg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCE-V1-7Cg">
@@ -920,9 +915,6 @@
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="confirm:" destination="l21-Ei-0oO" eventType="touchUpInside" id="tGU-xt-r7Y"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -948,7 +940,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1B-i5-JkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6566" y="1191"/>
+            <point key="canvasLocation" x="6543" y="1138"/>
         </scene>
         <!--Service-->
         <scene sceneID="vPE-IB-ZCk">
@@ -970,7 +962,6 @@
                                 </state>
                                 <connections>
                                     <action selector="SearchButtonPressed:" destination="NE0-au-5Bm" eventType="touchUpInside" id="UK8-Jb-63i"/>
-                                    <action selector="search:" destination="l21-Ei-0oO" eventType="touchUpInside" id="W9m-4L-zoy"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vsw-cK-agD">
@@ -1081,16 +1072,16 @@
                     <tabBarItem key="tabBarItem" title="Service" id="9dI-Jg-6ey"/>
                     <navigationItem key="navigationItem" id="cog-mL-ikq"/>
                     <connections>
-                        <outlet property="buttonOutlet" destination="z4Y-tQ-5kA" id="7dj-8e-w5q"/>
                         <outlet property="extraLabel" destination="1NH-dx-Z57" id="dNt-cu-nlZ"/>
                         <outlet property="firstName" destination="QUD-7L-p5n" id="4N9-ti-hl3"/>
                         <outlet property="lastName" destination="XDi-ZZ-Xpo" id="xs6-jb-IZp"/>
+                        <outlet property="searchButton" destination="z4Y-tQ-5kA" id="gBs-ev-ejq"/>
                         <segue destination="o4B-m0-aRh" kind="show" identifier="searchByNameToCars" id="hyU-9X-a7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pel-0g-gXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3095" y="871"/>
+            <point key="canvasLocation" x="2940" y="976"/>
         </scene>
         <!--Customer CarsVC-->
         <scene sceneID="2MZ-ci-ad4">
@@ -1104,32 +1095,29 @@
                                 <rect key="frame" x="0.0" y="209" width="768" height="815"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="DK0-ij-9PT">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="DK0-ij-9PT" customClass="CustomerTableViewCell" customModule="VIN_Bladel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DK0-ij-9PT" id="08y-7F-Jbd">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="89.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DK0-ij-9PT" id="08y-7F-Jbd">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq3-Zp-esZ">
-                                                    <rect key="frame" x="15" y="14" width="700" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="700" id="8dM-uV-Wrk"/>
-                                                        <constraint firstAttribute="height" constant="60" id="dl1-sI-8cY"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-bv-ZI0">
+                                                    <rect key="frame" x="15" y="21" width="738" height="58"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.43668299999999999" green="0.4452929605" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="cq3-Zp-esZ" secondAttribute="bottom" constant="5" id="1Av-js-VxT"/>
-                                                <constraint firstItem="cq3-Zp-esZ" firstAttribute="leading" secondItem="08y-7F-Jbd" secondAttribute="leadingMargin" id="CJU-xY-4NA"/>
-                                                <constraint firstItem="cq3-Zp-esZ" firstAttribute="trailing" secondItem="08y-7F-Jbd" secondAttribute="trailingMargin" id="eHw-75-rlF"/>
-                                                <constraint firstItem="cq3-Zp-esZ" firstAttribute="top" secondItem="08y-7F-Jbd" secondAttribute="topMargin" constant="3" id="xuI-BF-JB9"/>
+                                                <constraint firstItem="uQS-bv-ZI0" firstAttribute="trailing" secondItem="08y-7F-Jbd" secondAttribute="trailingMargin" id="5a1-qp-xBh"/>
+                                                <constraint firstItem="uQS-bv-ZI0" firstAttribute="top" secondItem="08y-7F-Jbd" secondAttribute="topMargin" constant="10" id="OFf-i3-e1G"/>
+                                                <constraint firstItem="uQS-bv-ZI0" firstAttribute="leading" secondItem="08y-7F-Jbd" secondAttribute="leadingMargin" id="gNk-gO-EhC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uQS-bv-ZI0" secondAttribute="bottom" constant="10" id="tdi-LP-eXy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="carLabel" destination="uQS-bv-ZI0" id="gOW-fZ-vuf"/>
                                             <segue destination="uhD-MY-DGM" kind="show" id="ZkL-FU-XLu"/>
                                         </connections>
                                     </tableViewCell>
@@ -1180,7 +1168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZ3-xt-cSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3838" y="1138"/>
+            <point key="canvasLocation" x="3718.75" y="975.58593749999989"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="hMh-rF-k4V">
@@ -1263,7 +1251,7 @@
         <image name="icons8-purchase-order" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YYt-hK-Sus"/>
+        <segue reference="It2-cb-WYV"/>
         <segue reference="uL3-8k-4rK"/>
     </inferredMetricsTieBreakers>
 </document>

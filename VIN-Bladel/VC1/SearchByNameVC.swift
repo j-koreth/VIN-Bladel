@@ -13,13 +13,13 @@ class SearchByNameVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var extraLabel: UILabel!
-    @IBOutlet weak var buttonOutlet: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        buttonOutlet.isEnabled = false
+        searchButton.isEnabled = false
         lastName.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         firstName.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
@@ -49,14 +49,18 @@ class SearchByNameVC: UIViewController, UITextFieldDelegate {
     {
         if firstName.text?.count != 0 && lastName.text?.count != 0
         {
-            buttonOutlet.backgroundColor = UIColor(red:0.51, green:0.77, blue:1.00, alpha:1.0)
-            buttonOutlet.titleLabel?.textColor = .white
-            buttonOutlet.isEnabled = true
+            searchButton.isEnabled = true
+            searchButton.backgroundColor = UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0)
+            searchButton.setTitleColor(UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0), for: .disabled)
+            searchButton.setTitleColor(UIColor.white, for: .normal)
+            searchButton.layer.borderColor = UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0).cgColor
+            searchButton.layer.borderWidth = 3
+            searchButton.layer.cornerRadius = 35
         }
         else
         {
-            buttonOutlet.isEnabled = false
-            buttonOutlet.backgroundColor = UIColor.white
+            searchButton.isEnabled = false
+            searchButton.backgroundColor = UIColor.white
         }
     }
 }
