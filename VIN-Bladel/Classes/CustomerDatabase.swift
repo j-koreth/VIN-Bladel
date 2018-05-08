@@ -98,25 +98,6 @@ class CustomerDatabase
             customers.updateToDatabase()
         }
     }
-    
-    //Work in Progress
-//    func deleteCustomerByName(first: String, last: String)
-//    {
-//        var theCustomer: CustomerData!
-//        for customers in database
-//        {
-//            theCustomer = getCustomerByName(first: first, last: last)
-//        }
-//        var index = Int(theCustomer.customerIndex)
-//        database.remove(at: index!)
-//
-//        var num = 0
-//        for customers in database
-//        {
-//            customers.customerIndex = String(num)
-//            num += 1
-//        }
-//    }
 }
 
 
