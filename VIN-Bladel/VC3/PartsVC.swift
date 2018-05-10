@@ -87,7 +87,7 @@ class PartsVC: UIViewController, UITextFieldDelegate {
         partQuantity.addTarget(self, action: #selector(PartsVC.incrementQuantity(sender:)), for: .valueChanged)
         self.view.addSubview(partQuantity)
         
-        var quantityLabel = UILabel(frame: CGRect(x: 50, y: lastTextfieldY + 65, width: 45, height: 50))
+        var quantityLabel = UILabel(frame: CGRect(x: 55, y: lastTextfieldY + 65, width: 45, height: 50))
         quantityLabel.text = "0"
         quantityLabel.font = UIFont(name: "AvenirNext-Regular", size: 30)
         quantityLabel.tag = partCount
