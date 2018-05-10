@@ -12,10 +12,13 @@ import SearchTextField
 class PartsVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tooManyLabel: UILabel!
+    @IBOutlet weak var newTextfieldButton: UIButton!
     
     var listOfParts = [String]()
     var partsArray = [Part]()
-    var textFieldArray = [SearchTextField]()
+    var customerPartsArray = [UITextField()]
+    var customerQuantityArray = [UILabel()]
+    var partCount = 0
     
     var lastTextfieldY = 211
     
@@ -27,16 +30,18 @@ class PartsVC: UIViewController, UITextFieldDelegate {
         {
             listOfParts.append(part.name)
         }
+        addNewQuantity()
         addNewTextfield()
     }
 
     @IBAction func addNewPart(_ sender: Any)
     {
-        if textFieldArray.count < 4 && textFieldArray.last?.text != ""
+        if partCount < 4
         {
             addNewTextfield()
+            addNewQuantity()
         }
-        else if textFieldArray.count == 4
+        else if partCount == 4
         {
             tooManyLabel.text = "Max of 4 Services"
         }
@@ -48,8 +53,9 @@ class PartsVC: UIViewController, UITextFieldDelegate {
     
     func addNewTextfield()
     {
-        var partTextfield = SearchTextField(frame: CGRect(x: 100, y: lastTextfieldY + 75, width: 550, height: 60))
-        lastTextfieldY = Int(partTextfield.frame.midY)
+        var partTextfield = SearchTextField(frame: CGRect(x: 150, y: lastTextfieldY + 75, width: 500, height: 60))
+        partTextfield.delegate = self
+        partTextfield.tag = partCount
         
         partTextfield.placeholder = "Add Service"
         partTextfield.filterStrings(listOfParts)
@@ -63,8 +69,43 @@ class PartsVC: UIViewController, UITextFieldDelegate {
         
         self.view.addSubview(partTextfield)
         
+        var quantityTextfield = UITextView(frame: CGRect(x: 100, y: lastTextfieldY + 75, width: 475, height: 60))
+        lastTextfieldY = Int(quantityTextfield.frame.midY)
+        self.view.addSubview(quantityTextfield)
         
-        textFieldArray.append(partTextfield)
+        customerPartsArray.append(partTextfield)
+        newTextfieldButton.frame.origin.y = partTextfield.frame.midY
+        lastTextfieldY = Int(partTextfield.frame.midY)
+        partCount += 1
+
+    }
+    
+    func addNewQuantity()
+    {
+        var partQuantity = UIStepper(frame: CGRect(x: 20, y: lastTextfieldY + 110, width: 90, height: 29))
+        partQuantity.tag = partCount
+        partQuantity.addTarget(self, action: #selector(PartsVC.incrementQuantity(sender:)), for: .valueChanged)
+        self.view.addSubview(partQuantity)
+        
+        var quantityLabel = UILabel(frame: CGRect(x: 50, y: lastTextfieldY + 65, width: 45, height: 50))
+        quantityLabel.text = "0"
+        quantityLabel.font = UIFont(name: "AvenirNext-Regular", size: 30)
+        quantityLabel.tag = partCount
+        customerQuantityArray.append(quantityLabel)
+        self.view.addSubview(quantityLabel)
+        
+    }
+    
+    @objc func incrementQuantity(sender: UIStepper!)
+    {
+        let stepperValue = Int(sender.value)
+        customerQuantityArray[sender.tag].text = String(stepperValue)
+        print(customerQuantityArray[sender.tag].text)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+        customerPartsArray[textField.tag] = textField
     }
 
 
