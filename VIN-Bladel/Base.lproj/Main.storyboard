@@ -93,7 +93,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="kId-3u-UaR"/>
                     <connections>
+                        <outlet property="it" destination="kId-3u-UaR" id="dV2-yq-HA9"/>
                         <outlet property="manualButton" destination="SJW-HN-Z97" id="jTS-D4-0VQ"/>
+                        <outlet property="navigationBar" destination="kId-3u-UaR" id="7c5-wF-W2z"/>
                         <outlet property="scanButton" destination="rqc-DL-U2J" id="4QS-Se-vfh"/>
                         <outlet property="searchButton" destination="R9i-9V-XO2" id="nsP-0D-2ej"/>
                     </connections>
