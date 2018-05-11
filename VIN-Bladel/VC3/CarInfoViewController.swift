@@ -25,7 +25,7 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         textViewInformation = [car?.VIN, car?.vehicleMake, car?.vehicleModel, car?.vehicleSubModel, car?.vehicleModelYear, car?.vehicleDisplacement, car?.vehicleCylinder, car?.vehicleTransmission, car?.vehicleDriveType, car?.vehicleMileage]
         
         self.navigationItem.setHidesBackButton(true, animated:true)
@@ -42,9 +42,6 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
     
     override func viewDidDisappear(_ animated: Bool) {
         
@@ -76,6 +73,13 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
         view.endEditing(true)
         return true
     }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != textViewInformation[textField.tag]
+        {
+            textViewInformation[textField.tag] = textField.text
+        }
+        return true
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return labelTitles.count
@@ -85,6 +89,8 @@ class CarInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CarInfoTableViewCell
         cell.carLabel?.text = labelTitles[indexPath.row]
+        cell.carTextField.tag = indexPath.row
+
         cell.carTextField.text = textViewInformation[indexPath.row]
         
         
