@@ -93,7 +93,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="kId-3u-UaR"/>
                     <connections>
-                        <outlet property="it" destination="kId-3u-UaR" id="dV2-yq-HA9"/>
                         <outlet property="manualButton" destination="SJW-HN-Z97" id="jTS-D4-0VQ"/>
                         <outlet property="navigationBar" destination="kId-3u-UaR" id="7c5-wF-W2z"/>
                         <outlet property="scanButton" destination="rqc-DL-U2J" id="4QS-Se-vfh"/>
@@ -1095,14 +1094,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u4x-Ca-LGr">
-                                <rect key="frame" x="0.0" y="209" width="768" height="815"/>
+                                <rect key="frame" x="0.0" y="209" width="730" height="815"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="DK0-ij-9PT" customClass="CustomerTableViewCell" customModule="VIN_Bladel" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="730" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DK0-ij-9PT" id="08y-7F-Jbd">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="730" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-bv-ZI0">
@@ -1127,10 +1126,10 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pXJ-fd-3pj">
-                                <rect key="frame" x="40" y="90" width="688" height="111"/>
+                                <rect key="frame" x="40" y="90" width="650" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer: [Name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnG-Fh-bgk">
-                                        <rect key="frame" x="0.0" y="0.0" width="688" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="650" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="650" id="ADn-IY-JM5"/>
                                             <constraint firstAttribute="height" constant="80" id="vku-Pf-isU"/>
@@ -1140,7 +1139,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpZ-da-MsQ">
-                                        <rect key="frame" x="0.0" y="110" width="688" height="1"/>
+                                        <rect key="frame" x="0.0" y="110" width="650" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Htj-8Y-odO"/>
