@@ -20,9 +20,10 @@ class ServiceDatabase{
         serviceReference.observe(.value) { (snapshot) in
             for service in snapshot.children.allObjects as! [DataSnapshot]
             {
-                let object = service.value as? [String: AnyObject]
-                let name = object?["Name"] as! String
-                self.database.append(Service(name: name))
+                print(service)
+//                let object = service.value as? [String: AnyObject]
+//                let name = object?["Name"] as! String
+//                self.database.append(Service(name: name, price: <#T##Double#>))
             }
         }
     }

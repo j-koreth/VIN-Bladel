@@ -30,6 +30,11 @@ class CustomerDatabase
         customerReference.child(key).setValue(customerDictionary)
     }
     
+    static func getAllCustomers() -> [CustomerData]
+    {
+        return database
+    }
+    
     static func getCustomerByName(first: String, last: String) -> CustomerData?
     {
         for customer in database

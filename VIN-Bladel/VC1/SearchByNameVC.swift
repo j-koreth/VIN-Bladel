@@ -8,59 +8,68 @@
 
 import UIKit
 
-class SearchByNameVC: UIViewController, UITextFieldDelegate {
+class SearchByNameVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var extraLabel: UILabel!
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad()
-    {
+    var database: [CustomerData] = []
+    var modifiedDatabase: [CustomerData] = []
+    var searchString: String = ""
+    
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        textField.delegate = self
         
-        searchButton.isEnabled = false
-        lastName.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        firstName.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        database = CustomerDatabase.getAllCustomers()
+        
+        modifiedDatabase = database.sorted(by: { $0.customerLast < $1.customerLast })
+        
     }
     
-    @IBAction func SearchButtonPressed(_ sender: UIButton)
-    {
-        if CustomerDatabase.getCustomerByName(first: firstName.text!, last: lastName.text!) != nil
-        {
-            customer = CustomerDatabase.getCustomerByName(first: firstName.text!, last: lastName.text!)
-            self.performSegue(withIdentifier: "searchByNameToCars", sender: nil)
+    func updateTable(letters: String) {
+        let letters = letters.lowercased()
+        modifiedDatabase = []
+        for currentCustomer in database {
+            if currentCustomer.customerFirst.lowercased().starts(with: letters) || currentCustomer.customerLast.lowercased().starts(with: letters) {
+                modifiedDatabase.append(currentCustomer)
+            }
         }
-            
-        else
-        {
-            let alert = UIAlertController(title: "Error", message: "Customer was not found in the database", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        print(modifiedDatabase)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return modifiedDatabase.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") {
+            cell.textLabel?.text = "\(modifiedDatabase[indexPath.row].customerLast!), \(modifiedDatabase[indexPath.row].customerFirst!)"
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string != "" {
+            searchString += string
+        } else {
+            let index = searchString.index(before: searchString.endIndex)
+            searchString = "\(searchString.prefix(upTo: index))"
+        }
+        updateTable(letters: searchString)
+        tableView.reloadData()
         return true
     }
     
-    @objc func textFieldDidChange()
-    {
-        if firstName.text?.count != 0 && lastName.text?.count != 0
-        {
-            searchButton.isEnabled = true
-            searchButton.backgroundColor = UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0)
-            searchButton.setTitleColor(UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0), for: .disabled)
-            searchButton.setTitleColor(UIColor.white, for: .normal)
-            searchButton.layer.borderColor = UIColor(red:0.71, green:0.76, blue:0.80, alpha:1.0).cgColor
-            searchButton.layer.borderWidth = 3
-            searchButton.layer.cornerRadius = 35
-        }
-        else
-        {
-            searchButton.isEnabled = false
-            searchButton.backgroundColor = UIColor.white
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let firstName = modifiedDatabase[indexPath.row].customerFirst,
+            let lastName = modifiedDatabase[indexPath.row].customerLast {
+            customer = CustomerDatabase.getCustomerByName(first: firstName, last: lastName)
+            self.performSegue(withIdentifier: "searchByNameToCars", sender: nil)
         }
     }
 }
