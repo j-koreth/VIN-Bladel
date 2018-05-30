@@ -17,13 +17,17 @@ class ServiceVC: UIViewController, UIPickerViewDataSource, UITableViewDataSource
     
     var output: String = ""
     
-    var services = ["Brakes":15.25,"Alignment":34.55,"Tires":65]
+    //var services = ["Brakes":15.25,"Alignment":34.55,"Tires":65]\
+    var services: [String : AnyObject] = [:]
+    
+    
     var parts = ["Brakes":["Front Pads":67.50,"Rear Pads":67.50,"Front Rotors":125.43],"Alignment":["Stuff":56.78],"Tires":["Front Right":50,"Front Left":45]]
     
     var currentService: String = "Alignment"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("\(ServiceDatabase.pullFromFirebase())")
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -60,6 +64,8 @@ class ServiceVC: UIViewController, UIPickerViewDataSource, UITableViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        services = ServiceDatabase.pullFromFirebase()
+
         return services.count
     }
     
@@ -89,7 +95,12 @@ class ServiceVC: UIViewController, UIPickerViewDataSource, UITableViewDataSource
         textView.text = output
     }
     
+//    @IBAction func whenClearButtonPressed(_ sender: UIButton) {
+//        textView.text = ""
+//    }
+    
     @IBAction func whenClearButtonPressed(_ sender: UIButton) {
         textView.text = ""
     }
+    
 }

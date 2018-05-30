@@ -21,8 +21,12 @@ class PartsDatabase{
             for part in snapshot.children.allObjects as! [DataSnapshot]
             {
                 let object = part.value as? [String: AnyObject]
-                let name = object?["Name"] as! String
-                self.database.append(Part(name: name))
+                let dictionaryOfValues = object?.values
+                //let name = object?["Name"] as! String
+                print("a")
+                print(object)
+               
+                //self.database.append(Part(name: name))
             }
         }
     }
